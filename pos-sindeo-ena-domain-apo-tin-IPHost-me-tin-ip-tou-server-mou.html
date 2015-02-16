@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Πανος Γεωργιαδης" />
+        <meta name="copyright" content="Πανος Γεωργιαδης" />
+
+        <meta name="description" content="Καταρχήν να ξεκινήσω λέγοντας ότι δεν έχω σκοπό να κάνω διαφήμιση την IPHost. Ο λόγος που την χρησιμοποιώ, είναι γιατί ήμουν αρκετά τυχερός ώστε να κερδίσω ένα domain με κατάληξη .eu σ’έναν διαγωνισμό του Insomnia. Ε, αφού το κέρδισα, λογικό (και επόμενο είναι) να το χρησιμοποιήσω. Η αλήθεια είναι ...
+" />
+<meta name="keywords" content="iphost, domain, dns, how-to, " />
+        <title>Πώς συνδέω ένα domain (IPHost) με τον server&nbsp;μου  · Linux = 'ed'
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Full Atom Feed" />
+        <link href="/feeds/Career-Advice.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Career Advice Category Atom Feed" />
+        <link href="/feeds/Editorial.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Editorial Category Atom Feed" />
+        <link href="/feeds/Elegant---Pelican-Theme.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Elegant - Pelican Theme Category Atom Feed" />
+        <link href="/feeds/How-to.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - How-to Category Atom Feed" />
+        <link href="/feeds/Nginx.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Nginx Category Atom Feed" />
+        <link href="/feeds/OSX-Software-Development.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - OSX Software Development Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name><span style="color:black;">Linux</span> <span style="color:darkblue;">=</span> <span style="color:#AA1032;">'ed'</span></span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/skhetika">Σχετικά</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/pos-sindeo-ena-domain-apo-tin-IPHost-me-tin-ip-tou-server-mou"> Πώς συνδέω ένα domain (IPHost) με τον server&nbsp;μου  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>Καταρχήν να ξεκινήσω λέγοντας ότι <strong>δεν</strong> έχω σκοπό να κάνω διαφήμιση την <em>IPHost</em>.
+Ο λόγος που την χρησιμοποιώ, είναι γιατί ήμουν αρκετά τυχερός ώστε να κερδίσω ένα <em>domain</em> με κατάληξη <strong>.eu</strong> σ&#8217;έναν διαγωνισμό
+του <a href="http://insomnia.gr">Insomnia</a>. Ε, αφού το κέρδισα, λογικό (και επόμενο είναι) να το χρησιμοποιήσω. 
+Η αλήθεια είναι ότι σπάνια παίρνω μέρος σε διαγωνισμούς. Συνήθως τα Χριστούγεννα θα δείτε ότι
+γίνεται πανικός σε διάφορα γνωστά <em>forums</em>, όπως είναι το <a href="http://thelab.gr">Thelab.gr</a>, το <a href="http://insomnia.gr">Insomnia.gr</a>, <a href="http://hwbox.org">HWBox</a>, <a href="http://deltahacker.gr">deltahacker</a> κ.α. τότε πραγματικά αξίζει να πάρεις μέρος γιατί έχουν μερικά πολύ
+όμορφα δώρα. Θυμάμαι χαρακτηριστικά, έναν πολύ διασκεδαστικό διαγωνισμό που είχα πάρει μέρος: ήταν στο <em>παλιό - καλό</em> <strong>OutofSpecs</strong>, όπου ο νικητής θα ήταν αυτός που θα κατάφερνε να πετύχει το χαμηλότερο score στο <a href="http://www.futuremark.com/benchmarks/legacy">3DMark 2001 <span class="caps">SE</span></a>.</p>
+<blockquote>
+<p>Οι καλύτερες&nbsp;εποχές!</p>
+</blockquote>
+<p>Τέλος πάντων, ας μην μακρυγορώ και ας μπω στο θέμα: Όπως θα ξέρετε ήδη<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>, έχω αγοράσει έναν <em>dedicated server</em> αξίας <strong>5 Ευρώ</strong>.
+ Ω ναι, μιλάμε για real hardware και όχι για κάποιο <span class="caps">VPS</span> με <em>shared resources</em>. Βλέπετε, μετά από αυτό που τράβηξα με την <em>Dreamhost</em>
+και το <a href="http://ubuntuxtreme.com">UbuntuXtreme.com</a>, όπου κάθε <em>&#8220;τρεις-και-λίγο&#8221;</em> το <span class="caps">VPS</span> έκανε reboot και με χρεώνε λόγω έλειψης
+πόρων κάνοντας ταυτόχρονα και το website μή προσπελάσιμο από τους επισκέπτες, υποσχέθηκα στον εαυτό μου ότι δεν θα δοκιμάσω ποτέ
+ξανά <span class="caps">VPS</span>. Ποτέ ξανά <span class="caps">VPS</span>. Τα <span class="caps">VPS</span> είναι @&amp;<em>^$&amp;^@#</em>^&nbsp;!!!</p>
+<h1><span class="caps">DNS</span></h1>
+<p>Προφανώς και όταν θέλουμε ένα domain να κάνει <strong>resolve σε μία <span class="caps">IP</span></strong>, την δουλειά την αναλαμβάνει ο <span class="caps">DNS</span>. Στην συγκεκριμένη
+περίπτωση, θα πρέπει να πάμε στην εταιρία που έχουμε κάνει register το Domain μας, και εκεί, κάπου, στον πίνακα ελέγχου,
+θα πρέπει να μας παρέχει την δυνατότητα να τροποιποιήσουμε τα <em><span class="caps">DNS</span> Records/Zone</em>. Πήγα λοιπόν στο <em>control panel</em> της IPHost,
+έκανα login, πήγα στα &#8220;Domains μου&#8221; και&nbsp;ιδού:</p>
+<p><img alt="Pinakas IPHost" src="/images/iphost1.png" /></p>
+<p>Στην συνέχεια πατάμε <strong>Δημιουργία/Διαχείριση Ζώνης <span class="caps">DNS</span></strong></p>
+<p><img alt="DNS Zone IPHost" src="/images/iphostdnszone.png" /></p>
+<p>&#8230; στην συνέχεια βάζω την IPv4 του <em>Dedicated Server</em> μου, η οποία είναι <code>37.187.4.87</code>, και περιμένω να ρυθμιστούν όλα μόνα τους (seriously, πολύ εύκολο :P&nbsp;)</p>
+<p><img alt="DNS Zone Completed" src="/images/iphostzoneok.png" /></p>
+<h1>Επαλήθευση, ότι&nbsp;λειτουργεί</h1>
+<p>Επειδή παίρνει κάποια ώρα το όλο <em>update</em> των <em>nameservers</em>, μην περιμένετε να δείτε άμεση ανταπόκριση από τον browser. Στην δική μου περίπτωση δεν περιμένω έτσι κι αλλιώς, αφού δεν τρέχω κάποιον webserver την <span class="caps">TCP</span> 80. Σε πρώτη φάση λοιπόν, ας ανοίξουμε το τερματικό και ας παίξουμε με τα τόσα <em>παιχνίδια</em> που υπάρχουν στο&nbsp;Linux.</p>
+<div class="highlight"><pre>nslookup pingouinos.eu
+Server:     192.168.178.1
+Address:    192.168.178.1#53
+
+** server can<span class="err">&#39;</span>t find pingouinos.eu: NXDOMAIN
+</pre></div>
+
+
+<p>Όπως φαίνεται ακόμα δεν έχουν ανανεωθεί οι <span class="caps">DNS</span>. <em>Ιδέα</em>: Να χρησιμοποιήσω τους <span class="caps">DNS</span> της Google<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>, οι οποίοι
+προφανώς είναι πολύ καλύτεροι από αυτούς που χρησιμοποιεί ο γερμανικός <span class="caps">ISP</span> μου. Για όσους δεν γνωρίζουν, οι <span class="caps">DNS</span> της Google είναι
+<code>8.8.8.8</code> και <code>8.8.4.4</code>. Οπότε δίνουμε ξανά την ίδια εντολή, μόνο που αυτή την φορά το request θα γίνει από την&nbsp;Google:</p>
+<div class="highlight"><pre> nslookup pingouinos.eu 8.8.8.8
+Server:     8.8.8.8
+Address:    8.8.8.8#53
+
+Non-authoritative answer:
+Name:   pingouinos.eu
+Address: 37.187.4.87
+</pre></div>
+
+
+<p>Ώπα! Η Google είναι ενημερωμένη, βλέπει τις αλλαγές! Αυτό σημαίνει ότι όλα τα κάναμε σωστά και λίγες ώρες,
+θα ενημερωθεί και ο δικός μας πάροχος και <em>όλα ok</em>. Μπορείτε επίσης να διευρήνεσετε ακόμα περισσότερο τα πράγματα
+χρησιμοποιώντας την εντολή <code>dig</code>, η οποία ρωτάει για πληροφορίες όπως <code>A</code>, <code>NS</code>, <code>MX</code>. Για&nbsp;παράδειγμα:</p>
+<div class="highlight"><pre>dig pingouinos.eu NS 8.8.8.8
+
+<span class="p">;</span> &lt;&lt;&gt;&gt; DiG 9.8.3-P1 &lt;&lt;&gt;&gt; pingouinos.eu NS 8.8.8.8
+<span class="p">;;</span> global options: +cmd
+<span class="p">;;</span> Got answer:
+<span class="p">;;</span> -&gt;&gt;HEADER<span class="s">&lt;&lt;- opcode: QUERY, status: NOERROR, id: 46292</span>
+<span class="s">;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0</span>
+
+<span class="s">;; QUESTION SECTION:</span>
+<span class="s">;pingouinos.eu.         IN  NS</span>
+
+<span class="s">;; AUTHORITY SECTION:</span>
+<span class="s">eu.         516 IN  SOA ns04.iphost.gr. admin.iphost.gr. 2009022301 14400 7200 604800 14400</span>
+
+<span class="s">;; Query time: 2 msec</span>
+<span class="s">;; SERVER: 192.168.178.1#53(192.168.178.1)</span>
+<span class="s">;; WHEN: Wed Jan 21 21:01:41 2015</span>
+<span class="s">;; MSG SIZE  rcvd: 87</span>
+
+<span class="s">;; Got answer:</span>
+<span class="s">;; -&gt;&gt;HEADER&lt;&lt;- opcode</span>: QUERY, status: NXDOMAIN, id: 19434
+<span class="p">;;</span> flags: qr rd ra<span class="p">;</span> QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+
+<span class="p">;;</span> QUESTION SECTION:
+<span class="p">;</span>8.8.8.8.           IN  A
+
+<span class="p">;;</span> AUTHORITY SECTION:
+.           <span class="m">783</span> IN  SOA a.root-servers.net. nstld.verisign-grs.com. <span class="m">2015012101</span> <span class="m">1800</span> <span class="m">900</span> <span class="m">604800</span> 86400
+
+<span class="p">;;</span> Query <span class="nb">time</span>: <span class="m">1</span> msec
+<span class="p">;;</span> SERVER: 192.168.178.1#53<span class="o">(</span>192.168.178.1<span class="o">)</span>
+<span class="p">;;</span> WHEN: Wed Jan <span class="m">21</span> 21:01:41 2015
+<span class="p">;;</span> MSG SIZE  rcvd: 100
+</pre></div>
+
+
+<p>Κάπου εδώ θα σταματήσω, και θα επανέλθω αύριο να ανανεώσω το άρθρο, ώστε να είμαστε <strong>100% σίγουροι</strong> ότι λειτούργησε η <em>&#8220;σύνδεση&#8221;</em>
+και δεν σας γράφω&nbsp;σαχλαμάρες.</p>
+<hr />
+<h1>24 ώρες μετά&nbsp;&#8230;</h1>
+<p>Έχει περάσει σχεδόν μία μέρα, και ήρθε η στιγμή να επαληθεύσουμε αν το <em>pingouinos.eu</em> κάνει <em>resolve</em>
+στην <span class="caps">IP</span> του server&nbsp;μου:</p>
+<div class="highlight"><pre>drpaneas@macbook:~/Desktop<span class="nv">$ </span>nslookup pingouinos.eu
+Server:     192.168.178.1
+Address:    192.168.178.1#53
+
+Non-authoritative answer:
+Name:   pingouinos.eu
+Address: 37.187.4.87
+</pre></div>
+
+
+<p>Τέλεια! Οπότε τωρα δεν χρειάζεται να θυμάμαι την <span class="caps">IP</span>&nbsp;:D</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Διαβάστε το άρθρο <a href="http://linuxed.gr/editorial/new-dedicated-server-in-da-house-me-5-euro/">New dedicated server in da house με 5 Eυρώ</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Περισσότερες πληροφορίες για τους Public Google <span class="caps">DNS</span> θα βρείτε <a href="https://developers.google.com/speed/public-dns/">εδώ</a>&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/o-epimenon-nika" title="Previous: Ο επιμένων&nbsp;νικά!">Ο επιμένων&nbsp;νικά!</a></li>
+ 
+                <li class="next_article"><a href="/eisagogi-ston-nginx" title="Next: Εισαγωγή στον&nbsp;Nginx">Εισαγωγή στον&nbsp;Nginx</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2015-01-21T20:23:00+02:00">Ιαν 21, 2015</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#how-to-ref">how-to</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#dns-ref">dns
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#domain-ref">domain
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#iphost-ref">iphost
+                    <span>1</span>
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> onCrash="Reboot();"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://oncrashreboot.com" property="cc:attributionName" rel="cc:attributionURL">Talha Mansoor</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

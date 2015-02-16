@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Panos Georgiadis" />
+        <meta name="copyright" content="Panos Georgiadis" />
+
+        <meta name="description" content="List of all the configuration variables and metadata that you can use with Elegant
+" />
+<meta name="keywords" content="pelican-theme, config, Elegant - Pelican Theme, " />
+        <title>Configuration Variables and Metadata&nbsp;List  · Linux = 'ed'
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Full Atom Feed" />
+        <link href="/feeds/Career-Advice.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Career Advice Category Atom Feed" />
+        <link href="/feeds/Editorial.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Editorial Category Atom Feed" />
+        <link href="/feeds/Elegant---Pelican-Theme.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Elegant - Pelican Theme Category Atom Feed" />
+        <link href="/feeds/How-to.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - How-to Category Atom Feed" />
+        <link href="/feeds/Nginx.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Nginx Category Atom Feed" />
+        <link href="/feeds/OSX-Software-Development.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - OSX Software Development Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name><span style="color:black;">Linux</span> <span style="color:darkblue;">=</span> <span style="color:#AA1032;">'ed'</span></span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/skhetika">Σχετικά</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/configuration-variables-and-metadata-list"> Configuration Variables and Metadata&nbsp;List  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#pelican-configuration">Pelican Configuration</a></li>
+<li><a href="#configuration-variables">Configuration Variables</a></li>
+<li><a href="#metadata">Metadata</a></li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+
+            
+<h2 id="pelican-configuration">Pelican Configuration</h2>
+<p>These are the settings that will help you get the most out of Elegant</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">TAG_SAVE_AS</span> <span class="o">=</span> <span class="s">''</span>
+<span class="n">AUTHOR_SAVE_AS</span> <span class="o">=</span> <span class="s">''</span>
+<span class="n">CATEGORY_SAVE_AS</span> <span class="o">=</span> <span class="s">''</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s">'theme/images'</span><span class="p">,</span> <span class="s">'images'</span><span class="p">]</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s">'sitemap'</span><span class="p">,</span> <span class="s">'extract_toc'</span><span class="p">,</span> <span class="s">'tipue_search'</span><span class="p">,</span>
+           <span class="s">'neighbors'</span><span class="p">,</span> <span class="s">'assets'</span><span class="p">,</span> <span class="s">'share_post'</span><span class="p">]</span>
+<span class="n">MD_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span><span class="s">'codehilite(css_class=highlight)'</span><span class="p">,</span> <span class="s">'extra'</span><span class="p">,</span>
+                 <span class="s">'headerid'</span><span class="p">,</span> <span class="s">'toc(permalink=true)'</span><span class="p">]</span>
+<span class="n">DIRECT_TEMPLATES</span> <span class="o">=</span> <span class="p">((</span><span class="s">'index'</span><span class="p">,</span> <span class="s">'tags'</span><span class="p">,</span> <span class="s">'categories'</span><span class="p">,</span><span class="s">'archives'</span><span class="p">,</span> <span class="s">'search'</span><span class="p">,</span> <span class="s">'404'</span><span class="p">))</span>
+</pre></div>
+</td></tr></table>
+<h2 id="configuration-variables">Configuration Variables</h2>
+<p>These are the optional configuration variables that you can define</p>
+<ol>
+<li><code>PROJECTS</code> used for <a href="elegant-best-pelican-theme-features#projects">Projects
+   feature</a>
+   on the landing page</li>
+<li><code>USE_SHORTCUT_ICONS</code> used for <a href="how-to-set-shortcut-icons">shortcut icons like favicon, Opera Speed Dial</a></li>
+<li><code>SITE_LICENSE</code> used to add <a href="few-more-features-of-elegant#add-license-to-your-site">site license</a></li>
+<li><code>SITE_SUBTITLE</code> used to add <a href="few-more-features-of-elegant#site-subtitle">site subtitle in the footer</a></li>
+<li><code>COMMENTS_INTRO</code> used with
+   <a href="how-to-use-disqus-comments-elegantly#invite-visitors-to-comment">comments</a></li>
+<li><code>SITE_DESCRIPTION</code> used for <a href="search-engine-and-social-media-optimization#search-engine-optimization-seo">Search Engine Optimization</a></li>
+<li><code>LANDING_PAGE_ABOUT</code> used for <a href="elegant-best-pelican-theme-features#about-me">About me
+   feature</a>
+   on the landing page</li>
+<li><code>SOCIAL_PROFILE_LABEL</code> used with <a href="how-to-display-your-social-media-profiles">social media profiles widget</a></li>
+<li><code>RECENT_ARTICLES_COUNT</code> see the post <a href="elegant-best-pelican-theme-features#recent-articles">Recent Articles</a></li>
+</ol>
+<p>These are the variables used for <a href="elegant-best-pelican-theme-features#mailchimp">Mailchimp subscriber
+form</a> in the sidebar,</p>
+<ol>
+<li><code>MAILCHIMP_FORM_ACTION</code> is mandatory. Set it to your Mailchimp form action
+   <span class="caps">URL</span></li>
+<li><code>SUBSCRIBE_BUTTON_TITLE</code></li>
+<li><code>EMAIL_FIELD_PLACEHOLDER</code></li>
+<li><code>EMAIL_SUBSCRIPTION_LABEL</code></li>
+</ol>
+<p>These are the variables used with different Pelican plugins,</p>
+<ol>
+<li><code>SERIES_TITLE</code> used with <a href="how-to-use-multi-part-plugin"><code>multi_part</code> plugin</a></li>
+<li><code>SHARE_POST_INTRO</code> used with <a href="how-to-use-social-sharing-plugin"><code>share_post</code>
+   plugin</a></li>
+<li><code>RELATED_POSTS_LABEL</code> used with <a href="https://github.com/getpelican/pelican-plugins/tree/master/related_posts"><code>related_posts</code>
+   plugin</a> </li>
+</ol>
+<p>These are the variables used for <a href="search-engine-and-social-media-optimization#social-media-optimization-smo">Social Media
+Optimization</a>,</p>
+<ol>
+<li><code>FEATURED_IMAGE</code></li>
+<li><code>TWITTER_USERNAME</code></li>
+<li><code>GOOGLE_PLUS_PROFILE_URL</code> </li>
+</ol>
+<p>Blog <a href="http://oncrashreboot.com"><code>onCrash=Reboot();</code></a> uses Elegant theme. You
+can see its configuration files at
+<a href="https://github.com/talha131/onCrashReboot">Github</a> for inspiration.</p>
+<h2 id="metadata">Metadata</h2>
+<p>Pelican uses <a href="http://docs.getpelican.com/en/latest/getting_started.html#file-metadata">file
+metadata</a>
+from your articles and pages text files to get information about your posts,
+like tags, authors etc.</p>
+<p>On top of <em>“official”</em> metadata, Elegant uses some optional metadata that you
+can use in your articles and pages.</p>
+<ol>
+<li><code>summary</code> used for <a href="search-engine-and-social-media-optimization#search-engine-optimization-seo">Search Engine Optimization</a></li>
+<li><code>subtitle</code> used to set <a href="elegant-best-pelican-theme-features#article-subtitle">article subtitle</a></li>
+<li><code>keywords</code> used for <a href="search-engine-and-social-media-optimization#search-engine-optimization-seo">Search Engine Optimization</a></li>
+<li><code>modified</code> used to set <a href="how-does-modified-metadata-works">last updated time</a>
+    of the article</li>
+<li><code>series_title</code> used with <a href="how-to-use-multi-part-plugin"><code>multi_part</code> plugin</a></li>
+<li><code>featured_image</code> used for <a href="search-engine-and-social-media-optimization#social-media-optimization-smo">Social Media Optimization</a></li>
+<li><code>comments_intro</code> used with
+    <a href="how-to-use-disqus-comments-elegantly#invite-visitors-to-comment">comments</a></li>
+<li><code>share_post_intro</code> used with <a href="how-to-use-social-sharing-plugin"><code>share_post</code>
+    plugin</a></li>
+<li><code>disqus_identifier</code> used with
+    <a href="how-to-use-disqus-comments-elegantly#disqus-thread-id">comments</a></li>
+</ol>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/few-more-features-of-elegant" title="Previous: Few more features of&nbsp;Elegant">Few more features of&nbsp;Elegant</a></li>
+ 
+                <li class="next_article"><a href="/how-to-set-shortcut-icons" title="Next: How to set Shortcut&nbsp;Icons">How to set Shortcut&nbsp;Icons</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2014-04-23T18:25:00+03:00">Απρ 23, 2014</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Elegant---Pelican-Theme-ref">Elegant - Pelican Theme</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#config-ref">config
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#pelican-theme-ref">pelican-theme
+                    <span>17</span>
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> onCrash="Reboot();"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://oncrashreboot.com" property="cc:attributionName" rel="cc:attributionURL">Talha Mansoor</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

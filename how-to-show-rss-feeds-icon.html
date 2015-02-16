@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Panos Georgiadis" />
+        <meta name="copyright" content="Panos Georgiadis" />
+
+        <meta name="description" content="Elegant supports RSS and Atom feeds for your posts, categories and tags
+" />
+<meta name="keywords" content="pelican-theme, font-awesome, web-design, Elegant - Pelican Theme, " />
+        <title>How to show <span class="caps">RSS</span> feeds&nbsp;icon  · Linux = 'ed'
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Full Atom Feed" />
+        <link href="/feeds/Career-Advice.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Career Advice Category Atom Feed" />
+        <link href="/feeds/Editorial.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Editorial Category Atom Feed" />
+        <link href="/feeds/Elegant---Pelican-Theme.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Elegant - Pelican Theme Category Atom Feed" />
+        <link href="/feeds/How-to.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - How-to Category Atom Feed" />
+        <link href="/feeds/Nginx.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Nginx Category Atom Feed" />
+        <link href="/feeds/OSX-Software-Development.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - OSX Software Development Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name><span style="color:black;">Linux</span> <span style="color:darkblue;">=</span> <span style="color:#AA1032;">'ed'</span></span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/skhetika">Σχετικά</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/how-to-show-rss-feeds-icon"> How to show <span class="caps">RSS</span> feeds&nbsp;icon  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p><span class="caps">RSS</span> feeds is the oldest and arguably the most used format to publish blog
+updates. Its use is not limited to <span class="caps">RSS</span> aggregators and readers. Tools like
+<a href="https://ifttt.com/recipes?channel=feed"><span class="caps">IFTTT</span></a> and
+<a href="http://manual.calibre-ebook.com/news.html">Calibre</a> increases <span class="caps">RSS</span> feeds&#8217; power
+and versatility by&nbsp;manifolds.</p>
+<p>To enable <span class="caps">RSS</span> feeds, see <a href="http://docs.getpelican.com/en/latest/settings.html#feed-settings">Feed
+Settings</a> in
+Pelican&nbsp;documentation.</p>
+<p>Links to <span class="caps">RSS</span> feeds are embedded in every page. Links to category and tag
+feeds are embedded only in the Categories and Tags pages&nbsp;respectively.</p>
+<p>Elegant does not show <span class="caps">RSS</span> feeds icon out of the box, though it can be easily&nbsp;enabled.</p>
+<p>All <span class="caps">RSS</span> consumers have the ability to capture feed links from a web address.
+For example, you need not put <code>http://oncrashreboot.com/feeds/all.atom.xml</code> in
+your <span class="caps">RSS</span> reader. Just <code>http://oncrashreboot.com</code> is enough. Your reader should
+be able to extract feed <span class="caps">URL</span> from the&nbsp;link.</p>
+<p>All popular browsers can detect <span class="caps">RSS</span> feeds on the page and show a visual cue. In
+Firefox, you can add &#8220;Subscribe&#8221; button to the
+<a href="https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars?redirectlocale=en-US&amp;redirectslug=How+to+customize+the+toolbar">toolbar</a>.
+For Chrome, you can use <a href="https://chrome.google.com/webstore/detail/rss-subscription-extensio/nlbjncdgjeocebhnmkbbbdekmmmcbfjd"><span class="caps">RSS</span> Subscription
+Extension</a>.</p>
+<p>Here is an example of my category feeds in&nbsp;Chrome.</p>
+<p><img alt="Display RSS Feeds in Chrome" src="/images/rss-feeds-chrome-category-feeds.png" /></p>
+<p>These options make it redundant to have a separate <span class="caps">RSS</span> icon on the page.
+Elegant is all about a clean and minimal <span class="caps">UI</span>.</p>
+<p>But it is not so hard to enable it. First <a href="how-to-display-your-social-media-profiles">configure the Social
+widget</a>. Then add a tuple for <span class="caps">RSS</span>,</p>
+<div class="highlight"><pre><span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">((</span><span class="s">&#39;RSS&#39;</span><span class="p">,</span> <span class="s">&#39;http://oncrashreboot.com/feeds/all.atom.xml&#39;</span><span class="p">),)</span>
+</pre></div>
+
+
+<p>Viola! You got yourself the <span class="caps">RSS</span>&nbsp;icon.</p>
+<p><img alt="RSS Feeds icon in Social widget" src="/images/rss-feeds-icon-social-widget.png" /></p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/how-to-display-your-social-media-profiles" title="Previous: How to display your Social Media&nbsp;Profiles">How to display your Social Media&nbsp;Profiles</a></li>
+ 
+                <li class="next_article"><a href="/how-elegant-displays-table-of-contents" title="Next: How Elegant displays Table of&nbsp;Contents">How Elegant displays Table of&nbsp;Contents</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2014-03-17T15:28:00+02:00">Μαρ 17, 2014</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Elegant---Pelican-Theme-ref">Elegant - Pelican Theme</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#font-awesome-ref">font-awesome
+                    <span>3</span>
+</a></li>
+                <li><a href="/tags.html#pelican-theme-ref">pelican-theme
+                    <span>17</span>
+</a></li>
+                <li><a href="/tags.html#web-design-ref">web-design
+                    <span>9</span>
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> onCrash="Reboot();"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://oncrashreboot.com" property="cc:attributionName" rel="cc:attributionURL">Talha Mansoor</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

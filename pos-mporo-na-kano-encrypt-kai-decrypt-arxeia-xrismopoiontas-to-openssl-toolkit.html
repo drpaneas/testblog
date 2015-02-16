@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Πανος Γεωργιαδης" />
+        <meta name="copyright" content="Πανος Γεωργιαδης" />
+
+        <meta name="description" content="Ντεμπούτο του Linuxed! Αναρωτιώμουν από πού να ξεκινήσω το άρθρο μου, αλλά σήμερα νιώθω ότι έχω πολλά να πω, και θέλω να αποφύγω να ξεκινάω να σας γράφω για το ένα και για το άλλο και να αφήνω το σημαντικό στο τέλος. Αποφάσισα λοιπόν αντί άλλων καθυστερήσεων να μπω κατευθείαν ...
+" />
+<meta name="keywords" content="how-to, openssl, How-to, " />
+        <title>Πώς να κάνω encrypt και decrypt αρχεία χρησιμοποιώντας το OpenSSL&nbsp;toolkit  · Linux = 'ed'
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Full Atom Feed" />
+        <link href="/feeds/Career-Advice.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Career Advice Category Atom Feed" />
+        <link href="/feeds/Editorial.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Editorial Category Atom Feed" />
+        <link href="/feeds/Elegant---Pelican-Theme.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Elegant - Pelican Theme Category Atom Feed" />
+        <link href="/feeds/How-to.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - How-to Category Atom Feed" />
+        <link href="/feeds/Nginx.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Nginx Category Atom Feed" />
+        <link href="/feeds/OSX-Software-Development.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - OSX Software Development Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name><span style="color:black;">Linux</span> <span style="color:darkblue;">=</span> <span style="color:#AA1032;">'ed'</span></span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/skhetika">Σχετικά</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/pos-mporo-na-kano-encrypt-kai-decrypt-arxeia-xrismopoiontas-to-openssl-toolkit"> Πώς να κάνω encrypt και decrypt αρχεία χρησιμοποιώντας το OpenSSL&nbsp;toolkit  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <p>Ντεμπούτο του Linuxed! Αναρωτιώμουν από πού να ξεκινήσω το άρθρο μου, αλλά σήμερα νιώθω ότι έχω πολλά να πω, και θέλω να αποφύγω να ξεκινάω να σας γράφω <em>για το ένα και για το άλλο</em> και να αφήνω το σημαντικό στο τέλος. Αποφάσισα λοιπόν αντί άλλων καθυστερήσεων να μπω κατευθείαν στο κυρίως κείμενο&#8230; <em>με μία μικρή εισαγωγή</em>&#8230; </p>
+<p>Αν είστε <em>fan</em> του <a href="http://el.wikipedia.org/wiki/%CE%9F_%CE%86%CF%81%CF%87%CE%BF%CE%BD%CF%84%CE%B1%CF%82_%CF%84%CF%89%CE%BD_%CE%94%CE%B1%CF%87%CF%84%CF%85%CE%BB%CE%B9%CE%B4%CE%B9%CF%8E%CE%BD">LoTR</a>, φαντάζομαι πως θα θυμάστε την σκηνή<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> που ο Gandalf μπαίνει μέσα στο Bag End και ρωτάει τον Frodo: &#8220;<em>Is it secret? Is it safe?</em>&#8220;. Στην συνέχεια, ο Frodo επιβεβαιώνει τα λεγόμενά του, δείχνοτας πως το δαχτυλίδι παραμένει σφραγισμένο μέσα στον φάκελο. Προφανώς, για όλους εμάς, ένας φάκελος και μια σφραγίδα, δεν καλύπτουν τα σημερινα security standards. Οπότε, για όλους εμάς, το <em>δαχτυλίδι</em> δεν είναι <strong>ούτε secret</strong>, <strong>ούτε safe</strong>, αλλά βλέπετε, εκείνη την <em>μυθική</em> εποχή της <em>Μέσης Γης</em>, οι μάγοι και άλλα πλάσματα του Eru Ilúvatar, δεν είχαν <span class="caps">PC</span> ή Internet. Αντίθετα σήμερα, οι μάγοι της εποχής μας έχουν τα δικά τους εργαλεία και είναι γνωστοί ως&nbsp;Hackers.</p>
+<blockquote>
+<p>Αυτό όμως είναι μία ιστορία, θα πούμε άλλη&nbsp;φορά!</p>
+</blockquote>
+<h2>Keep it secret, Keep it&nbsp;Safe</h2>
+<p>Το βασικό μου πρόβλημα ξεκίνησε όταν θέλησα να στείλω ένα αρχείο <em>από</em> τον server μου στην Ελλάδα <em>στο</em> macbook μου εδώ στην Γερμανία. Λοιπόν, για να πούμε τα πράγματα με το όνομά τους: Δεν ήταν ένα οποιοδήποτε αρχείο. Δεν μπορώ να σας πω &#8220;τι είναι&#8221; και &#8220;τι δεν είναι&#8221;, καθώς η κρυφή του ταυτότητα θαρρώ πως δίνει ένα &#8220;μυστικό τόνο&#8221; στο άρθρο. Αυτό δε σημαίνει ότι είναι μυστικό και σ&#8217;εμένα, μια χαρά ξέρω &#8220;περί&#8221; ποιου αρχείου πρόκειται. Κατά μία έννοια θα μπορούσε να πει κανείς ότι κ εσείς ξέρετε, ακόμα κι αν δεν έχετε άμεση πρόσβαση στο μυαλό μου ή τον υπολογιστή μου, μπορείτε να κάνετε&nbsp;εικασίες. </p>
+<p>Καταλαβαίνετε που το πάω; Μπορεί να (μην) ξέρετε για ποιο αρχείο σας μιλάω, αλλά για όσους με ξέρουν και &#8220;το μυαλό τους πηγαίνει κατά κει&#8221;, να ξέρουν οτι δεν θα το βρουν. Unsurprisingly, την ίδια μοίρα μ&#8217;εσάς, θα έχει και η Deutsche Telekom και η <span class="caps">NSA</span> που έχουν&#8221;έχει στήσει αφτί&#8221; αμφότεροι στο τέλος της γραμμής. Όχι, δεν μπορεί και δεν θα μπορέσει ποτέ <strong>κανείς</strong> να μάθει για ποιο αρχείο σας μιλάω. Μπα. Με τίποτα<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup>.</p>
+<p>Αν προσπαθείσετε να δείτε τα περιεχόμενα του&nbsp;αρχείου:</p>
+<div class="highlight"><pre><span class="nv">$ </span>cat file 
+</pre></div>
+
+
+<p>θα δείτε κάτι&nbsp;τέτοιο:</p>
+<div class="highlight"><pre>Salted__???~?B?<span class="s1">&#39;?`c?g&lt;?)/g&amp;??????[?&lt;???O?d?S??~?q???Ѫi??C??</span>
+<span class="s1">                                                           &quot;?Fz@????\pg????2?i|?f??L?&gt;?d{?:*???????v??K?&quot;?Y?̷?p?Z???(?Q???????*dme???Fgۦ?   ??</span>
+<span class="s1"> c??n?[Bo?r?^?;L+!?</span>
+<span class="s1">                   %7?L?*?Qr?Plb?b{Y    /?1[?=,﹯?}8K?rP?Ņ??U????f&quot;{Ǒ?</span>
+<span class="s1">                                                                     ?-?&amp;??O[????m?Qw$???҈R?(?] ??6;yQ??Wy)?FO?K?*I??URZ?l2)Xʓ????N?%??Q-??d??{??U?o</span>
+<span class="s1">     ?ڎ?;U&#39;</span>?i?eR?/?R~???<span class="sb">`</span>???NM&lt;?ԡ<span class="p">|</span><span class="nv">0o</span><span class="o">=</span>?P??9?̢j?/??
+?3?v?S?o<span class="s1">&#39;?????۬?GM?X϶?^??OVr?&quot;????\&amp;L.?V8\|??b??????ՉJ?)????9;+??SC?c?㱶?]??\$?7G6??W??j??!l??$?_UO?i??H?H???</span>
+<span class="s1">??IHq??:?M ?G??I(4??/??S:Ӷ???Z?z??????E?9&#39;</span>?a?<span class="o">(</span>U߃D?Ny5???hD????@Z2U&lt;?ɽ?
+sx?ϴ#??????W1?<span class="s1">&#39;?T??|=ы?5?d?$?}?쪯YX(J/?}2?&#39;</span>xx?t??Q#?@?&gt;c<span class="o">{{</span>????Dd5??<span class="p">&amp;</span>?~?lBmR?
+?jf?????@n?R??թG???T?I_W??<span class="o">(</span>??????wQ?<span class="o">)</span>q,?6M?<span class="o">(</span>?w<span class="nv">$?</span>??ᬥ???1??uxc,9<span class="o">(</span>??*t1??yh??+U?? ?d??NL?8?ȴ?/?<span class="s1">&#39;?OLa??z?&amp;J9DR\c??f?%??sÒu????</span>
+<span class="s1">                                                                                                                        )s?9?f?x??E???\q???l??;?9</span>
+<span class="s1">???!L?z?%?})?(??a?}?&gt;_?-?_?????&amp;???R?XQ?x??U?C7?Z?:`F)@[?W5u??je??$??$`&amp;??3?[jF</span>
+<span class="s1">                                                                               ¡?R??#??a??w?@ q|y6??5??*&amp;??Vw?9}???om?a?_8??M0?!???c??h?}};گ?#?G?ĩ? ??BVJ^Ґ?V9</span>
+<span class="s1">                  H???*W6?kE??????Ơ</span>
+<span class="s1">                                   Zp]F86?b?8?5?8?N?,?N???1&#39;</span>.??1???:??%@<span class="o">=</span>?I@???????<span class="s1">&#39;?OW?s?u?O?ꨯm??s?Mwzq???????????*?ƾx1V4???.?Ր???87??e</span>
+<span class="s1">??ܢO?r???DՁZ?1????Y7?WQE?ְ?X?Ps??Gseݍ</span>
+<span class="s1">8?wP?)??/%????}?`?Has?I?B?l&#39;</span>????+
+?ۖF
+   ?L? ?F?rT?<span class="o">)</span>?e<span class="o">{</span>?#^m!IO??0P?3????_4Kgϗ,<span class="se">\?</span>??D???????8<span class="p">;</span>???H?q
+????nTdZS???_???<span class="p">|</span><span class="se">\߷</span>?t???P?
+                          ?.???t?0c:<span class="o">=</span>?3yney#E??D?~?5????؅????أ8% .?U?l!6<span class="p">&amp;</span>
+q4<span class="nv">$i</span>???8?ЕP7F<span class="p">|</span>Ԃ0Q????:??C???B?y??Ә*WW?j&gt;V貺???Vi5uwyc??7%<span class="o">[</span>?
+???s<span class="nv">$?</span>N???p??<span class="se">\r</span>i5xza???<span class="p">&amp;</span>l?<span class="s2">&quot;o@?T?몜??o#u?</span><span class="nv">$H</span><span class="s2">???</span>
+<span class="s2">/O?F?&quot;</span>?R@n??6?o??8?:??Άf?.<span class="p">|</span>?????9P??n
+                                     &gt;?<span class="sb">`</span>?O<span class="nv">$*</span>?????x????ã??<span class="o">)</span>??5?D?<span class="o">{</span>v???Q<span class="p">&amp;</span>?Q??????9??j *-
+                                                                                          ?Zxߚ?A?U?O?v&gt;j?g??-?&gt;<span class="p">&amp;</span>:??i?<span class="o">]</span>??????5<span class="nv">$a</span>?9?U+????셴&lt;+???k??r<span class="nv">$O</span>?<span class="p">;</span>x:???l<span class="o">=</span>?B4arp?
+??B??4?@??<span class="o">[</span>?3N?q??!h???g<span class="sb">`</span>?pJ6???뭁????N??#??q??/???&gt;?Q??#??ҧ?Q?W?????L??5xVnلΐ
+??<span class="o">(</span>?<span class="s2">&quot;t?7???ň=?MH?O??c?sbF?@a??#?aK,?Q?q??b??Z ͊?F??g%܅??1v??</span><span class="err">$</span><span class="s2"></span>
+</pre></div>
+
+
+<p>Οι παραπάνω &#8220;<em>ασυναρτησίες</em>&#8221; οφείλονται στο γεγονός ότι το αρχείο είναι κρυπτογραφημένο (<em>encrypted</em>). Και ένα αρχείο, μη προσπελάσιμο, είναι τελείως άχρηστο. Για να το αποκρυπτογραφίσετε, θα πρέπει να γνωρίζετε την τέχνη του OpenSSL, καθώς και κάποια άλλα πράγματα, όπως: τον <strong>Cipher</strong> και το <strong>passphrase</strong>.</p>
+<hr />
+<h2>Κρυπτογράφιση με το&nbsp;OpenSSL</h2>
+<p><img alt="Keep it secret keep it safe" src="/images/gandalfopenssl.png" title="Keep it Secret, Keep it Safe" /></p>
+<h3>Βήμα 1: Ενεργοποιήστε την κατάσταση κωδικοποίησης&nbsp;αρχείου</h3>
+<p>The openssl program is a command line tool for using the various cryptography functions of OpenSSL’s crypto library from the shell. It can be also used for file encryption and decryption with Ciphers<sup id="fnref:3"><a class="footnote-ref" href="#fn:3" rel="footnote">3</a></sup>. Για να χρησιμοποιήσουμε αυτή την λειτουργία, αρκεί να δώσουμε την παράμετρο <code>enc</code>.</p>
+<ul>
+<li><code>enc</code> – Encoding with&nbsp;Ciphers.</li>
+</ul>
+<h3>Βήμα 2: Επιλέξτε το αρχείο που θέλετε να&nbsp;κρυπτογραφίσετε</h3>
+<p>Στην συνέχεια θα επιλέξουμε το αρχείο που θέλουμε να κρυπτογραφίσουμε (<strong>για λόγους ευκολίας, ας ονομάσουμε το αρχείο με το προτώτυπο όνομα που είμαι σίγουρος ότι δεν έχετε ξαναδει ποτέ μπροστά σας</strong> <code>foo.bar</code>). Αυτό λοιπόν πρόκειται να παίξει τον ρόλο του <code>input file</code>, γεγονός που δηλώνεται με την παράμετρο <code>-in</code>. Με την ευκαιρία, ας δούμε μερικές από τις επιλογές που μπορείτε να συνδυάσετε παρέα με την παράμετρο <code>enc</code>:</p>
+<ul>
+<li><code>-in</code> input&nbsp;file</li>
+<li><code>-out</code> output&nbsp;file</li>
+<li><code>-pass</code> pass phrase&nbsp;source</li>
+<li><code>-e</code> encrypt (by&nbsp;default)</li>
+<li><code>-d</code> decrypt</li>
+<li><code>-k</code> passphrase is the next&nbsp;argument</li>
+</ul>
+<h3>Βήμα 3: Κρυπτογράφιση ή&nbsp;Αποκρυπτογράφιση;</h3>
+<p>Το επόμενο βήμα είναι να ορίσουμε τι θέλουμε να κάνουμε με το αρχείο: 
++ Encryption <code>-e</code> ή
++ Decryption <code>-d</code>. </p>
+<p>Κάπου διάβασα, ότι η μεγαλύτερη παγίδα της σκέψης είναι αυτή του αυτονόητου, αλλά εδώ δεν χρίζει λόγος ανησυχίας. By default λοιπόν, χρησιμοποίεται η σημαία <code>-e</code>, την οποία δεν δείτε να την χρησιμοποιούν ιδιαίτερα  (<em>όσο λιγότερα, τόσο το καλύτερο</em>). Οπότε, η επιλογή <code>-e</code> είναι optional με την προϋπόθεση ότι η πρόθεσή σας είναι να κρυπτογραφίσετε το αρχείο. Για να ολοκληρώσετε την <em>κρυπτογράφιση</em> του αρχείου, το μόνο που μένει είναι να δηλώσετε άλλα δύο&nbsp;πράγματα:</p>
+<ol>
+<li>Cipher (δηλαδή τον&nbsp;αλγόριθμο)</li>
+<li>Passphrase<sup id="fnref:4"><a class="footnote-ref" href="#fn:4" rel="footnote">4</a></sup> (κλειδί)</li>
+</ol>
+<h3>Βήμα 4: Επιλογή&nbsp;αλγορίθμου</h3>
+<p>Για να κρυπτογραφίσουμε ένα αρχείο,  <strong>χρειαζόμαστε έναν Cipher</strong>. Χωρίς να θέλω να πρωτοτυπήσω θα χρησιμοποιήσω τον: <strong>aes-256-cbc</strong>.</p>
+<h3>Βήμα 5: Επιλογή&nbsp;κλειδιού</h3>
+<p>Για passphrase (symmetric key) θα χρησιμοποιήσουμε την επιλογή <code>-k</code>. Χμμμ, για να σκεφτώ&#8230; ok I figured out, το passphrase μου θα είναι <code>darthvader666</code>.</p>
+<p>Αν και σας είπα ότι έχουμε μόνο δύο πράγματα (τον αλγόριθμο και το passphrase), η αλήθεια είναι ότι μένει κάτι ακόμα. Υποθέτω, ότι δεν φαντάζει λογικώς ορθό να κάνουμε edit ένα αρχείο και &#8212; <em>at the same time</em> &#8212; να το κάνουμε replace. Συνεπώς, χρειαζόμαστε ένα <code>output file</code> το οποίο θα είναι το τελικό αποτέλεσμα (δηλ. <em>το κρυπτογραφημένο αρχείο</em>). Για να το πω πιο απλά, είναι το αντίστοιχο του &#8220;<strong>save as</strong>&#8220;. Για να το κάνουμε αυτό από γραμμή εντολών, το OpenSSL διαθέτει στο ρεπερτόριο εντολών του την επιλογή <code>-out</code>. </p>
+<p>Για να δούμε λίγο ολόκληρη την&nbsp;εντολή:</p>
+<div class="highlight"><pre>openssl enc -in foo.bar -e -aes-256-cbc -k darthvader666 -out foo.bar.enc
+</pre></div>
+
+
+<p>Οπότε, ακόμα κι αν κάποιος υποκλέψει το αρχείο foo.bar.enc (το <code>enc</code> απλά δηλώνει ότι το αρχείο είναι κρυπτογραφημένο. Ο λόγος που το βάζουμε είναι για να ξέρουμε εκ των πρωτέρων ότι το αρχείο είναι encrypted και τίποτε άλλο). Διαφορετικά, αν προσπαθήσει να το ανοίξει κάποιος τρίτος, θα δει &#8220;<em>ασυναρτησίες</em>&#8220;.</p>
+<blockquote>
+<p>Παρατηρήστε το <code>salted</code> στην αρχή της πρότασης. Σημαίνει ότι το αρχείο είναι&nbsp;encrypted.</p>
+</blockquote>
+<h2>Αποκρυπτογράφιση με το&nbsp;OpenSSL</h2>
+<p>Η λύση για να αποκαλυφθούν τα περιεχόμενα του αρχείου βρίσκεται στην αντίστροφη λειτουργία της κρυπτογράφισης ή αλλιώς: <strong>απο</strong>κρυπτογράφισης (<em>decryption</em>). Αν δεν υπάρχει <em>κρυπτογραφημένο αρχείο</em>, δεν υπάρχει λόγος για <em>αποκρυπτογράφιση</em>. Αν δεν υπάρχει λόγος για αποκτυπρογράφιση, τότε γιατί ταλαιπωρούμαστε; Να σας πω γιατί ταλαιπωρούμαστε: Ταλαιπωρούμαστε, αγαπητοί μου, γιατί ως άνθρωποι του Internet, είμαστε εκτεθημένοι σε ξένα μάτια. Μάτια που βλέπουν μέσα από τα καλώδια. Αν λοιπόν, έρθει μία στιγμή στην ζωή σας (πχ δουλειά) όπου θέλετε να κρατήσετε τα <em>μάτια των άλλων</em> μακρυά από ένα συγκεκριμένο αρχείο, τότε θα χρειαστείτε όλα αυτά για τα οποία σας μιλάω σ&#8217;αυτό το άρθρο. Καλύτερα&nbsp;τώρα; </p>
+<p>Αλλα πείτε μου, ποιός ο λόγος να κρυπτογραφίσω ένα αρχείο αν δεν μπορώ να το διαβάσω <em>ούτε εγώ ο ίδιος</em> (;). Για να κάνουμε decrypt λοιπόν, αρχικά θα χρησιμοποιήσουμε τα ίδια filenames <strong>αντίστροφα</strong> (είσοδος -&gt; έξοδος) καθώς επίσης και την παράμετρο <code>-d</code>. </p>
+<p>Για να δούμε ολόκληρη την&nbsp;εντολή:</p>
+<div class="highlight"><pre>openssl enc -in foo.bar.enc -d -aes-256-cbc -k darthvader666 -out foo.bar
+</pre></div>
+
+
+<p>Και τώρα, αν προσπαθείσετε να δείτε τα περιεχόμενα του&nbsp;αρχείου:</p>
+<div class="highlight"><pre>cat foo.bar
+</pre></div>
+
+
+<p>Θα δείτε <strong>επιτέλους</strong> τα περιεχόμενα και τις πληροφορίες που έκρυβε όσο ήταν&nbsp;κρυπτογραφημένο:</p>
+<div class="highlight"><pre>This file contatins super important stuff. Use it wisely:
+
+* FBI Password: paok
+* CIA Password: mpaok
+</pre></div>
+
+
+<h2>Συνοψίζοντας</h2>
+<p>Αν το όλο άρθρο σας κέντρισε το ενδιαφέρον με την κρυπτογράφιση, θα σας πρότεινα να μελετήσετε το concept των <strong>public <span class="amp">&amp;</span> private keys</strong>. Καθώς και το αντίστοιχο course στο Coursera. Όχι, δεν σας δίνω το link<sup id="fnref:5"><a class="footnote-ref" href="#fn:5" rel="footnote">5</a></sup> γιατί βαριέμαι, αλλά γιατί περιμένω να ενεργοποιήθειτε και να ψάξετε! Run Forest! Run!<sup id="fnref:6"><a class="footnote-ref" href="#fn:6" rel="footnote">6</a></sup></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Δείτε το <a href="https://www.youtube.com/watch?v=E5jdaolDq7A">βίντεο</a> στο youtube ώστε να καταλάβετε για ποια σκηνή σας μιλάω.&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Κάτι <a href="http://arstechnica.com/security/2012/12/25-gpu-cluster-cracks-every-standard-windows-password-in-6-hours/">τέτοια</a> διαβάζω, και σκέφτομαι αν η χρήση του χρονικού επιρρήματος &#8220;<em>ποτέ</em>&#8221; ήταν σωστή σ&#8217;αυτή την περίπτωση. Υπερβολές!&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Για την ώρα SSLv3 και v2 θεωρούνται vulnerable (βλ. <a href="https://www.openssl.org/~bodo/ssl-poodle.pdf"><em>Exploiting Poodle SSLv3</em></a>) οπότε γενικά προτείνουμε <span class="caps">TLS</span> 1. Ωστόσο, η πλήρης λίστα βρίσκεται <a href="https://www.openssl.org/docs/apps/ciphers.html#cipher_suite_names">εδώ</a>&#160;<a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Μάθετε σχετικά με το <a href="http://en.wikipedia.org/wiki/Symmetric-key_algorithm">Συμμετρικό κλειδί</a>&#160;<a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>ή πιο απλά, <a href="http://lmgtfy.com/?q=Coursera+Cryptography#">let me google that for you</a>&#160;<a class="footnote-backref" href="#fnref:5" rev="footnote" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Ε, μη μου πείτε ότι δεν έχετε δει την <a href="https://www.youtube.com/watch?v=x2-MCPa_3rU">συγκεκριμένη σκηνή</a> από την ταινία Forest Gump&#160;<a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/how-to-set-shortcut-icons" title="Previous: How to set Shortcut&nbsp;Icons">How to set Shortcut&nbsp;Icons</a></li>
+ 
+                <li class="next_article"><a href="/new-dedicated-server-in-da-house-me-5-euro" title="Next: New dedicated server in da house με 5&nbsp;Ευρώ">New dedicated server in da house με 5&nbsp;Ευρώ</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2014-12-19T00:01:00+02:00">Δεκ 19, 2014</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#How-to-ref">How-to</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#how-to-ref">how-to
+                    <span>1</span>
+</a></li>
+                <li><a href="/tags.html#openssl-ref">openssl
+                    <span>1</span>
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> onCrash="Reboot();"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://oncrashreboot.com" property="cc:attributionName" rel="cc:attributionURL">Talha Mansoor</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

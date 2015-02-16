@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linux = 'ed'</title><link href="/" rel="alternate"></link><link href="/feeds/career-advice.atom.xml" rel="self"></link><id>/</id><updated>2013-11-19T01:15:00+02:00</updated><entry><title>A Fitness Coach and the Software Developers</title><link href="/career-advice-software-developers-fitness-coach" rel="alternate"></link><updated>2013-11-19T01:15:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2013-11-01:career-advice-software-developers-fitness-coach</id><summary type="html">&lt;p&gt;Elliott Hulse, a fitness coach, on the topic of &lt;a class="reference external" href="http://www.hulsestrength.com/1-exercise-increase-testosterone/"&gt;building
+muscles&lt;/a&gt;,&lt;/p&gt;
+&lt;blockquote&gt;
+Your muscles need to be stressed to a point where they are &lt;span class="caps"&gt;FORCED&lt;/span&gt; to
+grow bigger and stronger. Otherwise they will stay the same, seeing
+no need to waste valuable energy on developing a bigger musculature.
+Something key to remember, for any physical goal, is that the body
+will always take the path of least resistance. Put it in an
+environment where &lt;span class="caps"&gt;YOUR&lt;/span&gt; &lt;span class="caps"&gt;GOAL&lt;/span&gt; is the only possible outcome.&lt;/blockquote&gt;
+&lt;p&gt;To have big muscles you have to lift heavy weights. Heavier than what
+you lift easily. If you won&amp;#8217;t push your body, it won&amp;#8217;t develop.
+Forcing your body to do the &lt;em&gt;impossible&lt;/em&gt; is the only way to make it&amp;nbsp;develop.&lt;/p&gt;
+&lt;p&gt;We all create a comfort zone. We build it, cherish it, rely on it, and then we
+lock ourselves inside it. This is true for software development&amp;nbsp;too.&lt;/p&gt;
+&lt;p&gt;You never improve if you cage yourself in your comfort&amp;nbsp;zone.&lt;/p&gt;
+&lt;p&gt;Call your specific skills your niche. Proclaim that the your programming
+language is the best language ever created. Fall in love
+with your platform and become its ardent worshipper. Your&amp;nbsp;call!&lt;/p&gt;
+&lt;p&gt;You cannot improve with this&amp;nbsp;attitude.&lt;/p&gt;
+&lt;div class="figure align-right"&gt;
+&lt;img alt="A butterfly out of its cocoon" src="/images/career-advice-from-a-fitness-coach-butterfly-on-flower.jpg" /&gt;
+&lt;p class="caption"&gt;&lt;span class="caps"&gt;CC&lt;/span&gt; &lt;a class="reference external" href="https://secure.flickr.com/photos/bigtallguy/9508035181/"&gt;image&lt;/a&gt; courtesy of &lt;a class="reference external" href="https://secure.flickr.com/photos/bigtallguy/"&gt;Paul&amp;nbsp;Reynolds&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;C was the first programming language I learned. After few months, I
+landed on my first job where I kept developing softwares in C. For a
+long time I didn&amp;#8217;t bother to learn how to use a debugger at&amp;nbsp;all.&lt;/p&gt;
+&lt;p&gt;My excuse was something along these lines, &amp;quot;I can debug all I want using log
+statements thrown all around the code.&amp;quot; This was a good enough excuse for&amp;nbsp;many.&lt;/p&gt;
+&lt;p&gt;The real reason was that learning a command line debugger (&lt;span class="caps"&gt;GDB&lt;/span&gt;) scared&amp;nbsp;me.&lt;/p&gt;
+&lt;p&gt;Each time I opened up a &lt;span class="caps"&gt;GDB&lt;/span&gt; tutorial, I would close the browser tab within few
+minutes. &amp;quot;Gosh! What is this? The lingo is so alien. What the heck writer is
+babbling about? Argh! I will never get&amp;nbsp;it.&lt;/p&gt;
+&lt;p&gt;&amp;quot;I have reached my limits. Why add another item in list of my failures?  Lets
+drop it. I don&amp;#8217;t have to feel so uncomfortable. My world is going fine without
+&lt;span class="caps"&gt;GDB&lt;/span&gt;.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Don&amp;#8217;t do what I&amp;nbsp;did.&lt;/p&gt;
+&lt;p&gt;This approach may work for some time and in few cases. Unfortunately, this
+attitude becomes persistent and turns into a habit. It begins to spread from
+your programming skills into rest of your&amp;nbsp;life.&lt;/p&gt;
+&lt;p&gt;In the same class where I learned C, several students gave up on C. Their
+excuse, &amp;quot;C is not widely used. We are interested in learning Java or C#. These
+will offer us better job&amp;nbsp;prospects.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Guess what? They didn&amp;#8217;t come around to learn any of their favorite
+languages. First they gave up on pointers, and then C. Same guys gave up
+on object-oriented programming introductory classes. When C# classes
+started they weren&amp;#8217;t ready for it at all. Finally they stopped
+programming&amp;nbsp;altogether.&lt;/p&gt;
+&lt;p&gt;Some took up graphic designing, and rest took up quality
+assurance. The attitude of shying away from difficult stripped away
+their&amp;nbsp;dreams.&lt;/p&gt;
+&lt;p&gt;If you want to improve, get out of your comfort zone. Pick something
+that challenges&amp;nbsp;you.&lt;/p&gt;
+&lt;p&gt;Do whatever that makes you&amp;nbsp;uncomfortable.&lt;/p&gt;
+</summary><category term="self-improvement"></category><category term="beginners"></category><category term="be-better"></category><category term="fitness"></category></entry></feed>
