@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Panos Georgiadis" />
+        <meta name="copyright" content="Panos Georgiadis" />
+
+        <meta name="description" content="Elegant shows Table of Contents, if available, non intrusively to give a clean reading experience to the visitor
+" />
+<meta name="keywords" content="pelican-theme, reST, markdown, navigation, web-design, Elegant - Pelican Theme, " />
+        <title>How Elegant displays Table of&nbsp;Contents  · Linux = 'ed'
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Full Atom Feed" />
+        <link href="/feeds/Career-Advice.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Career Advice Category Atom Feed" />
+        <link href="/feeds/Editorial.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Editorial Category Atom Feed" />
+        <link href="/feeds/Elegant---Pelican-Theme.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Elegant - Pelican Theme Category Atom Feed" />
+        <link href="/feeds/How-to.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - How-to Category Atom Feed" />
+        <link href="/feeds/Nginx.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - Nginx Category Atom Feed" />
+        <link href="/feeds/OSX-Software-Development.atom.xml" type="application/atom+xml" rel="alternate" title="Linux = 'ed' - OSX Software Development Category Atom Feed" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name><span style="color:black;">Linux</span> <span style="color:darkblue;">=</span> <span style="color:#AA1032;">'ed'</span></span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/skhetika">Σχετικά</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/how-elegant-displays-table-of-contents"> How Elegant displays Table of&nbsp;Contents  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+    <div class="span2 table-of-content">
+        <nav>
+        <h4>Contents</h4>
+        <div class="toc">
+<ul>
+<li><a href="#markdown-format">Markdown Format</a><ul>
+<li><a href="#enable-permalinks">Enable Permalinks</a></li>
+</ul>
+</li>
+<li><a href="#restructuredtext-format">reStructuredText Format</a><ul>
+<li><a href="#hide-default-title-text">Hide Default Title Text</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </nav>
+    </div>
+    <div class="span8 article-content">
+
+            
+<p>The idea behind Elegant’s design is to make reading a clean and distraction
+free experience. Table of contents is important but it is not part of the
+article content. Therefore, Elegant pushes out table of content to the left of
+the article’s main content. Its font size is relatively smaller. This way,
+table of content stays visible for navigation but reader’s attention to the
+article stays unaffected.</p>
+<p>To utilise this feature, you need to use
+<a href="https://github.com/getpelican/pelican-plugins">extract_toc</a> plugin. Elegant
+encloses the table of content in <code>&lt;nav&gt;</code> tag for semantics.</p>
+<p>You also need to make sure your markup format generates a table of contents of
+your article.</p>
+<h1 id="markdown-format">Markdown Format</h1>
+<p>For Markdown, make sure you have enabled <code>toc</code> extension in Pelican configuration.</p>
+<div class="highlight"><pre><span class="n">MD_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span><span class="s">'toc'</span><span class="p">]</span>
+</pre></div>
+<p>Next, add <code>[TOC]</code> in your article’s markup. Here is a <code>sample.md</code> file.</p>
+<div class="highlight"><pre><span class="n">Title</span><span class="o">:</span> <span class="n">My</span> <span class="n">sample</span> <span class="n">title</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2014</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">03</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">Examples</span>
+
+<span class="o">[</span><span class="n">TOC</span><span class="o">]</span>
+
+<span class="n">This</span> <span class="k">is</span> <span class="n">my</span> <span class="n">first</span> <span class="n">heading</span>
+<span class="o">========================</span>
+
+<span class="n">This</span> <span class="k">is</span> <span class="n">the</span> <span class="n">content</span> <span class="n">of</span> <span class="n">my</span> <span class="n">sample</span> <span class="n">blog</span> <span class="n">post</span><span class="o">.</span>
+
+<span class="n">This</span> <span class="n">my</span> <span class="n">second</span> <span class="n">heading</span>
+<span class="o">======================</span>
+
+<span class="n">I</span> <span class="n">will</span> <span class="n">end</span> <span class="n">my</span> <span class="n">example</span> <span class="n">here</span><span class="o">.</span>
+</pre></div>
+<p>That’s it. Your article’s table of contents will appear on the left side of the
+actual content.</p>
+<h2 id="enable-permalinks">Enable Permalinks</h2>
+<p>You can also take advantage of <code>permalink</code> option in <code>toc</code> extension.</p>
+<div class="highlight"><pre><span class="n">MD_EXTENSIONS</span> <span class="o">=</span> <span class="p">[</span><span class="s">'toc(permalink=true)'</span><span class="p">]</span>
+</pre></div>
+<p>This will generate
+<a href="https://github.com/waylan/Python-Markdown/pull/252">permalinks</a> for every
+heading. Elegant keeps them hidden until user hovers over the heading.</p>
+<p><img alt="Permalinks example using Markdown" src="/images/elegant-theme-toc-permalinks.png"/></p>
+<h1 id="restructuredtext-format">reStructuredText Format</h1>
+<p>reStructuredText format has
+<a href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents"><code>contents</code></a>
+directive that generates table of contents of the post. Here is a <code>sample.rst</code>
+file.</p>
+<div class="highlight"><pre><span class="gh">My sample title</span>
+<span class="gh">###############</span>
+
+<span class="nc">:date:</span> <span class="nf">2014-12-03</span>
+<span class="nc">:category:</span> <span class="nf">Examples</span>
+
+<span class="p">..</span> <span class="ow">contents</span><span class="p">::</span>
+
+<span class="gh">This is my first heading</span>
+<span class="gh">========================</span>
+
+This is the content of my sample blog post.
+
+<span class="gh">This my second heading</span>
+<span class="gh">======================</span>
+
+I will end my example here.
+</pre></div>
+<h2 id="hide-default-title-text">Hide Default Title Text</h2>
+<p>Unlike Markdown, reStructuredText generates a default title for the table of
+contents. From <a href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents">official
+documentation</a>,</p>
+<blockquote>
+<p>Language-dependent boilerplate text will be used for the title. The English
+default title text is “Contents”.</p>
+</blockquote>
+<p>You end up having two titles for your table of contents, one generated by
+reStructuredText and the other by Elegant.</p>
+<p>Unfortunately, there is <a href="https://github.com/talha131/pelican-elegant/issues/54">no straightforward
+way</a> to disable default
+title generation in reStructuredText. You need to add following rule in your
+<code>custom.css</code> file to hide the duplicate title.</p>
+<div class="highlight"><pre><span class="nt">div</span><span class="nf">#contents</span> <span class="nt">p</span><span class="nc">.topic-title.first</span> <span class="p">{</span>
+    <span class="k">display</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>See <a href="how-to-use-custom-css" title="How to use custom.css">this article</a> to understand how you can use
+<code>custom.css</code>.</p>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/how-to-show-rss-feeds-icon" title="Previous: How to show <span class="caps">RSS</span> feeds&nbsp;icon">How to show <span class="caps">RSS</span> feeds&nbsp;icon</a></li>
+ 
+                <li class="next_article"><a href="/how-to-customize-elegant" title="Next: How to Customize&nbsp;Elegant">How to Customize&nbsp;Elegant</a> »</li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2014-03-18T11:03:00+02:00">Μαρ 18, 2014</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Elegant---Pelican-Theme-ref">Elegant - Pelican Theme</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#markdown-ref">markdown
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#navigation-ref">navigation
+                    <span>3</span>
+</a></li>
+                <li><a href="/tags.html#pelican-theme-ref">pelican-theme
+                    <span>17</span>
+</a></li>
+                <li><a href="/tags.html#reST-ref">reST
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#web-design-ref">web-design
+                    <span>9</span>
+</a></li>
+            </ul>
+
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+                <form action="empty" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <h4>Get Monthly Updates</h4>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter your email..." required>
+                    <div class="clear"><input type="submit" value="Send me Free updates" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </form>
+            </div>
+
+            <!--End mc_embed_signup-->
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-license"><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"> onCrash="Reboot();"</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://oncrashreboot.com" property="cc:attributionName" rel="cc:attributionURL">Talha Mansoor</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</li>
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

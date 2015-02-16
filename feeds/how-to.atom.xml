@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linux = 'ed'</title><link href="/" rel="alternate"></link><link href="/feeds/how-to.atom.xml" rel="self"></link><id>/</id><updated>2015-01-21T20:23:00+02:00</updated><entry><title>Πώς συνδέω ένα domain (IPHost) με τον server μου</title><link href="/pos-sindeo-ena-domain-apo-tin-IPHost-me-tin-ip-tou-server-mou" rel="alternate"></link><updated>2015-01-21T20:23:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-01-21:pos-sindeo-ena-domain-apo-tin-IPHost-me-tin-ip-tou-server-mou</id><summary type="html">&lt;p&gt;Καταρχήν να ξεκινήσω λέγοντας ότι &lt;strong&gt;δεν&lt;/strong&gt; έχω σκοπό να κάνω διαφήμιση την &lt;em&gt;IPHost&lt;/em&gt;.
+Ο λόγος που την χρησιμοποιώ, είναι γιατί ήμουν αρκετά τυχερός ώστε να κερδίσω ένα &lt;em&gt;domain&lt;/em&gt; με κατάληξη &lt;strong&gt;.eu&lt;/strong&gt; σ&amp;#8217;έναν διαγωνισμό
+του &lt;a href="http://insomnia.gr"&gt;Insomnia&lt;/a&gt;. Ε, αφού το κέρδισα, λογικό (και επόμενο είναι) να το χρησιμοποιήσω. 
+Η αλήθεια είναι ότι σπάνια παίρνω μέρος σε διαγωνισμούς. Συνήθως τα Χριστούγεννα θα δείτε ότι
+γίνεται πανικός σε διάφορα γνωστά &lt;em&gt;forums&lt;/em&gt;, όπως είναι το &lt;a href="http://thelab.gr"&gt;Thelab.gr&lt;/a&gt;, το &lt;a href="http://insomnia.gr"&gt;Insomnia.gr&lt;/a&gt;, &lt;a href="http://hwbox.org"&gt;HWBox&lt;/a&gt;, &lt;a href="http://deltahacker.gr"&gt;deltahacker&lt;/a&gt; κ.α. τότε πραγματικά αξίζει να πάρεις μέρος γιατί έχουν μερικά πολύ
+όμορφα δώρα. Θυμάμαι χαρακτηριστικά, έναν πολύ διασκεδαστικό διαγωνισμό που είχα πάρει μέρος: ήταν στο &lt;em&gt;παλιό - καλό&lt;/em&gt; &lt;strong&gt;OutofSpecs&lt;/strong&gt;, όπου ο νικητής θα ήταν αυτός που θα κατάφερνε να πετύχει το χαμηλότερο score στο &lt;a href="http://www.futuremark.com/benchmarks/legacy"&gt;3DMark 2001 &lt;span class="caps"&gt;SE&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Οι καλύτερες&amp;nbsp;εποχές!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Τέλος πάντων, ας μην μακρυγορώ και ας μπω στο θέμα: Όπως θα ξέρετε ήδη&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, έχω αγοράσει έναν &lt;em&gt;dedicated server&lt;/em&gt; αξίας &lt;strong&gt;5 Ευρώ&lt;/strong&gt;.
+ Ω ναι, μιλάμε για real hardware και όχι για κάποιο &lt;span class="caps"&gt;VPS&lt;/span&gt; με &lt;em&gt;shared resources&lt;/em&gt;. Βλέπετε, μετά από αυτό που τράβηξα με την &lt;em&gt;Dreamhost&lt;/em&gt;
+και το &lt;a href="http://ubuntuxtreme.com"&gt;UbuntuXtreme.com&lt;/a&gt;, όπου κάθε &lt;em&gt;&amp;#8220;τρεις-και-λίγο&amp;#8221;&lt;/em&gt; το &lt;span class="caps"&gt;VPS&lt;/span&gt; έκανε reboot και με χρεώνε λόγω έλειψης
+πόρων κάνοντας ταυτόχρονα και το website μή προσπελάσιμο από τους επισκέπτες, υποσχέθηκα στον εαυτό μου ότι δεν θα δοκιμάσω ποτέ
+ξανά &lt;span class="caps"&gt;VPS&lt;/span&gt;. Ποτέ ξανά &lt;span class="caps"&gt;VPS&lt;/span&gt;. Τα &lt;span class="caps"&gt;VPS&lt;/span&gt; είναι @&amp;amp;&lt;em&gt;^$&amp;amp;^@#&lt;/em&gt;^&amp;nbsp;!!!&lt;/p&gt;
+&lt;h1&gt;&lt;span class="caps"&gt;DNS&lt;/span&gt;&lt;/h1&gt;
+&lt;p&gt;Προφανώς και όταν θέλουμε ένα domain να κάνει &lt;strong&gt;resolve σε μία &lt;span class="caps"&gt;IP&lt;/span&gt;&lt;/strong&gt;, την δουλειά την αναλαμβάνει ο &lt;span class="caps"&gt;DNS&lt;/span&gt;. Στην συγκεκριμένη
+περίπτωση, θα πρέπει να πάμε στην εταιρία που έχουμε κάνει register το Domain μας, και εκεί, κάπου, στον πίνακα ελέγχου,
+θα πρέπει να μας παρέχει την δυνατότητα να τροποιποιήσουμε τα &lt;em&gt;&lt;span class="caps"&gt;DNS&lt;/span&gt; Records/Zone&lt;/em&gt;. Πήγα λοιπόν στο &lt;em&gt;control panel&lt;/em&gt; της IPHost,
+έκανα login, πήγα στα &amp;#8220;Domains μου&amp;#8221; και&amp;nbsp;ιδού:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pinakas IPHost" src="/images/iphost1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Στην συνέχεια πατάμε &lt;strong&gt;Δημιουργία/Διαχείριση Ζώνης &lt;span class="caps"&gt;DNS&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="DNS Zone IPHost" src="/images/iphostdnszone.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;#8230; στην συνέχεια βάζω την IPv4 του &lt;em&gt;Dedicated Server&lt;/em&gt; μου, η οποία είναι &lt;code&gt;37.187.4.87&lt;/code&gt;, και περιμένω να ρυθμιστούν όλα μόνα τους (seriously, πολύ εύκολο :P&amp;nbsp;)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="DNS Zone Completed" src="/images/iphostzoneok.png" /&gt;&lt;/p&gt;
+&lt;h1&gt;Επαλήθευση, ότι&amp;nbsp;λειτουργεί&lt;/h1&gt;
+&lt;p&gt;Επειδή παίρνει κάποια ώρα το όλο &lt;em&gt;update&lt;/em&gt; των &lt;em&gt;nameservers&lt;/em&gt;, μην περιμένετε να δείτε άμεση ανταπόκριση από τον browser. Στην δική μου περίπτωση δεν περιμένω έτσι κι αλλιώς, αφού δεν τρέχω κάποιον webserver την &lt;span class="caps"&gt;TCP&lt;/span&gt; 80. Σε πρώτη φάση λοιπόν, ας ανοίξουμε το τερματικό και ας παίξουμε με τα τόσα &lt;em&gt;παιχνίδια&lt;/em&gt; που υπάρχουν στο&amp;nbsp;Linux.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;nslookup pingouinos.eu
+Server:     192.168.178.1
+Address:    192.168.178.1#53
+
+** server can&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;t find pingouinos.eu: NXDOMAIN
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Όπως φαίνεται ακόμα δεν έχουν ανανεωθεί οι &lt;span class="caps"&gt;DNS&lt;/span&gt;. &lt;em&gt;Ιδέα&lt;/em&gt;: Να χρησιμοποιήσω τους &lt;span class="caps"&gt;DNS&lt;/span&gt; της Google&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;, οι οποίοι
+προφανώς είναι πολύ καλύτεροι από αυτούς που χρησιμοποιεί ο γερμανικός &lt;span class="caps"&gt;ISP&lt;/span&gt; μου. Για όσους δεν γνωρίζουν, οι &lt;span class="caps"&gt;DNS&lt;/span&gt; της Google είναι
+&lt;code&gt;8.8.8.8&lt;/code&gt; και &lt;code&gt;8.8.4.4&lt;/code&gt;. Οπότε δίνουμε ξανά την ίδια εντολή, μόνο που αυτή την φορά το request θα γίνει από την&amp;nbsp;Google:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; nslookup pingouinos.eu 8.8.8.8
+Server:     8.8.8.8
+Address:    8.8.8.8#53
+
+Non-authoritative answer:
+Name:   pingouinos.eu
+Address: 37.187.4.87
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Ώπα! Η Google είναι ενημερωμένη, βλέπει τις αλλαγές! Αυτό σημαίνει ότι όλα τα κάναμε σωστά και λίγες ώρες,
+θα ενημερωθεί και ο δικός μας πάροχος και &lt;em&gt;όλα ok&lt;/em&gt;. Μπορείτε επίσης να διευρήνεσετε ακόμα περισσότερο τα πράγματα
+χρησιμοποιώντας την εντολή &lt;code&gt;dig&lt;/code&gt;, η οποία ρωτάει για πληροφορίες όπως &lt;code&gt;A&lt;/code&gt;, &lt;code&gt;NS&lt;/code&gt;, &lt;code&gt;MX&lt;/code&gt;. Για&amp;nbsp;παράδειγμα:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;dig pingouinos.eu NS 8.8.8.8
+
+&lt;span class="p"&gt;;&lt;/span&gt; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.8.3-P1 &amp;lt;&amp;lt;&amp;gt;&amp;gt; pingouinos.eu NS 8.8.8.8
+&lt;span class="p"&gt;;;&lt;/span&gt; global options: +cmd
+&lt;span class="p"&gt;;;&lt;/span&gt; Got answer:
+&lt;span class="p"&gt;;;&lt;/span&gt; -&amp;gt;&amp;gt;HEADER&lt;span class="s"&gt;&amp;lt;&amp;lt;- opcode: QUERY, status: NOERROR, id: 46292&lt;/span&gt;
+&lt;span class="s"&gt;;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0&lt;/span&gt;
+
+&lt;span class="s"&gt;;; QUESTION SECTION:&lt;/span&gt;
+&lt;span class="s"&gt;;pingouinos.eu.         IN  NS&lt;/span&gt;
+
+&lt;span class="s"&gt;;; AUTHORITY SECTION:&lt;/span&gt;
+&lt;span class="s"&gt;eu.         516 IN  SOA ns04.iphost.gr. admin.iphost.gr. 2009022301 14400 7200 604800 14400&lt;/span&gt;
+
+&lt;span class="s"&gt;;; Query time: 2 msec&lt;/span&gt;
+&lt;span class="s"&gt;;; SERVER: 192.168.178.1#53(192.168.178.1)&lt;/span&gt;
+&lt;span class="s"&gt;;; WHEN: Wed Jan 21 21:01:41 2015&lt;/span&gt;
+&lt;span class="s"&gt;;; MSG SIZE  rcvd: 87&lt;/span&gt;
+
+&lt;span class="s"&gt;;; Got answer:&lt;/span&gt;
+&lt;span class="s"&gt;;; -&amp;gt;&amp;gt;HEADER&amp;lt;&amp;lt;- opcode&lt;/span&gt;: QUERY, status: NXDOMAIN, id: 19434
+&lt;span class="p"&gt;;;&lt;/span&gt; flags: qr rd ra&lt;span class="p"&gt;;&lt;/span&gt; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 0
+
+&lt;span class="p"&gt;;;&lt;/span&gt; QUESTION SECTION:
+&lt;span class="p"&gt;;&lt;/span&gt;8.8.8.8.           IN  A
+
+&lt;span class="p"&gt;;;&lt;/span&gt; AUTHORITY SECTION:
+.           &lt;span class="m"&gt;783&lt;/span&gt; IN  SOA a.root-servers.net. nstld.verisign-grs.com. &lt;span class="m"&gt;2015012101&lt;/span&gt; &lt;span class="m"&gt;1800&lt;/span&gt; &lt;span class="m"&gt;900&lt;/span&gt; &lt;span class="m"&gt;604800&lt;/span&gt; 86400
+
+&lt;span class="p"&gt;;;&lt;/span&gt; Query &lt;span class="nb"&gt;time&lt;/span&gt;: &lt;span class="m"&gt;1&lt;/span&gt; msec
+&lt;span class="p"&gt;;;&lt;/span&gt; SERVER: 192.168.178.1#53&lt;span class="o"&gt;(&lt;/span&gt;192.168.178.1&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;;;&lt;/span&gt; WHEN: Wed Jan &lt;span class="m"&gt;21&lt;/span&gt; 21:01:41 2015
+&lt;span class="p"&gt;;;&lt;/span&gt; MSG SIZE  rcvd: 100
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Κάπου εδώ θα σταματήσω, και θα επανέλθω αύριο να ανανεώσω το άρθρο, ώστε να είμαστε &lt;strong&gt;100% σίγουροι&lt;/strong&gt; ότι λειτούργησε η &lt;em&gt;&amp;#8220;σύνδεση&amp;#8221;&lt;/em&gt;
+και δεν σας γράφω&amp;nbsp;σαχλαμάρες.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h1&gt;24 ώρες μετά&amp;nbsp;&amp;#8230;&lt;/h1&gt;
+&lt;p&gt;Έχει περάσει σχεδόν μία μέρα, και ήρθε η στιγμή να επαληθεύσουμε αν το &lt;em&gt;pingouinos.eu&lt;/em&gt; κάνει &lt;em&gt;resolve&lt;/em&gt;
+στην &lt;span class="caps"&gt;IP&lt;/span&gt; του server&amp;nbsp;μου:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;drpaneas@macbook:~/Desktop&lt;span class="nv"&gt;$ &lt;/span&gt;nslookup pingouinos.eu
+Server:     192.168.178.1
+Address:    192.168.178.1#53
+
+Non-authoritative answer:
+Name:   pingouinos.eu
+Address: 37.187.4.87
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Τέλεια! Οπότε τωρα δεν χρειάζεται να θυμάμαι την &lt;span class="caps"&gt;IP&lt;/span&gt;&amp;nbsp;:D&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Διαβάστε το άρθρο &lt;a href="http://linuxed.gr/editorial/new-dedicated-server-in-da-house-me-5-euro/"&gt;New dedicated server in da house με 5 Eυρώ&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Περισσότερες πληροφορίες για τους Public Google &lt;span class="caps"&gt;DNS&lt;/span&gt; θα βρείτε &lt;a href="https://developers.google.com/speed/public-dns/"&gt;εδώ&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="iphost"></category><category term="domain"></category><category term="dns"></category></entry><entry><title>Πώς να κάνω encrypt και decrypt αρχεία χρησιμοποιώντας το OpenSSL toolkit</title><link href="/pos-mporo-na-kano-encrypt-kai-decrypt-arxeia-xrismopoiontas-to-openssl-toolkit" rel="alternate"></link><updated>2014-12-19T00:01:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2014-12-19:pos-mporo-na-kano-encrypt-kai-decrypt-arxeia-xrismopoiontas-to-openssl-toolkit</id><summary type="html">&lt;p&gt;Ντεμπούτο του Linuxed! Αναρωτιώμουν από πού να ξεκινήσω το άρθρο μου, αλλά σήμερα νιώθω ότι έχω πολλά να πω, και θέλω να αποφύγω να ξεκινάω να σας γράφω &lt;em&gt;για το ένα και για το άλλο&lt;/em&gt; και να αφήνω το σημαντικό στο τέλος. Αποφάσισα λοιπόν αντί άλλων καθυστερήσεων να μπω κατευθείαν στο κυρίως κείμενο&amp;#8230; &lt;em&gt;με μία μικρή εισαγωγή&lt;/em&gt;&amp;#8230; &lt;/p&gt;
+&lt;p&gt;Αν είστε &lt;em&gt;fan&lt;/em&gt; του &lt;a href="http://el.wikipedia.org/wiki/%CE%9F_%CE%86%CF%81%CF%87%CE%BF%CE%BD%CF%84%CE%B1%CF%82_%CF%84%CF%89%CE%BD_%CE%94%CE%B1%CF%87%CF%84%CF%85%CE%BB%CE%B9%CE%B4%CE%B9%CF%8E%CE%BD"&gt;LoTR&lt;/a&gt;, φαντάζομαι πως θα θυμάστε την σκηνή&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; που ο Gandalf μπαίνει μέσα στο Bag End και ρωτάει τον Frodo: &amp;#8220;&lt;em&gt;Is it secret? Is it safe?&lt;/em&gt;&amp;#8220;. Στην συνέχεια, ο Frodo επιβεβαιώνει τα λεγόμενά του, δείχνοτας πως το δαχτυλίδι παραμένει σφραγισμένο μέσα στον φάκελο. Προφανώς, για όλους εμάς, ένας φάκελος και μια σφραγίδα, δεν καλύπτουν τα σημερινα security standards. Οπότε, για όλους εμάς, το &lt;em&gt;δαχτυλίδι&lt;/em&gt; δεν είναι &lt;strong&gt;ούτε secret&lt;/strong&gt;, &lt;strong&gt;ούτε safe&lt;/strong&gt;, αλλά βλέπετε, εκείνη την &lt;em&gt;μυθική&lt;/em&gt; εποχή της &lt;em&gt;Μέσης Γης&lt;/em&gt;, οι μάγοι και άλλα πλάσματα του Eru Ilúvatar, δεν είχαν &lt;span class="caps"&gt;PC&lt;/span&gt; ή Internet. Αντίθετα σήμερα, οι μάγοι της εποχής μας έχουν τα δικά τους εργαλεία και είναι γνωστοί ως&amp;nbsp;Hackers.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Αυτό όμως είναι μία ιστορία, θα πούμε άλλη&amp;nbsp;φορά!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Keep it secret, Keep it&amp;nbsp;Safe&lt;/h2&gt;
+&lt;p&gt;Το βασικό μου πρόβλημα ξεκίνησε όταν θέλησα να στείλω ένα αρχείο &lt;em&gt;από&lt;/em&gt; τον server μου στην Ελλάδα &lt;em&gt;στο&lt;/em&gt; macbook μου εδώ στην Γερμανία. Λοιπόν, για να πούμε τα πράγματα με το όνομά τους: Δεν ήταν ένα οποιοδήποτε αρχείο. Δεν μπορώ να σας πω &amp;#8220;τι είναι&amp;#8221; και &amp;#8220;τι δεν είναι&amp;#8221;, καθώς η κρυφή του ταυτότητα θαρρώ πως δίνει ένα &amp;#8220;μυστικό τόνο&amp;#8221; στο άρθρο. Αυτό δε σημαίνει ότι είναι μυστικό και σ&amp;#8217;εμένα, μια χαρά ξέρω &amp;#8220;περί&amp;#8221; ποιου αρχείου πρόκειται. Κατά μία έννοια θα μπορούσε να πει κανείς ότι κ εσείς ξέρετε, ακόμα κι αν δεν έχετε άμεση πρόσβαση στο μυαλό μου ή τον υπολογιστή μου, μπορείτε να κάνετε&amp;nbsp;εικασίες. &lt;/p&gt;
+&lt;p&gt;Καταλαβαίνετε που το πάω; Μπορεί να (μην) ξέρετε για ποιο αρχείο σας μιλάω, αλλά για όσους με ξέρουν και &amp;#8220;το μυαλό τους πηγαίνει κατά κει&amp;#8221;, να ξέρουν οτι δεν θα το βρουν. Unsurprisingly, την ίδια μοίρα μ&amp;#8217;εσάς, θα έχει και η Deutsche Telekom και η &lt;span class="caps"&gt;NSA&lt;/span&gt; που έχουν&amp;#8221;έχει στήσει αφτί&amp;#8221; αμφότεροι στο τέλος της γραμμής. Όχι, δεν μπορεί και δεν θα μπορέσει ποτέ &lt;strong&gt;κανείς&lt;/strong&gt; να μάθει για ποιο αρχείο σας μιλάω. Μπα. Με τίποτα&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="#fn:2" rel="footnote"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Αν προσπαθείσετε να δείτε τα περιεχόμενα του&amp;nbsp;αρχείου:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;cat file 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;θα δείτε κάτι&amp;nbsp;τέτοιο:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Salted__???~?B?&lt;span class="s1"&gt;&amp;#39;?`c?g&amp;lt;?)/g&amp;amp;??????[?&amp;lt;???O?d?S??~?q???Ѫi??C??&lt;/span&gt;
+&lt;span class="s1"&gt;                                                           &amp;quot;?Fz@????\pg????2?i|?f??L?&amp;gt;?d{?:*???????v??K?&amp;quot;?Y?̷?p?Z???(?Q???????*dme???Fgۦ?   ??&lt;/span&gt;
+&lt;span class="s1"&gt; c??n?[Bo?r?^?;L+!?&lt;/span&gt;
+&lt;span class="s1"&gt;                   %7?L?*?Qr?Plb?b{Y    /?1[?=,﹯?}8K?rP?Ņ??U????f&amp;quot;{Ǒ?&lt;/span&gt;
+&lt;span class="s1"&gt;                                                                     ?-?&amp;amp;??O[????m?Qw$???҈R?(?] ??6;yQ??Wy)?FO?K?*I??URZ?l2)Xʓ????N?%??Q-??d??{??U?o&lt;/span&gt;
+&lt;span class="s1"&gt;     ?ڎ?;U&amp;#39;&lt;/span&gt;?i?eR?/?R~???&lt;span class="sb"&gt;`&lt;/span&gt;???NM&amp;lt;?ԡ&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="nv"&gt;0o&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;?P??9?̢j?/??
+?3?v?S?o&lt;span class="s1"&gt;&amp;#39;?????۬?GM?X϶?^??OVr?&amp;quot;????\&amp;amp;L.?V8\|??b??????ՉJ?)????9;+??SC?c?㱶?]??\$?7G6??W??j??!l??$?_UO?i??H?H???&lt;/span&gt;
+&lt;span class="s1"&gt;??IHq??:?M ?G??I(4??/??S:Ӷ???Z?z??????E?9&amp;#39;&lt;/span&gt;?a?&lt;span class="o"&gt;(&lt;/span&gt;U߃D?Ny5???hD????@Z2U&amp;lt;?ɽ?
+sx?ϴ#??????W1?&lt;span class="s1"&gt;&amp;#39;?T??|=ы?5?d?$?}?쪯YX(J/?}2?&amp;#39;&lt;/span&gt;xx?t??Q#?@?&amp;gt;c&lt;span class="o"&gt;{{&lt;/span&gt;????Dd5??&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;?~?lBmR?
+?jf?????@n?R??թG???T?I_W??&lt;span class="o"&gt;(&lt;/span&gt;??????wQ?&lt;span class="o"&gt;)&lt;/span&gt;q,?6M?&lt;span class="o"&gt;(&lt;/span&gt;?w&lt;span class="nv"&gt;$?&lt;/span&gt;??ᬥ???1??uxc,9&lt;span class="o"&gt;(&lt;/span&gt;??*t1??yh??+U?? ?d??NL?8?ȴ?/?&lt;span class="s1"&gt;&amp;#39;?OLa??z?&amp;amp;J9DR\c??f?%??sÒu????&lt;/span&gt;
+&lt;span class="s1"&gt;                                                                                                                        )s?9?f?x??E???\q???l??;?9&lt;/span&gt;
+&lt;span class="s1"&gt;???!L?z?%?})?(??a?}?&amp;gt;_?-?_?????&amp;amp;???R?XQ?x??U?C7?Z?:`F)@[?W5u??je??$??$`&amp;amp;??3?[jF&lt;/span&gt;
+&lt;span class="s1"&gt;                                                                               ¡?R??#??a??w?@ q|y6??5??*&amp;amp;??Vw?9}???om?a?_8??M0?!???c??h?}};گ?#?G?ĩ? ??BVJ^Ґ?V9&lt;/span&gt;
+&lt;span class="s1"&gt;                  H???*W6?kE??????Ơ&lt;/span&gt;
+&lt;span class="s1"&gt;                                   Zp]F86?b?8?5?8?N?,?N???1&amp;#39;&lt;/span&gt;.??1???:??%@&lt;span class="o"&gt;=&lt;/span&gt;?I@???????&lt;span class="s1"&gt;&amp;#39;?OW?s?u?O?ꨯm??s?Mwzq???????????*?ƾx1V4???.?Ր???87??e&lt;/span&gt;
+&lt;span class="s1"&gt;??ܢO?r???DՁZ?1????Y7?WQE?ְ?X?Ps??Gseݍ&lt;/span&gt;
+&lt;span class="s1"&gt;8?wP?)??/%????}?`?Has?I?B?l&amp;#39;&lt;/span&gt;????+
+?ۖF
+   ?L? ?F?rT?&lt;span class="o"&gt;)&lt;/span&gt;?e&lt;span class="o"&gt;{&lt;/span&gt;?#^m!IO??0P?3????_4Kgϗ,&lt;span class="se"&gt;\?&lt;/span&gt;??D???????8&lt;span class="p"&gt;;&lt;/span&gt;???H?q
+????nTdZS???_???&lt;span class="p"&gt;|&lt;/span&gt;&lt;span class="se"&gt;\߷&lt;/span&gt;?t???P?
+                          ?.???t?0c:&lt;span class="o"&gt;=&lt;/span&gt;?3yney#E??D?~?5????؅????أ8% .?U?l!6&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;
+q4&lt;span class="nv"&gt;$i&lt;/span&gt;???8?ЕP7F&lt;span class="p"&gt;|&lt;/span&gt;Ԃ0Q????:??C???B?y??Ә*WW?j&amp;gt;V貺???Vi5uwyc??7%&lt;span class="o"&gt;[&lt;/span&gt;?
+???s&lt;span class="nv"&gt;$?&lt;/span&gt;N???p??&lt;span class="se"&gt;\r&lt;/span&gt;i5xza???&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;l?&lt;span class="s2"&gt;&amp;quot;o@?T?몜??o#u?&lt;/span&gt;&lt;span class="nv"&gt;$H&lt;/span&gt;&lt;span class="s2"&gt;???&lt;/span&gt;
+&lt;span class="s2"&gt;/O?F?&amp;quot;&lt;/span&gt;?R@n??6?o??8?:??Άf?.&lt;span class="p"&gt;|&lt;/span&gt;?????9P??n
+                                     &amp;gt;?&lt;span class="sb"&gt;`&lt;/span&gt;?O&lt;span class="nv"&gt;$*&lt;/span&gt;?????x????ã??&lt;span class="o"&gt;)&lt;/span&gt;??5?D?&lt;span class="o"&gt;{&lt;/span&gt;v???Q&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;?Q??????9??j *-
+                                                                                          ?Zxߚ?A?U?O?v&amp;gt;j?g??-?&amp;gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;:??i?&lt;span class="o"&gt;]&lt;/span&gt;??????5&lt;span class="nv"&gt;$a&lt;/span&gt;?9?U+????셴&amp;lt;+???k??r&lt;span class="nv"&gt;$O&lt;/span&gt;?&lt;span class="p"&gt;;&lt;/span&gt;x:???l&lt;span class="o"&gt;=&lt;/span&gt;?B4arp?
+??B??4?@??&lt;span class="o"&gt;[&lt;/span&gt;?3N?q??!h???g&lt;span class="sb"&gt;`&lt;/span&gt;?pJ6???뭁????N??#??q??/???&amp;gt;?Q??#??ҧ?Q?W?????L??5xVnلΐ
+??&lt;span class="o"&gt;(&lt;/span&gt;?&lt;span class="s2"&gt;&amp;quot;t?7???ň=?MH?O??c?sbF?@a??#?aK,?Q?q??b??Z ͊?F??g%܅??1v??&lt;/span&gt;&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="s2"&gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Οι παραπάνω &amp;#8220;&lt;em&gt;ασυναρτησίες&lt;/em&gt;&amp;#8221; οφείλονται στο γεγονός ότι το αρχείο είναι κρυπτογραφημένο (&lt;em&gt;encrypted&lt;/em&gt;). Και ένα αρχείο, μη προσπελάσιμο, είναι τελείως άχρηστο. Για να το αποκρυπτογραφίσετε, θα πρέπει να γνωρίζετε την τέχνη του OpenSSL, καθώς και κάποια άλλα πράγματα, όπως: τον &lt;strong&gt;Cipher&lt;/strong&gt; και το &lt;strong&gt;passphrase&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Κρυπτογράφιση με το&amp;nbsp;OpenSSL&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="Keep it secret keep it safe" src="/images/gandalfopenssl.png" title="Keep it Secret, Keep it Safe" /&gt;&lt;/p&gt;
+&lt;h3&gt;Βήμα 1: Ενεργοποιήστε την κατάσταση κωδικοποίησης&amp;nbsp;αρχείου&lt;/h3&gt;
+&lt;p&gt;The openssl program is a command line tool for using the various cryptography functions of OpenSSL’s crypto library from the shell. It can be also used for file encryption and decryption with Ciphers&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="#fn:3" rel="footnote"&gt;3&lt;/a&gt;&lt;/sup&gt;. Για να χρησιμοποιήσουμε αυτή την λειτουργία, αρκεί να δώσουμε την παράμετρο &lt;code&gt;enc&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;enc&lt;/code&gt; – Encoding with&amp;nbsp;Ciphers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Βήμα 2: Επιλέξτε το αρχείο που θέλετε να&amp;nbsp;κρυπτογραφίσετε&lt;/h3&gt;
+&lt;p&gt;Στην συνέχεια θα επιλέξουμε το αρχείο που θέλουμε να κρυπτογραφίσουμε (&lt;strong&gt;για λόγους ευκολίας, ας ονομάσουμε το αρχείο με το προτώτυπο όνομα που είμαι σίγουρος ότι δεν έχετε ξαναδει ποτέ μπροστά σας&lt;/strong&gt; &lt;code&gt;foo.bar&lt;/code&gt;). Αυτό λοιπόν πρόκειται να παίξει τον ρόλο του &lt;code&gt;input file&lt;/code&gt;, γεγονός που δηλώνεται με την παράμετρο &lt;code&gt;-in&lt;/code&gt;. Με την ευκαιρία, ας δούμε μερικές από τις επιλογές που μπορείτε να συνδυάσετε παρέα με την παράμετρο &lt;code&gt;enc&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-in&lt;/code&gt; input&amp;nbsp;file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-out&lt;/code&gt; output&amp;nbsp;file&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-pass&lt;/code&gt; pass phrase&amp;nbsp;source&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-e&lt;/code&gt; encrypt (by&amp;nbsp;default)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-d&lt;/code&gt; decrypt&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-k&lt;/code&gt; passphrase is the next&amp;nbsp;argument&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Βήμα 3: Κρυπτογράφιση ή&amp;nbsp;Αποκρυπτογράφιση;&lt;/h3&gt;
+&lt;p&gt;Το επόμενο βήμα είναι να ορίσουμε τι θέλουμε να κάνουμε με το αρχείο: 
++ Encryption &lt;code&gt;-e&lt;/code&gt; ή
++ Decryption &lt;code&gt;-d&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Κάπου διάβασα, ότι η μεγαλύτερη παγίδα της σκέψης είναι αυτή του αυτονόητου, αλλά εδώ δεν χρίζει λόγος ανησυχίας. By default λοιπόν, χρησιμοποίεται η σημαία &lt;code&gt;-e&lt;/code&gt;, την οποία δεν δείτε να την χρησιμοποιούν ιδιαίτερα  (&lt;em&gt;όσο λιγότερα, τόσο το καλύτερο&lt;/em&gt;). Οπότε, η επιλογή &lt;code&gt;-e&lt;/code&gt; είναι optional με την προϋπόθεση ότι η πρόθεσή σας είναι να κρυπτογραφίσετε το αρχείο. Για να ολοκληρώσετε την &lt;em&gt;κρυπτογράφιση&lt;/em&gt; του αρχείου, το μόνο που μένει είναι να δηλώσετε άλλα δύο&amp;nbsp;πράγματα:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Cipher (δηλαδή τον&amp;nbsp;αλγόριθμο)&lt;/li&gt;
+&lt;li&gt;Passphrase&lt;sup id="fnref:4"&gt;&lt;a class="footnote-ref" href="#fn:4" rel="footnote"&gt;4&lt;/a&gt;&lt;/sup&gt; (κλειδί)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Βήμα 4: Επιλογή&amp;nbsp;αλγορίθμου&lt;/h3&gt;
+&lt;p&gt;Για να κρυπτογραφίσουμε ένα αρχείο,  &lt;strong&gt;χρειαζόμαστε έναν Cipher&lt;/strong&gt;. Χωρίς να θέλω να πρωτοτυπήσω θα χρησιμοποιήσω τον: &lt;strong&gt;aes-256-cbc&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Βήμα 5: Επιλογή&amp;nbsp;κλειδιού&lt;/h3&gt;
+&lt;p&gt;Για passphrase (symmetric key) θα χρησιμοποιήσουμε την επιλογή &lt;code&gt;-k&lt;/code&gt;. Χμμμ, για να σκεφτώ&amp;#8230; ok I figured out, το passphrase μου θα είναι &lt;code&gt;darthvader666&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Αν και σας είπα ότι έχουμε μόνο δύο πράγματα (τον αλγόριθμο και το passphrase), η αλήθεια είναι ότι μένει κάτι ακόμα. Υποθέτω, ότι δεν φαντάζει λογικώς ορθό να κάνουμε edit ένα αρχείο και &amp;#8212; &lt;em&gt;at the same time&lt;/em&gt; &amp;#8212; να το κάνουμε replace. Συνεπώς, χρειαζόμαστε ένα &lt;code&gt;output file&lt;/code&gt; το οποίο θα είναι το τελικό αποτέλεσμα (δηλ. &lt;em&gt;το κρυπτογραφημένο αρχείο&lt;/em&gt;). Για να το πω πιο απλά, είναι το αντίστοιχο του &amp;#8220;&lt;strong&gt;save as&lt;/strong&gt;&amp;#8220;. Για να το κάνουμε αυτό από γραμμή εντολών, το OpenSSL διαθέτει στο ρεπερτόριο εντολών του την επιλογή &lt;code&gt;-out&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Για να δούμε λίγο ολόκληρη την&amp;nbsp;εντολή:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;openssl enc -in foo.bar -e -aes-256-cbc -k darthvader666 -out foo.bar.enc
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Οπότε, ακόμα κι αν κάποιος υποκλέψει το αρχείο foo.bar.enc (το &lt;code&gt;enc&lt;/code&gt; απλά δηλώνει ότι το αρχείο είναι κρυπτογραφημένο. Ο λόγος που το βάζουμε είναι για να ξέρουμε εκ των πρωτέρων ότι το αρχείο είναι encrypted και τίποτε άλλο). Διαφορετικά, αν προσπαθήσει να το ανοίξει κάποιος τρίτος, θα δει &amp;#8220;&lt;em&gt;ασυναρτησίες&lt;/em&gt;&amp;#8220;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Παρατηρήστε το &lt;code&gt;salted&lt;/code&gt; στην αρχή της πρότασης. Σημαίνει ότι το αρχείο είναι&amp;nbsp;encrypted.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Αποκρυπτογράφιση με το&amp;nbsp;OpenSSL&lt;/h2&gt;
+&lt;p&gt;Η λύση για να αποκαλυφθούν τα περιεχόμενα του αρχείου βρίσκεται στην αντίστροφη λειτουργία της κρυπτογράφισης ή αλλιώς: &lt;strong&gt;απο&lt;/strong&gt;κρυπτογράφισης (&lt;em&gt;decryption&lt;/em&gt;). Αν δεν υπάρχει &lt;em&gt;κρυπτογραφημένο αρχείο&lt;/em&gt;, δεν υπάρχει λόγος για &lt;em&gt;αποκρυπτογράφιση&lt;/em&gt;. Αν δεν υπάρχει λόγος για αποκτυπρογράφιση, τότε γιατί ταλαιπωρούμαστε; Να σας πω γιατί ταλαιπωρούμαστε: Ταλαιπωρούμαστε, αγαπητοί μου, γιατί ως άνθρωποι του Internet, είμαστε εκτεθημένοι σε ξένα μάτια. Μάτια που βλέπουν μέσα από τα καλώδια. Αν λοιπόν, έρθει μία στιγμή στην ζωή σας (πχ δουλειά) όπου θέλετε να κρατήσετε τα &lt;em&gt;μάτια των άλλων&lt;/em&gt; μακρυά από ένα συγκεκριμένο αρχείο, τότε θα χρειαστείτε όλα αυτά για τα οποία σας μιλάω σ&amp;#8217;αυτό το άρθρο. Καλύτερα&amp;nbsp;τώρα; &lt;/p&gt;
+&lt;p&gt;Αλλα πείτε μου, ποιός ο λόγος να κρυπτογραφίσω ένα αρχείο αν δεν μπορώ να το διαβάσω &lt;em&gt;ούτε εγώ ο ίδιος&lt;/em&gt; (;). Για να κάνουμε decrypt λοιπόν, αρχικά θα χρησιμοποιήσουμε τα ίδια filenames &lt;strong&gt;αντίστροφα&lt;/strong&gt; (είσοδος -&amp;gt; έξοδος) καθώς επίσης και την παράμετρο &lt;code&gt;-d&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Για να δούμε ολόκληρη την&amp;nbsp;εντολή:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;openssl enc -in foo.bar.enc -d -aes-256-cbc -k darthvader666 -out foo.bar
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Και τώρα, αν προσπαθείσετε να δείτε τα περιεχόμενα του&amp;nbsp;αρχείου:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cat foo.bar
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Θα δείτε &lt;strong&gt;επιτέλους&lt;/strong&gt; τα περιεχόμενα και τις πληροφορίες που έκρυβε όσο ήταν&amp;nbsp;κρυπτογραφημένο:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;This file contatins super important stuff. Use it wisely:
+
+* FBI Password: paok
+* CIA Password: mpaok
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Συνοψίζοντας&lt;/h2&gt;
+&lt;p&gt;Αν το όλο άρθρο σας κέντρισε το ενδιαφέρον με την κρυπτογράφιση, θα σας πρότεινα να μελετήσετε το concept των &lt;strong&gt;public &lt;span class="amp"&gt;&amp;amp;&lt;/span&gt; private keys&lt;/strong&gt;. Καθώς και το αντίστοιχο course στο Coursera. Όχι, δεν σας δίνω το link&lt;sup id="fnref:5"&gt;&lt;a class="footnote-ref" href="#fn:5" rel="footnote"&gt;5&lt;/a&gt;&lt;/sup&gt; γιατί βαριέμαι, αλλά γιατί περιμένω να ενεργοποιήθειτε και να ψάξετε! Run Forest! Run!&lt;sup id="fnref:6"&gt;&lt;a class="footnote-ref" href="#fn:6" rel="footnote"&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Δείτε το &lt;a href="https://www.youtube.com/watch?v=E5jdaolDq7A"&gt;βίντεο&lt;/a&gt; στο youtube ώστε να καταλάβετε για ποια σκηνή σας μιλάω.&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;Κάτι &lt;a href="http://arstechnica.com/security/2012/12/25-gpu-cluster-cracks-every-standard-windows-password-in-6-hours/"&gt;τέτοια&lt;/a&gt; διαβάζω, και σκέφτομαι αν η χρήση του χρονικού επιρρήματος &amp;#8220;&lt;em&gt;ποτέ&lt;/em&gt;&amp;#8221; ήταν σωστή σ&amp;#8217;αυτή την περίπτωση. Υπερβολές!&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;Για την ώρα SSLv3 και v2 θεωρούνται vulnerable (βλ. &lt;a href="https://www.openssl.org/~bodo/ssl-poodle.pdf"&gt;&lt;em&gt;Exploiting Poodle SSLv3&lt;/em&gt;&lt;/a&gt;) οπότε γενικά προτείνουμε &lt;span class="caps"&gt;TLS&lt;/span&gt; 1. Ωστόσο, η πλήρης λίστα βρίσκεται &lt;a href="https://www.openssl.org/docs/apps/ciphers.html#cipher_suite_names"&gt;εδώ&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:3" rev="footnote" title="Jump back to footnote 3 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;Μάθετε σχετικά με το &lt;a href="http://en.wikipedia.org/wiki/Symmetric-key_algorithm"&gt;Συμμετρικό κλειδί&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:5"&gt;
+&lt;p&gt;ή πιο απλά, &lt;a href="http://lmgtfy.com/?q=Coursera+Cryptography#"&gt;let me google that for you&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:5" rev="footnote" title="Jump back to footnote 5 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:6"&gt;
+&lt;p&gt;Ε, μη μου πείτε ότι δεν έχετε δει την &lt;a href="https://www.youtube.com/watch?v=x2-MCPa_3rU"&gt;συγκεκριμένη σκηνή&lt;/a&gt; από την ταινία Forest Gump&amp;#160;&lt;a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="how-to"></category><category term="openssl"></category></entry></feed>
