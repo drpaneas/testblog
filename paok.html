@@ -9,7 +9,7 @@
         <meta name="description" content="Σε αυτό το άρθρο θα μιλήσουμε για βασικές ρυθμήσεις που πρέπει να κάνουμε στον Nginx. Οι ρυθμήσεις αυτές έχουν περισσότερο την έννοια του optimization, παρά του configuration, καθώς ο Nginx έρχεται pretty much configured, οπότε εδώ θα μιλήσουμε τις βέλτιστες ρυθμήσεις. Για να κάνω μία εισαγωγή, θα μιλήσουμε για πράγματα ...
 " />
 <meta name="keywords" content="nginx, server, Nginx, " />
-        <title>Βασικό configuration του&nbsp;Nginx  · Linux = 'ed'
+        <title>paok  · Linux = 'ed'
 </title>
         <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
@@ -61,7 +61,7 @@
 <article>
 <div class="row-fluid">
     <header class="page_header span10 offset2">
-    <h1><a href="/vasiko-configuration-tou-nginx"> Βασικό configuration του&nbsp;Nginx  </a></h1>
+    <h1><a href="/paok"> paok  </a></h1>
     </header>
 </div>
 
@@ -90,7 +90,7 @@ configured, οπότε εδώ θα μιλήσουμε τις <strong>βέλτι�
 θα δείτε ένα χάος από επιλογές και μεταβλητές οι οποίες άλλες είναι ήδη
 <em>defined</em> κι άλλες είναι απλά μαρκαρισμένες ως <code>#comment</code>. Μην σας πιάνει
 πανικός, πάμε να τις&nbsp;δούμε:</p>
-<h3>Worker&nbsp;Processes</h3>
+<h3 id="worker-processes">Worker&nbsp;Processes</h3>
 <p>Η μεταβλητή <code>worker_processes</code> μαζί με την <code>worker_connections</code> που θα δούμε
 στην συνέχεια, αποτελούν στην ουσία το <em>backbone</em> του Nginx. Ξεκινόντας
 με την πρώτη, αυτό που κάνει είναι να λέει στον server (ή τον virtual server)
@@ -155,7 +155,7 @@ processor   : 3
 δήλωσα εσφαλμένα ότι έχω;) ; Πρόβλημα! Για αυτό λοιπόν, σαν καλός μηχανικός
 θα δώσω τον σωστό αριθμό, και θα αφήσω τα <em>μεγάλα λόγια</em> για τους πολιτικούς.
 Computers don&#8217;t&nbsp;lie.</p>
-<h3>Worker&nbsp;Connections</h3>
+<h3 id="worker-connections">Worker&nbsp;Connections</h3>
 <p>Η δεύτερη αλλά εξίσου σημαντική μεταβλητή, είναι η <code>worker_connections</code>
 η οποία βρίσκεται μέσα στο <code>events {}</code> structure. Το νούμερο που θα βάλουμε εδώ
 συμβολίζει το αριθμό των ταυτόχρονων connections. Με άλλα λόγια, είναι το
@@ -192,7 +192,7 @@ Computers don&#8217;t&nbsp;lie.</p>
 kernel παλιότερο από <code>Linux 2.6+</code> τότε ίσως πρέπει να χρησιμοποιήσετε
 το απλό <code>poll</code> ή την <code>standard</code> μέθοδο η οποία χρησιμοποιείτε σε περίπτώσει
 όπου υπάρχει αδυναμία χρήσης της efficient. Τώρα, αν έχετε FreeBSD, Solaris ή ο,τιδήποτε άλλο, περισσότερες πληροφορίες θα βρείτε <a href="http://nginx.org/en/docs/events.html">εδώ</a>.</p>
-<h2>Buffers</h2>
+<h2 id="buffers">Buffers</h2>
 <p>Αυτό που πρέπει να γνωρίζετε σχετικά με τους buffers, είναι πως αν τους θέσετε
 να έχουν πολύ μικρό μέγεθος, τότε ο Nginx θα αναγκαστεί να δημιουργεί τα δικά
 του προσωρινά αρχεία. Αυτό σημαίνει ότι θα αρχίσει ένα &#8220;γράψε-διάβασε&#8221;,
@@ -233,7 +233,7 @@ load προκαλεί, τόσο πιο πολύ καθυστερεί να απα
 </pre></div>
 
 
-<h2>Timeouts</h2>
+<h2 id="timeouts">Timeouts</h2>
 <p>Τα Timetous είναι ένα άλλο σημαντικό ζήτημα που αν δεν το λάβετε σοβαρά 
 υπόψην σας, μπορεί να στραγγίξει όλη την δύναμη του πανίσχυρου server σας
 και να τον μετατρέψει από μία High Performance μηχανή σ&#8217;ένα αργό πεισματάρικο
@@ -267,9 +267,7 @@ load προκαλεί, τόσο πιο πολύ καθυστερεί να απα
             <nav>
             <ul class="articles_timeline">
  
-                <li class="previous_article">« <a href="/egkatastasi-tou-nginx" title="Previous: Εγκατάσταση του&nbsp;Nginx">Εγκατάσταση του&nbsp;Nginx</a></li>
- 
-                <li class="next_article"><a href="/paok" title="Next: paok">paok</a> »</li>
+                <li class="previous_article">« <a href="/vasiko-configuration-tou-nginx" title="Previous: Βασικό configuration του&nbsp;Nginx">Βασικό configuration του&nbsp;Nginx</a></li>
             </ul>
             </nav>
             </aside>
@@ -278,7 +276,7 @@ load προκαλεί, τόσο πιο πολύ καθυστερεί να απα
         <div class="span2" style="float:right;font-size:0.9em;">
  
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2015-02-02T21:34:00+02:00">Φεβ 2, 2015</time>
+            <time pubdate="pubdate" datetime="2015-02-12T21:34:00+02:00">Φεβ 12, 2015</time>
             <h4>Category</h4>
             <a class="category-link" href="/categories.html#Nginx-ref">Nginx</a> 
             <h4>Tags</h4>

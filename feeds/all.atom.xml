@@ -1,5 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Linux = 'ed'</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-02-02T21:34:00+02:00</updated><entry><title>Βασικό configuration του Nginx</title><link href="/vasiko-configuration-tou-nginx" rel="alternate"></link><updated>2015-02-02T21:34:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-02-02:vasiko-configuration-tou-nginx</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για βασικές ρυθμήσεις που πρέπει να κάνουμε
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linux = 'ed'</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-02-12T21:34:00+02:00</updated><entry><title>paok</title><link href="/paok" rel="alternate"></link><updated>2015-02-12T21:34:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-02-12:paok</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για βασικές ρυθμήσεις που πρέπει να κάνουμε
+στον Nginx. Οι ρυθμήσεις αυτές έχουν περισσότερο την έννοια του 
+optimization, παρά του configuration, καθώς ο Nginx έρχεται &lt;em&gt;pretty much&lt;/em&gt;
+configured, οπότε εδώ θα μιλήσουμε τις &lt;strong&gt;βέλτιστες ρυθμήσεις&lt;/strong&gt;. Για να κάνω μία
+εισαγωγή, θα μιλήσουμε για πράγματα όπως: &lt;em&gt;πόση μνήμη έχουμε διαθέσιμη&lt;/em&gt;,
+&lt;em&gt;πόσους πυρήνες (cpu) θα διαθέσουμε&lt;/em&gt;, και πώς αυτά θα επιδράσουν 
+στον συνολικό αριθμό των &lt;em&gt;processes&lt;/em&gt;, &lt;em&gt;threads&lt;/em&gt;, κ.α. πραγμάτων που σχετίζονται
+με τους πόρους και την λειτουργία του Nginx &lt;strong&gt;στο σύστημά μας&lt;/strong&gt;. Τονίζω το
+&amp;#8220;&lt;em&gt;σύστημά μας&lt;/em&gt;&amp;#8221; γιατί ο σκοπός μου δεν είναι να σας δώσω έτοιμο το 
+&lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt; αλλά να σας δείξω ποιες ρυθμήσεις είναι &lt;em&gt;common use&lt;/em&gt;
+και ποιες χρειάζονται λίγο &lt;em&gt;tweaking&lt;/em&gt; από την πλευρά&amp;nbsp;σας. &lt;/p&gt;
+&lt;p&gt;Πάμε λοιπόν&amp;nbsp;&amp;#8230;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;vim /etc/nginx/nginx.conf
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Το αρχείο με το οποίο θα ασχοληθούμε, είναι το &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt;
+το οποίο αποτελεί το βασικό αρχείο ρυθμήσεων του Nginx. Είναι το Νο1
+αρχείο στο οποίο κοιτάει ο Nginx να βρει πληροφορίες. Μόλις το ανοίξετε,
+θα δείτε ένα χάος από επιλογές και μεταβλητές οι οποίες άλλες είναι ήδη
+&lt;em&gt;defined&lt;/em&gt; κι άλλες είναι απλά μαρκαρισμένες ως &lt;code&gt;#comment&lt;/code&gt;. Μην σας πιάνει
+πανικός, πάμε να τις&amp;nbsp;δούμε:&lt;/p&gt;
+&lt;h3 id="worker-processes"&gt;Worker&amp;nbsp;Processes&lt;/h3&gt;
+&lt;p&gt;Η μεταβλητή &lt;code&gt;worker_processes&lt;/code&gt; μαζί με την &lt;code&gt;worker_connections&lt;/code&gt; που θα δούμε
+στην συνέχεια, αποτελούν στην ουσία το &lt;em&gt;backbone&lt;/em&gt; του Nginx. Ξεκινόντας
+με την πρώτη, αυτό που κάνει είναι να λέει στον server (ή τον virtual server)
+πόσους workers να διαθέσει για ένα connection. Μόλις ολοκληρωθεί το
+&lt;em&gt;πάρε-δώσε&lt;/em&gt; τον μηνυμάτων και οριστικοποιηθούν έννοιες όπως &lt;em&gt;dest &lt;span class="caps"&gt;IP&lt;/span&gt;&lt;/em&gt;,
+&lt;em&gt;source &lt;span class="caps"&gt;IP&lt;/span&gt;&lt;/em&gt;, &lt;em&gt;&lt;span class="caps"&gt;TCP&lt;/span&gt; Port&lt;/em&gt;, &lt;em&gt;&lt;span class="caps"&gt;UDP&lt;/span&gt; Port&lt;/em&gt;, τότε ο Nginx κάνει spawn μία στρατιά
+από &lt;em&gt;workers&lt;/em&gt; οι οποίοι είναι υπεύθυνοι για κατάσταση του εκάστωτε &lt;em&gt;connection&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;παράδειγμα&lt;/em&gt;: Όταν συνδέεστε στο &lt;code&gt;localhost:80&lt;/code&gt;, ο Nginx θα ψάξει να δει τι τιμή
+έχει η μεταβλητή &lt;code&gt;worker_processes&lt;/code&gt; και ανάλογα θα πράξει. Από default λοιπόν
+αυτή η λειτουργία αξιοποιείται στην &lt;code&gt;TCP 80&lt;/code&gt; για &lt;code&gt;http&lt;/code&gt; protocol και στην
+&lt;code&gt;TCP 443&lt;/code&gt; για &lt;code&gt;ssl&lt;/code&gt; (μην μπερδεύεστε, το &lt;code&gt;https&lt;/code&gt; εννοώ). Για οποιοδήποτε άλλο
+&lt;code&gt;socket&lt;/code&gt;&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;, θα πρέπει να το ρυθμήσουμε διαφορετικά ή να αγοράσουμε το
+εμπορικό μέρος του Nginx. Δεν είμα όμως σίγουρος, οπότε λέω να μην σας μπλέξω
+με αυτό. Άλλωστε δεν νομίζω να το χρειάζεστε, εκτός κι αν έχετε κάποιο
+αρκετά σύνθετο configuration, όπως για παράδειγμα πολλά &lt;code&gt;ethX&lt;/code&gt; interfaces
+ή πολλά &lt;em&gt;&lt;span class="caps"&gt;VM&lt;/span&gt;&lt;/em&gt;s σε &lt;code&gt;bridge mode&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;H formula που χρησιμοποιείται ευρέως στο Internet&amp;nbsp;λέει:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1 worker για κάθε core&amp;nbsp;processor&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Προφανώς αυτό δεν είναι πανάκεια, δηλαδή μπορεί κάποιος να πει:
+&amp;#8220;&lt;em&gt;Και γιατί ρε φίλε να μην βάλω 2 workers για κάθε core; Θα πάθει κάτι;
+Θα χαλάσει;&lt;/em&gt;&amp;#8220;. Η απάντηση είναι, χμ, οκ δεν θα πάθει κάτι αλλά είναι
+&lt;em&gt;bad practice&lt;/em&gt;, και ως &lt;em&gt;side effect&lt;/em&gt; μπορεί να έχει κάποια connections
+να παραμένουν &lt;em&gt;idle&lt;/em&gt; για αρκετό διάστημα, στα οποία όμως να σπαταλούνται
+workers, άρα επεξεργαστική ισχύ. Κακή διαχείριση πόρων λοιπόν &amp;#8212; είναι κάτι
+που θέλουμε να αποφύγουμε, ειδικά στην περίπτωση μου που έχω έναν μικρό
+Atom Processor. Στην δική μου περίπτωση λοιπόν, γνωρίζω ότι έχω έναν
+&lt;em&gt;Intel(R) Atom(&lt;span class="caps"&gt;TM&lt;/span&gt;) &lt;span class="caps"&gt;CPU&lt;/span&gt; N2800 @ 1.86GHz&lt;/em&gt;, o οποίος σύμφωνα με τα 
+&lt;a href="http://ark.intel.com/products/58917/Intel-Atom-Processor-N2800-1M-Cache-1_86-GHz"&gt;specs&lt;/a&gt; είναι dual core με hyperthreading. Αυτό σημαίνει ότι έχω 4 threads.
+Άρα, σύμφωνα με την παραπάνω formula, θα δώσω 1 worker για κάθε thread,&amp;nbsp;συνεπώς:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;worker_processes  4;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Στην δική σας περίπτωση, αν δεν γνωρίζετε τι επεξεργαστή τρέχετε στον server,
+ή το &lt;span class="caps"&gt;VPS&lt;/span&gt;, μπορείτε απλά να ρίξετε μια ματιά στο &lt;code&gt;/proc/cpuinfo/&lt;/code&gt;. Για κάποιον
+ηλίθιο λόγο, έχουν μπερδέψει την έννοια του &lt;code&gt;processor&lt;/code&gt; με του &lt;code&gt;thread&lt;/code&gt;, οπότε
+αρκεί να μετρήσετε πόσα &lt;em&gt;instances&lt;/em&gt; του &lt;code&gt;processor&lt;/code&gt; σας εμφανίζει. Για να μάθετε
+να σκέφτεστε με εντολές bash, αυτό προϋποθέτει ένα &lt;code&gt;cat&lt;/code&gt; του αρχείου, στην 
+συνέχεια ένα &lt;code&gt;grep&lt;/code&gt; του &lt;em&gt;string&lt;/em&gt; &lt;code&gt;processor&lt;/code&gt; μέσω ενός &lt;code&gt;|&lt;/code&gt;, το οποίο στην περίπτωση μου, θα&amp;nbsp;δώσε:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ns348481:~ # cat /proc/cpuinfo | grep &amp;quot;processor&amp;quot;
+processor   : 0
+processor   : 1
+processor   : 2
+processor   : 3
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Οπότε, είτε μετράω με το μάτι, και βλέπω 4 processors (n+1) γιατί
+ξεκινάει από τον &amp;#8220;μηδέν&amp;#8221;, ή απλά ξανά κάνω &lt;code&gt;pipe&lt;/code&gt; και περνάω τα instances
+από έναν &lt;em&gt;μετρητή ανα γραμμή&lt;/em&gt;, δηλαδή &lt;code&gt;wc -l&lt;/code&gt;, δηλαδή κάπως&amp;nbsp;έτσι:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cat /proc/cpuinfo | grep &amp;quot;processor&amp;quot; | wc -l
+4
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Αν κάνω το λάθος, το παίξω &lt;em&gt;άπλας&lt;/em&gt;, και δώσω μεγαλύτερο νούμερο, τότε
+για τον δικό μου server σημαίνει ότι δεσμεύω περισσότερους υπολογιστικούς
+πόρους από όσους πραγματικά έχω. Τι θα γίνει λοιπόν στην περίπτωση όπου υπάρχει
+όντως μεγάλο &lt;em&gt;load&lt;/em&gt; και θα χρειαστούν αυτοί οι παραπάνω πόροι (τους οποίους
+δήλωσα εσφαλμένα ότι έχω;) ; Πρόβλημα! Για αυτό λοιπόν, σαν καλός μηχανικός
+θα δώσω τον σωστό αριθμό, και θα αφήσω τα &lt;em&gt;μεγάλα λόγια&lt;/em&gt; για τους πολιτικούς.
+Computers don&amp;#8217;t&amp;nbsp;lie.&lt;/p&gt;
+&lt;h3 id="worker-connections"&gt;Worker&amp;nbsp;Connections&lt;/h3&gt;
+&lt;p&gt;Η δεύτερη αλλά εξίσου σημαντική μεταβλητή, είναι η &lt;code&gt;worker_connections&lt;/code&gt;
+η οποία βρίσκεται μέσα στο &lt;code&gt;events {}&lt;/code&gt; structure. Το νούμερο που θα βάλουμε εδώ
+συμβολίζει το αριθμό των ταυτόχρονων connections. Με άλλα λόγια, είναι το
+πόσοι users μπορούν να συνδεθούν ταυτόχρονα, στον server. Αν και αυτό δεν
+είναι απολύτως σωστό, καθώς αν και συνήθως στην θεωρία ο browser ανοίγει
+ένα connection, στην πράξη αυτο φαίνεται να είναι 3 ή τουλάχιστον παραπάνω
+από 1. By default, ο Nginx έχει ορίσει την τιμή στα &lt;code&gt;768&lt;/code&gt; connections, αλλά 
+εμείς θα θέσουμε την βέλτιστη τιμή για το σύστημά σας, την οποία θα μας δώσει
+η εντολή &lt;code&gt;ulimit&lt;/code&gt;. Αρκετές φορές χρησιμοποιώ αυτή την εντολή, ειδικά όταν
+τρέχω κάποιον &lt;em&gt;bug reproducer&lt;/em&gt; όπου γνωρίζω εκ των πρωτέρων ότι θα έρθω
+αντιμέτωπος με κάποιο &lt;code&gt;segmentation fault&lt;/code&gt;. Για να μπορέσω να κάνω debugging
+με το &lt;code&gt;gdb&lt;/code&gt;, θα πρέπει να ορίσω τον αριρθμό τον maximum resources που μπορώ να
+δεσμεύσω στο σύστημα (και εδώ έρχεται η &lt;code&gt;ulimit&lt;/code&gt;). Σε διαφορετική, αν το σύστημα
+αρχίζει να τρέχει υπερβολικά πολλές processes ή να καταναλώνει υπερβολική μνήμη
+τότε είναι θέμα χρόνου μέχρι να γίνει το όλο πράγμα &lt;em&gt;unresponsive&lt;/em&gt;. 
+Για όσους δεν πιστεύουν ότι μπορεί να κρασάρει το Linux, be my guest και 
+τρέξτε την ακόλουθη εντολή &lt;code&gt;:(){ :|:&amp;amp; };:&lt;/code&gt; η οποία είναι κλασσικό &lt;code&gt;fork bomb&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Λέγοντας όλα αυτά, είναι εμφανές ότι ο Nginx θέλει να αποφύγει παρόμοια προβλήματα τα οποία θα οφείλονται σε μαζική κίνηση από έναν ή περισσότερους users.
+Βάζοντας μια μικρή τιμή, τότε περιορίζουμε την επισκεψημότητά μας, ενώ
+βάζοντας υψηλή τιμή υπερεκτιμάμε τις δυνατότητες του μηχανήματός μας. Η πιο
+σωστή επιλογή λοιπόν είναι να βάλουμε ακριβώς το &lt;em&gt;sweet spot&lt;/em&gt;, το οποίο θα μας
+το δώσει η εκτέλεση της εντολής &lt;code&gt;ulimit -n&lt;/code&gt;. Στην δική μου περίπτωση, το
+&lt;em&gt;output&lt;/em&gt; της εντολής είναι &lt;code&gt;1024&lt;/code&gt;, οπότε πάνω στο &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt; και
+την θέτω ως&amp;nbsp;εξής:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;events {
+    worker_connections  1024;
+    use epoll;
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Το &lt;code&gt;epoll&lt;/code&gt; σημαίνει &lt;em&gt;efficient method for connection processing&lt;/em&gt; και είναι
+ενεργοποιημένο από default στις καινούριες Linux διανομές. Αν έχετε
+kernel παλιότερο από &lt;code&gt;Linux 2.6+&lt;/code&gt; τότε ίσως πρέπει να χρησιμοποιήσετε
+το απλό &lt;code&gt;poll&lt;/code&gt; ή την &lt;code&gt;standard&lt;/code&gt; μέθοδο η οποία χρησιμοποιείτε σε περίπτώσει
+όπου υπάρχει αδυναμία χρήσης της efficient. Τώρα, αν έχετε FreeBSD, Solaris ή ο,τιδήποτε άλλο, περισσότερες πληροφορίες θα βρείτε &lt;a href="http://nginx.org/en/docs/events.html"&gt;εδώ&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="buffers"&gt;Buffers&lt;/h2&gt;
+&lt;p&gt;Αυτό που πρέπει να γνωρίζετε σχετικά με τους buffers, είναι πως αν τους θέσετε
+να έχουν πολύ μικρό μέγεθος, τότε ο Nginx θα αναγκαστεί να δημιουργεί τα δικά
+του προσωρινά αρχεία. Αυτό σημαίνει ότι θα αρχίσει ένα &amp;#8220;γράψε-διάβασε&amp;#8221;,
+το οποίο ανάλογα με τα connections, μπορεί να οδηγήσει σε ανεπιθυμήτο
+&lt;em&gt;load&lt;/em&gt; για το σύστημα. Όσο περισσότερο I/O κάνει ένα σύστημα, τόσο περισσότερο
+load προκαλεί, τόσο πιο πολύ καθυστερεί να απαντήσει σε &lt;code&gt;requests&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;Υπάρχουν 4 buffers για τους οποίους θα μιλήσουμε:
+1) Client Buffer Body Size
+   Αυτό έχει να κάνει συνήθως με τις &lt;code&gt;post actions&lt;/code&gt;. Όσοι γνωρίζετε &lt;span class="caps"&gt;HTML&lt;/span&gt;
+   το μυαλό σας πολύ σωστά έχει πάει σε &lt;code&gt;html forms&lt;/code&gt; ή &lt;code&gt;buttons&lt;/code&gt;.
+2) Client Header Buffer Size
+   Ακριβώς το ίδιο, αλλά μόνο για τον header. Μία λογική τιμή που προτείνουν
+   εδώ οι ειδικοί είναι 1024.
+3) Client Max Body Buffer
+   Είναι το μέγιστο επιτρεπόμενο μέγεθος για client request. Αν λοιπόν υπερβούμε
+   αυτό το όριο, ο Nginx θα πετάξει ένα &lt;a href="https://www.google.de/webhp?sourceid=chrome-instant&amp;amp;ion=1&amp;amp;espv=2&amp;amp;ie=UTF-8#q=request%20entity%20too%20large%20413"&gt;413 Error - Request entity too larget&lt;/a&gt;.
+4) Large Client Header Buffer
+   Το οποίο είναι το ιδιο, αλλά για τον&amp;nbsp;Header.&lt;/p&gt;
+&lt;p&gt;Πάμε λοιπόν στο &lt;code&gt;http { }&lt;/code&gt; section και εκεί&amp;nbsp;θέτουμε:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;http {
+    ...
+    ... 
+    client_body_buffer_size 10k;
+    client_header_buffer_size 1k;
+    client_max_body_size 8m;
+    large_client_header_buffers 2 1k;
+    ...
+    ...
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Εδώ είναι ένα καλό σημείο να κάνουμε save και να τεστάρουμε
+αν το configuration έχει κάποιο λάθος (typo ή μη). Τρέχουμε
+λοιπόν την εολή &lt;code&gt;nginx -t&lt;/code&gt; και περιμένουμε ένα output σας&amp;nbsp;αυτό:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;configuration&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="sr"&gt;/etc/nginx/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;conf&lt;/span&gt; &lt;span class="n"&gt;syntax&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;ok&lt;/span&gt;
+&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;configuration&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="sr"&gt;/etc/nginx/&lt;/span&gt;&lt;span class="n"&gt;nginx&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;conf&lt;/span&gt; &lt;span class="n"&gt;test&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;successful&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="timeouts"&gt;Timeouts&lt;/h2&gt;
+&lt;p&gt;Τα Timetous είναι ένα άλλο σημαντικό ζήτημα που αν δεν το λάβετε σοβαρά 
+υπόψην σας, μπορεί να στραγγίξει όλη την δύναμη του πανίσχυρου server σας
+και να τον μετατρέψει από μία High Performance μηχανή σ&amp;#8217;ένα αργό πεισματάρικο
+γαϊδουράκι. Εδώ&amp;nbsp;έχουμε:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Client Body&amp;nbsp;Timeout&lt;/li&gt;
+&lt;li&gt;Client Header&amp;nbsp;Timeout&lt;/li&gt;
+&lt;li&gt;Keepalive&amp;nbsp;Timeout&lt;/li&gt;
+&lt;li&gt;Send&amp;nbsp;Timeout&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;και τα θέτω ως&amp;nbsp;εξής:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    client_body_timeout 12;
+    client_header_timeout 12;
+    keepalive_timeout 15;
+    send_timeout 10;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Τα παραπάνω, αποτελούν ένα τυπικό configuration για τον Nginx με μέτριο
+προς υψηλό&amp;nbsp;traffic.&lt;/p&gt;
+&lt;div class="footnote"&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Socket ονομάζουμε τον συνδυασμό &lt;code&gt;IP&lt;/code&gt; και &lt;code&gt;port&lt;/code&gt;. πχ &lt;code&gt;127.0.0.1:80&lt;/code&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Βασικό configuration του Nginx</title><link href="/vasiko-configuration-tou-nginx" rel="alternate"></link><updated>2015-02-02T21:34:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-02-02:vasiko-configuration-tou-nginx</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για βασικές ρυθμήσεις που πρέπει να κάνουμε
 στον Nginx. Οι ρυθμήσεις αυτές έχουν περισσότερο την έννοια του 
 optimization, παρά του configuration, καθώς ο Nginx έρχεται &lt;em&gt;pretty much&lt;/em&gt;
 configured, οπότε εδώ θα μιλήσουμε τις &lt;strong&gt;βέλτιστες ρυθμήσεις&lt;/strong&gt;. Για να κάνω μία

@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2015-02-16T23:43:32-00:00</lastmod>
+<lastmod>2015-02-17T00:02:21-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2015-02-16T23:43:32-00:00</lastmod>
+<lastmod>2015-02-17T00:02:21-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tags.html</loc>
-<lastmod>2015-02-16T23:43:32-00:00</lastmod>
+<lastmod>2015-02-17T00:02:21-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2015-02-16T23:43:32-00:00</lastmod>
+<lastmod>2015-02-17T00:02:21-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -34,6 +34,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/skhetika</loc>
 <lastmod>2014-09-21T18:53:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/paok</loc>
+<lastmod>2015-02-12T21:34:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -236,7 +243,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/nginx.html</loc>
-<lastmod>2015-02-02T21:34:00+01:35</lastmod>
+<lastmod>2015-02-12T21:34:00+01:35</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -278,14 +285,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/nginx.html</loc>
-<lastmod>2015-02-02T21:34:00+01:35</lastmod>
+<lastmod>2015-02-12T21:34:00+01:35</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/tag/server.html</loc>
-<lastmod>2015-02-02T21:34:00+01:35</lastmod>
+<lastmod>2015-02-12T21:34:00+01:35</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -299,7 +306,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/author/panos-georgiades.html</loc>
-<lastmod>2015-02-02T21:34:00+01:35</lastmod>
+<lastmod>2015-02-12T21:34:00+01:35</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
