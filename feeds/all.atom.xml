@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Linux = 'ed'</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2015-02-12T21:34:00+02:00</updated><entry><title>paok</title><link href="/paok" rel="alternate"></link><updated>2015-02-12T21:34:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-02-12:paok</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για βασικές ρυθμήσεις που πρέπει να κάνουμε
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Linux = 'ed'</title><link href="http://drpaneas.github.io/testblog/" rel="alternate"></link><link href="http://drpaneas.github.io/testblog/feeds/all.atom.xml" rel="self"></link><id>http://drpaneas.github.io/testblog/</id><updated>2015-02-12T21:34:00+02:00</updated><entry><title>paok</title><link href="http://drpaneas.github.io/testblog/paok" rel="alternate"></link><updated>2015-02-12T21:34:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:drpaneas.github.io,2015-02-12:testblog/paok</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για βασικές ρυθμήσεις που πρέπει να κάνουμε
 στον Nginx. Οι ρυθμήσεις αυτές έχουν περισσότερο την έννοια του 
 optimization, παρά του configuration, καθώς ο Nginx έρχεται &lt;em&gt;pretty much&lt;/em&gt;
 configured, οπότε εδώ θα μιλήσουμε τις &lt;strong&gt;βέλτιστες ρυθμήσεις&lt;/strong&gt;. Για να κάνω μία
@@ -192,7 +192,7 @@ load προκαλεί, τόσο πιο πολύ καθυστερεί να απα
 &lt;p&gt;Socket ονομάζουμε τον συνδυασμό &lt;code&gt;IP&lt;/code&gt; και &lt;code&gt;port&lt;/code&gt;. πχ &lt;code&gt;127.0.0.1:80&lt;/code&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Βασικό configuration του Nginx</title><link href="/vasiko-configuration-tou-nginx" rel="alternate"></link><updated>2015-02-02T21:34:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-02-02:vasiko-configuration-tou-nginx</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για βασικές ρυθμήσεις που πρέπει να κάνουμε
+&lt;/div&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Βασικό configuration του Nginx</title><link href="http://drpaneas.github.io/testblog/vasiko-configuration-tou-nginx" rel="alternate"></link><updated>2015-02-02T21:34:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:drpaneas.github.io,2015-02-02:testblog/vasiko-configuration-tou-nginx</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για βασικές ρυθμήσεις που πρέπει να κάνουμε
 στον Nginx. Οι ρυθμήσεις αυτές έχουν περισσότερο την έννοια του 
 optimization, παρά του configuration, καθώς ο Nginx έρχεται &lt;em&gt;pretty much&lt;/em&gt;
 configured, οπότε εδώ θα μιλήσουμε τις &lt;strong&gt;βέλτιστες ρυθμήσεις&lt;/strong&gt;. Για να κάνω μία
@@ -385,7 +385,7 @@ load προκαλεί, τόσο πιο πολύ καθυστερεί να απα
 &lt;p&gt;Socket ονομάζουμε τον συνδυασμό &lt;code&gt;IP&lt;/code&gt; και &lt;code&gt;port&lt;/code&gt;. πχ &lt;code&gt;127.0.0.1:80&lt;/code&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Εγκατάσταση του Nginx</title><link href="/egkatastasi-tou-nginx" rel="alternate"></link><updated>2015-01-29T23:58:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-01-29:egkatastasi-tou-nginx</id><summary type="html">&lt;p&gt;Μετά την εισαγωγή στο προηγούμενο άρθρο, ήρθε η στιγμή να ξεκινήσουμε τις
+&lt;/div&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Εγκατάσταση του Nginx</title><link href="http://drpaneas.github.io/testblog/egkatastasi-tou-nginx" rel="alternate"></link><updated>2015-01-29T23:58:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:drpaneas.github.io,2015-01-29:testblog/egkatastasi-tou-nginx</id><summary type="html">&lt;p&gt;Μετά την εισαγωγή στο προηγούμενο άρθρο, ήρθε η στιγμή να ξεκινήσουμε τις
 νέες μας περιπέτειες με τον Nginx. Για να γίνει όμως αυτό, όπως συμβαίνει
 γενικά με κάθε πρόγραμμα, πρέπει πρώτα από όλα, να εγκατασήσουμε 
 και να ρυθμήσουμε τον Nginx στο σύστημά μας. &lt;em&gt;Truth be told&lt;/em&gt;, σε αυτό τό
@@ -488,7 +488,7 @@ runlevel κι αν bootάρει το σύστημά σας (εκτός από τ
 &lt;p&gt;Τα αρχεία, προς το παρών, φαίνεται ότι τοποθετούνται στο &lt;code&gt;/srv/www/htdocs/&lt;/code&gt;
 directory.&lt;/p&gt;
 &lt;p&gt;Οπότε, λέγοντας αυτά, πιστεύω ότι πήρατε μία &lt;em&gt;γεύση&lt;/em&gt;
-σχετικά με το τι θα ασχοληθούμε στα υπόλοιπα άρθρα&amp;nbsp;:)&lt;/p&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Εισαγωγή στον Nginx</title><link href="/eisagogi-ston-nginx" rel="alternate"></link><updated>2015-01-22T23:19:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-01-22:eisagogi-ston-nginx</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για τον Nginx&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;span class="caps"&gt;HTTP&lt;/span&gt; Webserver (ω ναι, υπάρχουν κι άλλοι webservers πέρα από τον &lt;em&gt;Apache&lt;/em&gt;). Όταν λέω ότι θα κάνουμε μία εισαγωγή, εννοώ ότι θα ξεκινήσουμε την εξερεύνηση απαντώντας σε κάποια από τα βασικά ερωτήματα,&amp;nbsp;όπως:&lt;/p&gt;
+σχετικά με το τι θα ασχοληθούμε στα υπόλοιπα άρθρα&amp;nbsp;:)&lt;/p&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Εισαγωγή στον Nginx</title><link href="http://drpaneas.github.io/testblog/eisagogi-ston-nginx" rel="alternate"></link><updated>2015-01-22T23:19:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:drpaneas.github.io,2015-01-22:testblog/eisagogi-ston-nginx</id><summary type="html">&lt;p&gt;Σε αυτό το άρθρο θα μιλήσουμε για τον Nginx&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; &lt;span class="caps"&gt;HTTP&lt;/span&gt; Webserver (ω ναι, υπάρχουν κι άλλοι webservers πέρα από τον &lt;em&gt;Apache&lt;/em&gt;). Όταν λέω ότι θα κάνουμε μία εισαγωγή, εννοώ ότι θα ξεκινήσουμε την εξερεύνηση απαντώντας σε κάποια από τα βασικά ερωτήματα,&amp;nbsp;όπως:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Σε τι διαφέρει από τον&amp;nbsp;Apache;&lt;/li&gt;
 &lt;li&gt;Ποια είναι να χαρακτηριστικά&amp;nbsp;του;&lt;/li&gt;
@@ -569,7 +569,7 @@ directory.&lt;/p&gt;
 σου.&amp;#160;&lt;a class="footnote-backref" href="#fnref:4" rev="footnote" title="Jump back to footnote 4 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Πώς συνδέω ένα domain (IPHost) με τον server μου</title><link href="/pos-sindeo-ena-domain-apo-tin-IPHost-me-tin-ip-tou-server-mou" rel="alternate"></link><updated>2015-01-21T20:23:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-01-21:pos-sindeo-ena-domain-apo-tin-IPHost-me-tin-ip-tou-server-mou</id><summary type="html">&lt;p&gt;Καταρχήν να ξεκινήσω λέγοντας ότι &lt;strong&gt;δεν&lt;/strong&gt; έχω σκοπό να κάνω διαφήμιση την &lt;em&gt;IPHost&lt;/em&gt;.
+&lt;/div&gt;</summary><category term="nginx"></category><category term="server"></category></entry><entry><title>Πώς συνδέω ένα domain (IPHost) με τον server μου</title><link href="http://drpaneas.github.io/testblog/pos-sindeo-ena-domain-apo-tin-IPHost-me-tin-ip-tou-server-mou" rel="alternate"></link><updated>2015-01-21T20:23:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:drpaneas.github.io,2015-01-21:testblog/pos-sindeo-ena-domain-apo-tin-IPHost-me-tin-ip-tou-server-mou</id><summary type="html">&lt;p&gt;Καταρχήν να ξεκινήσω λέγοντας ότι &lt;strong&gt;δεν&lt;/strong&gt; έχω σκοπό να κάνω διαφήμιση την &lt;em&gt;IPHost&lt;/em&gt;.
 Ο λόγος που την χρησιμοποιώ, είναι γιατί ήμουν αρκετά τυχερός ώστε να κερδίσω ένα &lt;em&gt;domain&lt;/em&gt; με κατάληξη &lt;strong&gt;.eu&lt;/strong&gt; σ&amp;#8217;έναν διαγωνισμό
 του &lt;a href="http://insomnia.gr"&gt;Insomnia&lt;/a&gt;. Ε, αφού το κέρδισα, λογικό (και επόμενο είναι) να το χρησιμοποιήσω. 
 Η αλήθεια είναι ότι σπάνια παίρνω μέρος σε διαγωνισμούς. Συνήθως τα Χριστούγεννα θα δείτε ότι
@@ -682,7 +682,7 @@ Address: 37.187.4.87
 &lt;p&gt;Περισσότερες πληροφορίες για τους Public Google &lt;span class="caps"&gt;DNS&lt;/span&gt; θα βρείτε &lt;a href="https://developers.google.com/speed/public-dns/"&gt;εδώ&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="iphost"></category><category term="domain"></category><category term="dns"></category></entry><entry><title>Ο επιμένων νικά!</title><link href="/o-epimenon-nika" rel="alternate"></link><updated>2015-01-17T04:41:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-01-17:o-epimenon-nika</id><summary type="html">&lt;p&gt;Η ώρα είναι 4:09, ξημερώματα και βρίσκομαι στην Γερμανία. Η Αλεξάνδρα κοιμάται δίπλα στο δωμάτιο και εγώ βρίσκομαι στο σαλόνι γράφοντας αυτό το άρθρο στον &lt;code&gt;vim&lt;/code&gt;. Από κάτω ακούγονται διάφοροι &lt;em&gt;μεθυσμένοι&lt;/em&gt; Γερμανοί, καθώς υπάρχει ένα μπαρ που ανοίγει σχετικά αργά. Βλέπετε, αύριο (&lt;em&gt;δηλαδή σήμερα&lt;/em&gt;) είναι Σάββατο, οπότε του &lt;em&gt;δίνουν και καταλαβαίνει&lt;/em&gt;. Τέλος πάντων, το ερώτημα είναι γιατί &amp;#8230; Γιατί δεν&amp;nbsp;κοιμάμαι;&lt;/p&gt;
+&lt;/div&gt;</summary><category term="iphost"></category><category term="domain"></category><category term="dns"></category></entry><entry><title>Ο επιμένων νικά!</title><link href="http://drpaneas.github.io/testblog/o-epimenon-nika" rel="alternate"></link><updated>2015-01-17T04:41:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:drpaneas.github.io,2015-01-17:testblog/o-epimenon-nika</id><summary type="html">&lt;p&gt;Η ώρα είναι 4:09, ξημερώματα και βρίσκομαι στην Γερμανία. Η Αλεξάνδρα κοιμάται δίπλα στο δωμάτιο και εγώ βρίσκομαι στο σαλόνι γράφοντας αυτό το άρθρο στον &lt;code&gt;vim&lt;/code&gt;. Από κάτω ακούγονται διάφοροι &lt;em&gt;μεθυσμένοι&lt;/em&gt; Γερμανοί, καθώς υπάρχει ένα μπαρ που ανοίγει σχετικά αργά. Βλέπετε, αύριο (&lt;em&gt;δηλαδή σήμερα&lt;/em&gt;) είναι Σάββατο, οπότε του &lt;em&gt;δίνουν και καταλαβαίνει&lt;/em&gt;. Τέλος πάντων, το ερώτημα είναι γιατί &amp;#8230; Γιατί δεν&amp;nbsp;κοιμάμαι;&lt;/p&gt;
 &lt;h2&gt;Πρόβλημα στο&amp;nbsp;Fritzbox&lt;/h2&gt;
 &lt;p&gt;Η σύνδεση που έχω στο Internet είναι &lt;span class="caps"&gt;VDSL&lt;/span&gt; 50, με πάροχο την &lt;a href="http://1und1.de"&gt;1-und-1&lt;/a&gt;, η οποία είναι θυγατρική της Deutsche Telekom. Το Router που μου έδωσαν είναι ένα &lt;strong&gt;Fritz!Box 7362 &lt;span class="caps"&gt;SL&lt;/span&gt;&lt;/strong&gt;, το οποίο κανονικά στοιχίζει περίπου &lt;a href="http://www.amazon.de/Fritz-Box-7362SL-FritzBox-7362/dp/B00G472F6K"&gt;125 Ευρώ&lt;/a&gt; στο Amazon. Γενικά είμαι πολύ ευχαριστημένος από το Internet εδώ. Το μόνο μου πρόβλημα είναι ότι το Macbook δεν δουλεύει καλά με τον driver όταν το &lt;span class="caps"&gt;WLAN&lt;/span&gt; έχει &lt;span class="caps"&gt;WPA2&lt;/span&gt; (only) security, αλλά &amp;#8230; τι να κάνεις! Αυτά έχει η &lt;em&gt;Apple&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Στις 00:05 (περίπου) χτυπάει το κινητό μου. Ήταν η θεία μου που μένει στο&amp;nbsp;Sindelfingen:&lt;/p&gt;
@@ -751,7 +751,7 @@ Das Recovery Programm bricht dann komplett ab.
 &lt;p&gt;Για κακή μου τύχη, είχα αλλάξει τον κωδικό με τον οποίο κάνω Login στην 1und1. Οχι δεν τον ξέχασα, τον θυμάμαι μια χαρά. Το πρόβλημα είναι ότι για να συνδεθείς στο Internet (και να λειτουργήσει και το τηλέφωνο), το Fritz!Box σου ζητάει ένα StartCode, ο οποίος κωδικός γίνεται generate &lt;strong&gt;κάθε φορά που αλλάζεις password&lt;/strong&gt;. Για μία ακόμα φορά, το κινητό έσωσε την κατάσταση. Μπήκα στο 1und1 login center, αλλαξα τον κώδικο, κι στο καπάκι μου έστειλαν τον νέο StartCode με τον οποίο μπόρεσα και ενεργοποιήσα τόσο το Internet όσο και το&amp;nbsp;τηλέφωνο.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Ηθικό Δίδαγμα:
-Ποτέ, μα ποτέ, μα ποτέ μην βάλετε το Router σας να κάνει αυτόματα update το firmware. Έπαθα ότι έπαθα, γιατί το Fritz!Box κάθε βράδυ στις 00:00 ψάχνει να βρει αν υπάρχει κάποια νεοτερη έκδοση. Απόψε λοιπόν βρήκε, προσπάθησε να την εφαρμόσει, δεν τα κατάφερε, και&amp;nbsp;κόλλησε&amp;#8230;&lt;/p&gt;</summary><category term="fritz-box"></category></entry><entry><title>New dedicated server in da house με 5 Ευρώ</title><link href="/new-dedicated-server-in-da-house-me-5-euro" rel="alternate"></link><updated>2015-01-02T21:20:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2015-01-02:new-dedicated-server-in-da-house-me-5-euro</id><summary type="html">&lt;p&gt;&lt;strong&gt;Καλή Χρονιά&lt;/strong&gt; και &lt;strong&gt;Χρόνια Πολλά&lt;/strong&gt; φίλοι μου! Πρώτο άρθρο για το &lt;strong&gt;2015&lt;/strong&gt;, και σκέφτηκα να ξεκινήσω με κάτι που με χαροποίησε ιδιαίτερα τις προυηγούμενες μέρες. Προφανώς και δεν αναφέρομαι στην άδεια των Χριστουγέννων (&lt;em&gt;ψέμματα&lt;/em&gt;), ούτε στα Χριστουγεννιάτικα δώρα (&lt;em&gt;πάλι ψέμματα&lt;/em&gt;), αλλά στον νέο μου dedicated server, τον οποίο νοικιάζω μόλις 5 Ευρώ τον&amp;nbsp;μήνα!!!&lt;/p&gt;
+Ποτέ, μα ποτέ, μα ποτέ μην βάλετε το Router σας να κάνει αυτόματα update το firmware. Έπαθα ότι έπαθα, γιατί το Fritz!Box κάθε βράδυ στις 00:00 ψάχνει να βρει αν υπάρχει κάποια νεοτερη έκδοση. Απόψε λοιπόν βρήκε, προσπάθησε να την εφαρμόσει, δεν τα κατάφερε, και&amp;nbsp;κόλλησε&amp;#8230;&lt;/p&gt;</summary><category term="fritz-box"></category></entry><entry><title>New dedicated server in da house με 5 Ευρώ</title><link href="http://drpaneas.github.io/testblog/new-dedicated-server-in-da-house-me-5-euro" rel="alternate"></link><updated>2015-01-02T21:20:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:drpaneas.github.io,2015-01-02:testblog/new-dedicated-server-in-da-house-me-5-euro</id><summary type="html">&lt;p&gt;&lt;strong&gt;Καλή Χρονιά&lt;/strong&gt; και &lt;strong&gt;Χρόνια Πολλά&lt;/strong&gt; φίλοι μου! Πρώτο άρθρο για το &lt;strong&gt;2015&lt;/strong&gt;, και σκέφτηκα να ξεκινήσω με κάτι που με χαροποίησε ιδιαίτερα τις προυηγούμενες μέρες. Προφανώς και δεν αναφέρομαι στην άδεια των Χριστουγέννων (&lt;em&gt;ψέμματα&lt;/em&gt;), ούτε στα Χριστουγεννιάτικα δώρα (&lt;em&gt;πάλι ψέμματα&lt;/em&gt;), αλλά στον νέο μου dedicated server, τον οποίο νοικιάζω μόλις 5 Ευρώ τον&amp;nbsp;μήνα!!!&lt;/p&gt;
 &lt;p&gt;Επίσης, είμαι χαρούμενος γιατί αυτό είναι το πρώτο Editorial το blog. Σε αυτή την κατηγορία θα γράφω προσωπικές εμπειρίες και απόψεις που δεν έχουν να κάνουν με &lt;em&gt;στεγνά&lt;/em&gt; how-to, αλλά είναι πιο πολύ experienced-based, και προφανώς &lt;em&gt;personally biased&lt;/em&gt;. Ας πάμε όμως στο κυρίως θέμα: τον&amp;nbsp;server!&lt;/p&gt;
 &lt;h2&gt;&lt;span class="caps"&gt;WLAN&lt;/span&gt; και&amp;nbsp;προβλήματα&amp;#8230;&lt;/h2&gt;
 &lt;p&gt;Σαν γνήσιος geek, κάθε φορά που ταξιδεύω, προσπαθώ να συνδεθώ στο &lt;span class="caps"&gt;WLAN&lt;/span&gt; του μεταφορικού μέσω του οποίου βρίσκομαι. Δυστυχώς, στην Γερμανία δεν υπάρχει σαν έννοια το &lt;em&gt;Free Wifi&lt;/em&gt; &amp;#8212;ενώ στην Ελλάδα, το εφάρμωσε μια χαρά ο Σαμαράς&amp;#8212; και γενικά το &amp;#8220;&lt;em&gt;Free&lt;/em&gt;&amp;#8221; δύσκολα το βρίσκεις (&lt;em&gt;ευλογημένα Starbucks&lt;/em&gt;). Πρόσφατα λοιπόν, ταξιδεύαμε με το λεωφορείο μαζί με την Αλεξάνδρα, πηγαίνοντας προς ένα μικρό χωριό της Βάδης-Βυτερμβέργης κοντά στην Στουτγγάρδη, το Sindelfigen&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;. Εκεί μένουν οι συγγενείς μου, και τι καλύτερο από το να περνάς την Πρωτοχρονιά μαζί με τους συγγενείς σου (&lt;em&gt;emotion detected&lt;/em&gt;). Ανοίγω λοιπόν το Macbook και δοκιμάζω να μπω στο Gmail μου. Δυστυχώς όμως, διαπίστωσα πως όταν έστελνα &lt;code&gt;HTTP Request&lt;/code&gt; προς οποιονδήποτε webserver, ο &lt;code&gt;gateway 10.10.10.1&lt;/code&gt; μου πετούσε διάφορα &lt;em&gt;άκυρα&lt;/em&gt; errors. Προσπάθησα λίγη ώρα κάνοντας κάποιο βασικό troubleshooting,&amp;nbsp;όπως:&lt;/p&gt;
@@ -870,7 +870,7 @@ Das Recovery Programm bricht dann komplett ab.
 &lt;p&gt;Δείτε το &lt;a href="https://www.youtube.com/watch?v=fY5cWL4SUmw"&gt;trailer&lt;/a&gt;&amp;#160;&lt;a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="server"></category></entry><entry><title>Πώς να κάνω encrypt και decrypt αρχεία χρησιμοποιώντας το OpenSSL toolkit</title><link href="/pos-mporo-na-kano-encrypt-kai-decrypt-arxeia-xrismopoiontas-to-openssl-toolkit" rel="alternate"></link><updated>2014-12-19T00:01:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:,2014-12-19:pos-mporo-na-kano-encrypt-kai-decrypt-arxeia-xrismopoiontas-to-openssl-toolkit</id><summary type="html">&lt;p&gt;Ντεμπούτο του Linuxed! Αναρωτιώμουν από πού να ξεκινήσω το άρθρο μου, αλλά σήμερα νιώθω ότι έχω πολλά να πω, και θέλω να αποφύγω να ξεκινάω να σας γράφω &lt;em&gt;για το ένα και για το άλλο&lt;/em&gt; και να αφήνω το σημαντικό στο τέλος. Αποφάσισα λοιπόν αντί άλλων καθυστερήσεων να μπω κατευθείαν στο κυρίως κείμενο&amp;#8230; &lt;em&gt;με μία μικρή εισαγωγή&lt;/em&gt;&amp;#8230; &lt;/p&gt;
+&lt;/div&gt;</summary><category term="server"></category></entry><entry><title>Πώς να κάνω encrypt και decrypt αρχεία χρησιμοποιώντας το OpenSSL toolkit</title><link href="http://drpaneas.github.io/testblog/pos-mporo-na-kano-encrypt-kai-decrypt-arxeia-xrismopoiontas-to-openssl-toolkit" rel="alternate"></link><updated>2014-12-19T00:01:00+02:00</updated><author><name>Πανος Γεωργιαδης</name></author><id>tag:drpaneas.github.io,2014-12-19:testblog/pos-mporo-na-kano-encrypt-kai-decrypt-arxeia-xrismopoiontas-to-openssl-toolkit</id><summary type="html">&lt;p&gt;Ντεμπούτο του Linuxed! Αναρωτιώμουν από πού να ξεκινήσω το άρθρο μου, αλλά σήμερα νιώθω ότι έχω πολλά να πω, και θέλω να αποφύγω να ξεκινάω να σας γράφω &lt;em&gt;για το ένα και για το άλλο&lt;/em&gt; και να αφήνω το σημαντικό στο τέλος. Αποφάσισα λοιπόν αντί άλλων καθυστερήσεων να μπω κατευθείαν στο κυρίως κείμενο&amp;#8230; &lt;em&gt;με μία μικρή εισαγωγή&lt;/em&gt;&amp;#8230; &lt;/p&gt;
 &lt;p&gt;Αν είστε &lt;em&gt;fan&lt;/em&gt; του &lt;a href="http://el.wikipedia.org/wiki/%CE%9F_%CE%86%CF%81%CF%87%CE%BF%CE%BD%CF%84%CE%B1%CF%82_%CF%84%CF%89%CE%BD_%CE%94%CE%B1%CF%87%CF%84%CF%85%CE%BB%CE%B9%CE%B4%CE%B9%CF%8E%CE%BD"&gt;LoTR&lt;/a&gt;, φαντάζομαι πως θα θυμάστε την σκηνή&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt; που ο Gandalf μπαίνει μέσα στο Bag End και ρωτάει τον Frodo: &amp;#8220;&lt;em&gt;Is it secret? Is it safe?&lt;/em&gt;&amp;#8220;. Στην συνέχεια, ο Frodo επιβεβαιώνει τα λεγόμενά του, δείχνοτας πως το δαχτυλίδι παραμένει σφραγισμένο μέσα στον φάκελο. Προφανώς, για όλους εμάς, ένας φάκελος και μια σφραγίδα, δεν καλύπτουν τα σημερινα security standards. Οπότε, για όλους εμάς, το &lt;em&gt;δαχτυλίδι&lt;/em&gt; δεν είναι &lt;strong&gt;ούτε secret&lt;/strong&gt;, &lt;strong&gt;ούτε safe&lt;/strong&gt;, αλλά βλέπετε, εκείνη την &lt;em&gt;μυθική&lt;/em&gt; εποχή της &lt;em&gt;Μέσης Γης&lt;/em&gt;, οι μάγοι και άλλα πλάσματα του Eru Ilúvatar, δεν είχαν &lt;span class="caps"&gt;PC&lt;/span&gt; ή Internet. Αντίθετα σήμερα, οι μάγοι της εποχής μας έχουν τα δικά τους εργαλεία και είναι γνωστοί ως&amp;nbsp;Hackers.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Αυτό όμως είναι μία ιστορία, θα πούμε άλλη&amp;nbsp;φορά!&lt;/p&gt;
@@ -1002,7 +1002,7 @@ q4&lt;span class="nv"&gt;$i&lt;/span&gt;???8?ЕP7F&lt;span class="p"&gt;|&lt;/sp
 &lt;p&gt;Ε, μη μου πείτε ότι δεν έχετε δει την &lt;a href="https://www.youtube.com/watch?v=x2-MCPa_3rU"&gt;συγκεκριμένη σκηνή&lt;/a&gt; από την ταινία Forest Gump&amp;#160;&lt;a class="footnote-backref" href="#fnref:6" rev="footnote" title="Jump back to footnote 6 in the text"&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</summary><category term="how-to"></category><category term="openssl"></category></entry><entry><title>How to set Shortcut Icons</title><link href="/how-to-set-shortcut-icons" rel="alternate"></link><updated>2014-04-24T16:42:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-04-24:how-to-set-shortcut-icons</id><summary type="html">&lt;p&gt;Elegant supports Favicon, Opera Speed Dial, and shortcut or launcher icons on
+&lt;/div&gt;</summary><category term="how-to"></category><category term="openssl"></category></entry><entry><title>How to set Shortcut Icons</title><link href="http://drpaneas.github.io/testblog/how-to-set-shortcut-icons" rel="alternate"></link><updated>2014-04-24T16:42:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-04-24:testblog/how-to-set-shortcut-icons</id><summary type="html">&lt;p&gt;Elegant supports Favicon, Opera Speed Dial, and shortcut or launcher icons on
 Apple iOS and Android devices. These are disabled by default to avoid
 unnecessary &lt;span class="caps"&gt;HTTP&lt;/span&gt; requests on sites that do not use&amp;nbsp;them.&lt;/p&gt;
 &lt;p&gt;To enable, set &lt;code&gt;USE_SHORTCUT_ICONS&lt;/code&gt; in your&amp;nbsp;configuration&lt;/p&gt;
@@ -1029,7 +1029,7 @@ variable in your&amp;nbsp;configuration&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;favicon.ico&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;I highly recommend you to use &lt;a href="http://iconifier.net/"&gt;Iconifier.net&lt;/a&gt; to
-generate the set of&amp;nbsp;images.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="web-design"></category></entry><entry><title>Configuration Variables and Metadata List</title><link href="/configuration-variables-and-metadata-list" rel="alternate"></link><updated>2014-04-23T18:25:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-04-23:configuration-variables-and-metadata-list</id><summary type="html">
+generate the set of&amp;nbsp;images.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="web-design"></category></entry><entry><title>Configuration Variables and Metadata List</title><link href="http://drpaneas.github.io/testblog/configuration-variables-and-metadata-list" rel="alternate"></link><updated>2014-04-23T18:25:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-04-23:testblog/configuration-variables-and-metadata-list</id><summary type="html">
 &lt;h2 id="pelican-configuration"&gt;Pelican Configuration&lt;/h2&gt;
 &lt;p&gt;These are the settings that will help you get the most out of Elegant&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -1117,27 +1117,27 @@ can use in your articles and pages.&lt;/p&gt;
     plugin&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;disqus_identifier&lt;/code&gt; used with
     &lt;a href="how-to-use-disqus-comments-elegantly#disqus-thread-id"&gt;comments&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;</summary><category term="pelican-theme"></category><category term="config"></category></entry><entry><title>Few more features of Elegant</title><link href="/few-more-features-of-elegant" rel="alternate"></link><updated>2014-04-22T16:23:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-04-22:few-more-features-of-elegant</id><summary type="html">
+&lt;/ol&gt;</summary><category term="pelican-theme"></category><category term="config"></category></entry><entry><title>Few more features of Elegant</title><link href="http://drpaneas.github.io/testblog/few-more-features-of-elegant" rel="alternate"></link><updated>2014-04-22T16:23:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-04-22:testblog/few-more-features-of-elegant</id><summary type="html">
 &lt;p&gt;Here are few more features that make Elegant a unique and powerful theme for
 Pelican powered blogs.&lt;/p&gt;
 &lt;h2 id="add-license-to-your-site"&gt;Add License to your Site&lt;/h2&gt;
 &lt;p&gt;You can put your license string in &lt;code&gt;SITE_LICENSE&lt;/code&gt;. It will appear in the footer
 of every page of your site. Here is how license of my site looks like,&lt;/p&gt;
-&lt;p&gt;&lt;img alt="onCrashReboot site license" src="/images/elegant-theme_license.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="onCrashReboot site license" src="http://drpaneas.github.io/testblog/images/elegant-theme_license.png"/&gt;&lt;/p&gt;
 &lt;h2 id="site-subtitle"&gt;Site Subtitle&lt;/h2&gt;
 &lt;p&gt;You can also define &lt;code&gt;SITE_SUBTITLE&lt;/code&gt;, it appears in the footer, before site license.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Site subtitle" src="/images/elegant-theme_site-subtitle.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Site subtitle" src="http://drpaneas.github.io/testblog/images/elegant-theme_site-subtitle.png"/&gt;&lt;/p&gt;
 &lt;h2 id="web-safe-fonts"&gt;Web Safe Fonts&lt;/h2&gt;
 &lt;p&gt;Elegant uses commonly available typefaces in every style rule. It has a list of
 closely matching fonts in the fallback list. For examples Baskerville is the
 first choice for headings. But if reader does not have Baskerville installed,
-Garamond will be used. If that too fails then Georgia will be used.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="web-design"></category></entry><entry><title>How to use Disqus Comments “Elegantly”</title><link href="/how-to-use-disqus-comments-elegantly" rel="alternate"></link><updated>2014-04-21T16:39:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-04-21:how-to-use-disqus-comments-elegantly</id><summary type="html">&lt;p&gt;Pelican uses Disqus for comments. You have to set &lt;code&gt;DISQUS_SITENAME&lt;/code&gt; to Disqus
+Garamond will be used. If that too fails then Georgia will be used.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="web-design"></category></entry><entry><title>How to use Disqus Comments “Elegantly”</title><link href="http://drpaneas.github.io/testblog/how-to-use-disqus-comments-elegantly" rel="alternate"></link><updated>2014-04-21T16:39:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-04-21:testblog/how-to-use-disqus-comments-elegantly</id><summary type="html">&lt;p&gt;Pelican uses Disqus for comments. You have to set &lt;code&gt;DISQUS_SITENAME&lt;/code&gt; to Disqus
 site name identifier in configuration to enable&amp;nbsp;comments.&lt;/p&gt;
 &lt;p&gt;But that&amp;#8217;s not all. Elegant raises the notch up with following unique&amp;nbsp;features.&lt;/p&gt;
 &lt;h2 id="invite-visitors-to-comment"&gt;Invite Visitors to&amp;nbsp;Comment&lt;/h2&gt;
 &lt;p&gt;Instead of just throwing in comments form at the end of every article, Elegant
 offers you a way to write introductory text that would appear right before&amp;nbsp;comments.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Introductory text to the comments" src="/images/elegant-theme_comments-introduction.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Introductory text to the comments" src="http://drpaneas.github.io/testblog/images/elegant-theme_comments-introduction.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Set your message to &lt;code&gt;comments_intro&lt;/code&gt; in the article metadata. You may also
 define &lt;code&gt;COMMENTS_INTRO&lt;/code&gt; in Pelican&amp;nbsp;configuration.  &lt;/p&gt;
 &lt;p&gt;Write whatever you think is appropriate to invite the visitor to comment. Be
@@ -1153,7 +1153,7 @@ the article will change&amp;nbsp;too.&lt;/p&gt;
 &lt;p&gt;Elegant offers you &lt;code&gt;disqus_identifier&lt;/code&gt; property that you can set in your
 article metadata. Set it to any unique string you want. It won&amp;#8217;t be effected by
 the article &lt;span class="caps"&gt;URL&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;If you choose not to use &lt;code&gt;disqus_identifier&lt;/code&gt;, Elegant passes article &lt;span class="caps"&gt;URL&lt;/span&gt; to&amp;nbsp;Disqus.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category></entry><entry><title>How to use Multi Part plugin</title><link href="/how-to-use-multi-part-plugin" rel="alternate"></link><updated>2014-04-20T18:18:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-04-20:how-to-use-multi-part-plugin</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/multi_part"&gt;Multi
+&lt;p&gt;If you choose not to use &lt;code&gt;disqus_identifier&lt;/code&gt;, Elegant passes article &lt;span class="caps"&gt;URL&lt;/span&gt; to&amp;nbsp;Disqus.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category></entry><entry><title>How to use Multi Part plugin</title><link href="http://drpaneas.github.io/testblog/how-to-use-multi-part-plugin" rel="alternate"></link><updated>2014-04-20T18:18:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-04-20:testblog/how-to-use-multi-part-plugin</id><summary type="html">&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/multi_part"&gt;Multi
 parts&lt;/a&gt; is
 a useful plugin that lets you write &amp;#8220;multi-part&amp;#8221;&amp;nbsp;articles.&lt;/p&gt;
 &lt;p&gt;To mark articles that belong to the same series, define &lt;code&gt;parts&lt;/code&gt; metadata.&lt;/p&gt;
@@ -1163,7 +1163,7 @@ a useful plugin that lets you write &amp;#8220;multi-part&amp;#8221;&amp;nbsp;ar
 
 &lt;p&gt;Elegant shows the multi-part series in the&amp;nbsp;sidebar.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="multi-part example in the
-sidebar" src="/images/elegant-theme_multi-part-sidebar.png" /&gt;&lt;/p&gt;
+sidebar" src="http://drpaneas.github.io/testblog/images/elegant-theme_multi-part-sidebar.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Articles are sorted by their date in ascending order. The oldest article is
 considered &amp;#8220;Part 1&amp;#8221; and so&amp;nbsp;on.&lt;/p&gt;
 &lt;p&gt;The currently opened article is displayed in italics. In the above example,
@@ -1171,7 +1171,7 @@ considered &amp;#8220;Part 1&amp;#8221; and so&amp;nbsp;on.&lt;/p&gt;
 &lt;p&gt;Title attribute of html anchor tag &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; is set for each &amp;#8220;Part&amp;#8221; to its article
 title; it is displayed when user hovers over the&amp;nbsp;link.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="multi-part example with title of the
-links" src="/images/elegant-theme_multi-part-title-attribute.png" /&gt;&lt;/p&gt;
+links" src="http://drpaneas.github.io/testblog/images/elegant-theme_multi-part-title-attribute.png" /&gt;&lt;/p&gt;
 &lt;p&gt;As all other features, Elegant has some tricks up its&amp;nbsp;sleeve.&lt;/p&gt;
 &lt;h2 id="series-title"&gt;Series&amp;nbsp;Title&lt;/h2&gt;
 &lt;p&gt;By default Elegant uses value of &lt;code&gt;parts&lt;/code&gt; as the title of the series. You can
@@ -1183,7 +1183,7 @@ in your articles metadata,&amp;nbsp;like,&lt;/p&gt;
 
 
 &lt;p&gt;And this will give&amp;nbsp;you,&lt;/p&gt;
-&lt;p&gt;&lt;img alt="multi-part example with custom series title" src="/images/elegant-theme_multi-part-custom-label.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="multi-part example with custom series title" src="http://drpaneas.github.io/testblog/images/elegant-theme_multi-part-custom-label.png" /&gt;&lt;/p&gt;
 &lt;p&gt;You have to make sure &lt;code&gt;series_title&lt;/code&gt; metadata is set for every article in the&amp;nbsp;series.&lt;/p&gt;
 &lt;p&gt;You can also define &lt;code&gt;SERIES_TITLE&lt;/code&gt; in your Pelican configuration to set a
 default value for &lt;code&gt;multi_part&lt;/code&gt; widget&amp;nbsp;label.&lt;/p&gt;
@@ -1194,7 +1194,7 @@ the article metadata, then &lt;code&gt;parts&lt;/code&gt; metadata which it uses
 &lt;p&gt;With &lt;code&gt;series_title&lt;/code&gt; you will have to deal with the hassle of making sure all
 articles in the series have it, which you are already doing for &lt;code&gt;parts&lt;/code&gt;. So why
 double the&amp;nbsp;hassle?&lt;/p&gt;
-&lt;p&gt;With &lt;code&gt;SERIES_TITLE&lt;/code&gt; you won&amp;#8217;t be able to have custom titles for the&amp;nbsp;series&amp;#8217;.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category><category term="navigation"></category><category term="web-design"></category></entry><entry><title>Search Engine and Social Media Optimization</title><link href="/search-engine-and-social-media-optimization" rel="alternate"></link><updated>2014-04-20T16:31:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-04-20:search-engine-and-social-media-optimization</id><summary type="html">
+&lt;p&gt;With &lt;code&gt;SERIES_TITLE&lt;/code&gt; you won&amp;#8217;t be able to have custom titles for the&amp;nbsp;series&amp;#8217;.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category><category term="navigation"></category><category term="web-design"></category></entry><entry><title>Search Engine and Social Media Optimization</title><link href="http://drpaneas.github.io/testblog/search-engine-and-social-media-optimization" rel="alternate"></link><updated>2014-04-20T16:31:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-04-20:testblog/search-engine-and-social-media-optimization</id><summary type="html">
 &lt;p&gt;Search Engine Optimization(&lt;span class="caps"&gt;SEO&lt;/span&gt;) is a moving target which is often
 misunderstood.  Rise of social media has changed the traditional &lt;span class="caps"&gt;SEO&lt;/span&gt;
 techniques. Changes in search algorithms has made several &lt;span class="caps"&gt;SEO&lt;/span&gt; tecniques obsolete.&lt;/p&gt;
@@ -1274,11 +1274,11 @@ configuration and you are done.&lt;/p&gt;
 &lt;p&gt;Google help article &lt;a href="https://support.google.com/webmasters/answer/1408986?hl=en"&gt;“Author information in search
 results”&lt;/a&gt; mentions
 one more way of linking - use a verified email address.&lt;/p&gt;
-&lt;p&gt;Use whichever way suits you.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="social-media"></category><category term="web-analytics"></category></entry><entry><title>How does modified metadata works</title><link href="/how-does-modified-metadata-works" rel="alternate"></link><updated>2014-04-19T14:52:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-04-19:how-does-modified-metadata-works</id><summary type="html">&lt;p&gt;You need to update your articles time and again. Sometimes it makes sense to
+&lt;p&gt;Use whichever way suits you.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="social-media"></category><category term="web-analytics"></category></entry><entry><title>How does modified metadata works</title><link href="http://drpaneas.github.io/testblog/how-does-modified-metadata-works" rel="alternate"></link><updated>2014-04-19T14:52:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-04-19:testblog/how-does-modified-metadata-works</id><summary type="html">&lt;p&gt;You need to update your articles time and again. Sometimes it makes sense to
 display the date when you updated the article. You can show the last updated
 date of the article by defining &lt;code&gt;modified&lt;/code&gt; in your article&amp;nbsp;metadata. &lt;/p&gt;
 &lt;p&gt;This is how it is displayed in the side&amp;nbsp;bar,&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Modified Date" src="/images/elegant-theme_last-modified.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Modified Date" src="http://drpaneas.github.io/testblog/images/elegant-theme_last-modified.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Pelican post &lt;a href="https://github.com/getpelican/pelican/releases/tag/3.3.0"&gt;version
 3.3&lt;/a&gt; has a new
 &lt;a href="https://github.com/getpelican/pelican/pull/1148"&gt;&lt;code&gt;modified&lt;/code&gt; metadata&lt;/a&gt;. Type of
@@ -1306,7 +1306,7 @@ example from above, metadata in your reST formated file should&amp;nbsp;be,&lt;/
 
 &lt;p&gt;But I do &lt;strong&gt;not&lt;/strong&gt; recommend it because it will break on newer versions of
 Pelican. In fact, you should ditch Pelican 3.3 or less and move to a higher
-version if you require &lt;code&gt;modified&lt;/code&gt; metadata. &lt;/p&gt;</summary><category term="pelican-theme"></category><category term="web-design"></category></entry><entry><title>How to use Social Sharing Plugin</title><link href="/how-to-use-social-sharing-plugin" rel="alternate"></link><updated>2014-03-24T20:14:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-03-24:how-to-use-social-sharing-plugin</id><summary type="html">&lt;p&gt;No blog is complete without a social sharing plugin, that invites visitors to
+version if you require &lt;code&gt;modified&lt;/code&gt; metadata. &lt;/p&gt;</summary><category term="pelican-theme"></category><category term="web-design"></category></entry><entry><title>How to use Social Sharing Plugin</title><link href="http://drpaneas.github.io/testblog/how-to-use-social-sharing-plugin" rel="alternate"></link><updated>2014-03-24T20:14:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-03-24:testblog/how-to-use-social-sharing-plugin</id><summary type="html">&lt;p&gt;No blog is complete without a social sharing plugin, that invites visitors to
 share your post on popular social&amp;nbsp;networks. &lt;/p&gt;
 &lt;p&gt;There are plethora of social sharing widgets available online. Unfortunately
 most of these widgets are used to track users. &lt;a href="http://techliberation.com/2011/05/20/privacy-solutions-how-to-block-facebooks-like-button-and-other-social-widgets/"&gt;Technology
@@ -1334,13 +1334,13 @@ tracking at&amp;nbsp;all.&lt;/p&gt;
 
 
 &lt;p&gt;And&amp;nbsp;viola!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Share Post plugin in Elegant" src="/images/elegant-theme-share-post-plugin.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Share Post plugin in Elegant" src="http://drpaneas.github.io/testblog/images/elegant-theme-share-post-plugin.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Like &lt;a href="how-to-customize-elegant"&gt;rest of the Elegant&lt;/a&gt; you can customize this
 widget&amp;nbsp;too.&lt;/p&gt;
 &lt;p&gt;You can define &lt;code&gt;SHARE_POST_INTRO&lt;/code&gt; in your Pelican configuration to override the
 default &amp;#8220;Share on:&amp;#8221;&amp;nbsp;text.&lt;/p&gt;
 &lt;p&gt;You can also define it on per article basis by defining &lt;code&gt;share_post_intro&lt;/code&gt; in
-your article&amp;nbsp;metadata.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category><category term="social-media"></category></entry><entry><title>Avoid Unnecessary HTTP Requests</title><link href="/avoid-unnecessary-http-requests" rel="alternate"></link><updated>2014-03-24T14:09:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-03-24:avoid-unnecessary-http-requests</id><summary type="html">&lt;p&gt;Visitor&amp;#8217;s browser will make separate &lt;span class="caps"&gt;HTTP&lt;/span&gt; requests to fetch &lt;code&gt;elegent.css&lt;/code&gt;,
+your article&amp;nbsp;metadata.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category><category term="social-media"></category></entry><entry><title>Avoid Unnecessary HTTP Requests</title><link href="http://drpaneas.github.io/testblog/avoid-unnecessary-http-requests" rel="alternate"></link><updated>2014-03-24T14:09:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-03-24:testblog/avoid-unnecessary-http-requests</id><summary type="html">&lt;p&gt;Visitor&amp;#8217;s browser will make separate &lt;span class="caps"&gt;HTTP&lt;/span&gt; requests to fetch &lt;code&gt;elegent.css&lt;/code&gt;,
 &lt;code&gt;custom.css&lt;/code&gt;, &lt;code&gt;pygments.css&lt;/code&gt; and &lt;code&gt;tipuesearch.css&lt;/code&gt;. These four separate
 requests can be avoided using &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/assets"&gt;Pelican plugin
 &lt;code&gt;assets&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
@@ -1357,7 +1357,7 @@ requests can be avoided using &lt;a href="https://github.com/getpelican/pelican-
 &lt;p&gt;This minor fix will improve the load speed of your website. All four style
 sheets will be merged and minified into one style sheet, &lt;code&gt;style.min.css&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Compact &lt;span class="caps"&gt;CSS&lt;/span&gt; will save many bytes of data which in turn will improve page speed
-and parse&amp;nbsp;time.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category><category term="page-speed"></category></entry><entry><title>How to Customize Elegant</title><link href="/how-to-customize-elegant" rel="alternate"></link><updated>2014-03-24T14:05:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-03-24:how-to-customize-elegant</id><summary type="html">
+and parse&amp;nbsp;time.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category><category term="page-speed"></category></entry><entry><title>How to Customize Elegant</title><link href="http://drpaneas.github.io/testblog/how-to-customize-elegant" rel="alternate"></link><updated>2014-03-24T14:05:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-03-24:testblog/how-to-customize-elegant</id><summary type="html">
 &lt;p&gt;You can change Elegant’s look, color palette, font, size, and even labels used
 for widgets, sections and plugins.&lt;/p&gt;
 &lt;p&gt;Elegant is best maintained when you treat it as a separate resource in your
@@ -1442,7 +1442,7 @@ configuration, &lt;code&gt;pelicanconf.py&lt;/code&gt;.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SOCIAL_PROFILE_LABEL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;'Stay in Touch'&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That’s it. The title of social widget will change. There are several others
-labels that you can customize easily without touching Elegant’s source code.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="config"></category></entry><entry><title>How Elegant displays Table of Contents</title><link href="/how-elegant-displays-table-of-contents" rel="alternate"></link><updated>2014-03-18T11:03:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-03-18:how-elegant-displays-table-of-contents</id><summary type="html">
+labels that you can customize easily without touching Elegant’s source code.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="config"></category></entry><entry><title>How Elegant displays Table of Contents</title><link href="http://drpaneas.github.io/testblog/how-elegant-displays-table-of-contents" rel="alternate"></link><updated>2014-03-18T11:03:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-03-18:testblog/how-elegant-displays-table-of-contents</id><summary type="html">
 &lt;p&gt;The idea behind Elegant’s design is to make reading a clean and distraction
 free experience. Table of contents is important but it is not part of the
 article content. Therefore, Elegant pushes out table of content to the left of
@@ -1484,7 +1484,7 @@ actual content.&lt;/p&gt;
 &lt;p&gt;This will generate
 &lt;a href="https://github.com/waylan/Python-Markdown/pull/252"&gt;permalinks&lt;/a&gt; for every
 heading. Elegant keeps them hidden until user hovers over the heading.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Permalinks example using Markdown" src="/images/elegant-theme-toc-permalinks.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Permalinks example using Markdown" src="http://drpaneas.github.io/testblog/images/elegant-theme-toc-permalinks.png"/&gt;&lt;/p&gt;
 &lt;h1 id="restructuredtext-format"&gt;reStructuredText Format&lt;/h1&gt;
 &lt;p&gt;reStructuredText format has
 &lt;a href="http://docutils.sourceforge.net/docs/ref/rst/directives.html#table-of-contents"&gt;&lt;code&gt;contents&lt;/code&gt;&lt;/a&gt;
@@ -1527,7 +1527,7 @@ title generation in reStructuredText. You need to add following rule in your
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;See &lt;a href="how-to-use-custom-css" title="How to use custom.css"&gt;this article&lt;/a&gt; to understand how you can use
-&lt;code&gt;custom.css&lt;/code&gt;.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="reST"></category><category term="markdown"></category><category term="navigation"></category><category term="web-design"></category></entry><entry><title>How to show RSS feeds icon</title><link href="/how-to-show-rss-feeds-icon" rel="alternate"></link><updated>2014-03-17T15:28:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-03-17:how-to-show-rss-feeds-icon</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; feeds is the oldest and arguably the most used format to publish blog
+&lt;code&gt;custom.css&lt;/code&gt;.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="reST"></category><category term="markdown"></category><category term="navigation"></category><category term="web-design"></category></entry><entry><title>How to show RSS feeds icon</title><link href="http://drpaneas.github.io/testblog/how-to-show-rss-feeds-icon" rel="alternate"></link><updated>2014-03-17T15:28:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-03-17:testblog/how-to-show-rss-feeds-icon</id><summary type="html">&lt;p&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; feeds is the oldest and arguably the most used format to publish blog
 updates. Its use is not limited to &lt;span class="caps"&gt;RSS&lt;/span&gt; aggregators and readers. Tools like
 &lt;a href="https://ifttt.com/recipes?channel=feed"&gt;&lt;span class="caps"&gt;IFTTT&lt;/span&gt;&lt;/a&gt; and
 &lt;a href="http://manual.calibre-ebook.com/news.html"&gt;Calibre&lt;/a&gt; increases &lt;span class="caps"&gt;RSS&lt;/span&gt; feeds&amp;#8217; power
@@ -1548,7 +1548,7 @@ Firefox, you can add &amp;#8220;Subscribe&amp;#8221; button to the
 For Chrome, you can use &lt;a href="https://chrome.google.com/webstore/detail/rss-subscription-extensio/nlbjncdgjeocebhnmkbbbdekmmmcbfjd"&gt;&lt;span class="caps"&gt;RSS&lt;/span&gt; Subscription
 Extension&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here is an example of my category feeds in&amp;nbsp;Chrome.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Display RSS Feeds in Chrome" src="/images/rss-feeds-chrome-category-feeds.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Display RSS Feeds in Chrome" src="http://drpaneas.github.io/testblog/images/rss-feeds-chrome-category-feeds.png" /&gt;&lt;/p&gt;
 &lt;p&gt;These options make it redundant to have a separate &lt;span class="caps"&gt;RSS&lt;/span&gt; icon on the page.
 Elegant is all about a clean and minimal &lt;span class="caps"&gt;UI&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;But it is not so hard to enable it. First &lt;a href="how-to-display-your-social-media-profiles"&gt;configure the Social
@@ -1558,7 +1558,7 @@ widget&lt;/a&gt;. Then add a tuple for &lt;span class="caps"&gt;RSS&lt;/span&gt;
 
 
 &lt;p&gt;Viola! You got yourself the &lt;span class="caps"&gt;RSS&lt;/span&gt;&amp;nbsp;icon.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="RSS Feeds icon in Social widget" src="/images/rss-feeds-icon-social-widget.png" /&gt;&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="font-awesome"></category><category term="web-design"></category></entry><entry><title>How to display your Social Media Profiles</title><link href="/how-to-display-your-social-media-profiles" rel="alternate"></link><updated>2014-01-27T00:28:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-01-27:how-to-display-your-social-media-profiles</id><summary type="html">&lt;p&gt;Bloggers use different tools to connect with their readers, engage in
+&lt;p&gt;&lt;img alt="RSS Feeds icon in Social widget" src="http://drpaneas.github.io/testblog/images/rss-feeds-icon-social-widget.png" /&gt;&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="font-awesome"></category><category term="web-design"></category></entry><entry><title>How to display your Social Media Profiles</title><link href="http://drpaneas.github.io/testblog/how-to-display-your-social-media-profiles" rel="alternate"></link><updated>2014-01-27T00:28:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-01-27:testblog/how-to-display-your-social-media-profiles</id><summary type="html">&lt;p&gt;Bloggers use different tools to connect with their readers, engage in
 discussion with them, and create a loyal following of fans. These tools range
 from fully blown social web apps like twitter to old school &lt;span class="caps"&gt;RSS&lt;/span&gt;&amp;nbsp;feeds.&lt;/p&gt;
 &lt;p&gt;Bloggers add a social media widget to their blog which has links to all their
@@ -1566,7 +1566,7 @@ social media profiles; inviting readers to engage with them else where on the
 web too. Most social widgets are loud and obtrusive. Their colors and placement
 takes away readers&amp;#8217; attention from the actual&amp;nbsp;content.&lt;/p&gt;
 &lt;p&gt;&lt;img class="align-right" style="width: 262.0px; height: 140.0px;"
-src="/images/social-profiles-sidebar-default.png" alt="Social
+src="http://drpaneas.github.io/testblog/images/social-profiles-sidebar-default.png" alt="Social
 Profiles in the Sidebar" /&gt;&lt;/p&gt;
 &lt;p&gt;Elegant understands the importance of readers engagement but it makes sure
 not to push author&amp;#8217;s &lt;em&gt;&amp;#8220;online social karma&amp;#8221;&lt;/em&gt; down readers&amp;#8217;&amp;nbsp;throats.&lt;/p&gt;
@@ -1574,10 +1574,10 @@ not to push author&amp;#8217;s &lt;em&gt;&amp;#8220;online social karma&amp;#822
 media profile with an appropriate title attribute. Icons use muted color which
 changes when user hovers over&amp;nbsp;them.&lt;/p&gt;
 &lt;p&gt;&lt;img class="align-right" style="width: 134.0px; height: 62.5px;"
-src="/images/social-profiles-sidebar-facebook.png" alt="Hover over
+src="http://drpaneas.github.io/testblog/images/social-profiles-sidebar-facebook.png" alt="Hover over
 Facebook icon in the sidebar" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img class="align-right" style="width: 134.0px; height: 62.5px;"
-src="/images/social-profiles-sidebar-twitter.png" alt="Hover over
+src="http://drpaneas.github.io/testblog/images/social-profiles-sidebar-twitter.png" alt="Hover over
 Twitter icon in the sidebar" /&gt;&lt;/p&gt;
 &lt;p&gt;Elegant uses scalable vector icons from &lt;a href="http://fortawesome.github.io/Font-Awesome/"&gt;Font
 Awesome&lt;/a&gt;. You can instantly
@@ -1619,18 +1619,18 @@ class that you want to use for the social profile, minus the &lt;code&gt;fa&lt;/
 change this label by defining a new variable &lt;code&gt;SOCIAL_PROFILE_LABEL&lt;/code&gt; in your
 &lt;code&gt;pelicanconf.py&lt;/code&gt; file.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SOCIAL_PROFILE_LABEL&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;u&amp;#39;Stay in Touch&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="pelican-theme"></category><category term="font-awesome"></category><category term="social-media"></category><category term="web-design"></category></entry><entry><title>How to show Previous and Next Articles</title><link href="/how-to-show-previous-and-next-article" rel="alternate"></link><updated>2014-01-27T00:02:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2014-01-27:how-to-show-previous-and-next-article</id><summary type="html">&lt;p&gt;The Previous and Next post links are a powerful way to keep visitors engaged
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="pelican-theme"></category><category term="font-awesome"></category><category term="social-media"></category><category term="web-design"></category></entry><entry><title>How to show Previous and Next Articles</title><link href="http://drpaneas.github.io/testblog/how-to-show-previous-and-next-article" rel="alternate"></link><updated>2014-01-27T00:02:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2014-01-27:testblog/how-to-show-previous-and-next-article</id><summary type="html">&lt;p&gt;The Previous and Next post links are a powerful way to keep visitors engaged
 and to guide them through your&amp;nbsp;site.&lt;/p&gt;
 &lt;p&gt;Elegant requires &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/neighbors"&gt;Neighbor Articles
 plugin&lt;/a&gt; to
 show these navigational&amp;nbsp;links.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Show next and previous
-articles" src="/images/elegant-theme_previous-next-article.png" /&gt;&lt;/p&gt;
+articles" src="http://drpaneas.github.io/testblog/images/elegant-theme_previous-next-article.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Elegant shows newer article on the right hand side and older article on the
 left hand side at the bottom of every&amp;nbsp;article.&lt;/p&gt;
 &lt;p&gt;Most of the content on web is written in left to right languages. In these
 languages pages are placed from left to right. It seemed natural to use the
-same order in&amp;nbsp;Elegant.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category><category term="navigation"></category><category term="web-design"></category></entry><entry><title>How to use StatCounter and Google Analytics</title><link href="/how-to-use-statcounter-and-google-analytics" rel="alternate"></link><updated>2013-11-11T23:05:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2013-11-11:how-to-use-statcounter-and-google-analytics</id><summary type="html">
+same order in&amp;nbsp;Elegant.&lt;/p&gt;</summary><category term="pelican-theme"></category><category term="pelican-plugin"></category><category term="navigation"></category><category term="web-design"></category></entry><entry><title>How to use StatCounter and Google Analytics</title><link href="http://drpaneas.github.io/testblog/how-to-use-statcounter-and-google-analytics" rel="alternate"></link><updated>2013-11-11T23:05:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2013-11-11:testblog/how-to-use-statcounter-and-google-analytics</id><summary type="html">
 &lt;p&gt;Elegant has support for popular web tracking services,
 &lt;a href="http://statcounter.com/"&gt;StatCounter&lt;/a&gt; and &lt;a href="http://www.google.com/analytics/"&gt;Google
 Analytics&lt;/a&gt;.&lt;/p&gt;
@@ -1662,7 +1662,7 @@ Analytics account. It has this format &lt;code&gt;UA-XXXXX-X&lt;/code&gt;.&lt;/p
 &lt;p&gt;Set &lt;code&gt;GOOGLE_ANALYTICS&lt;/code&gt; variable to it in your configuration.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;u'UA-00000000-1'&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;That’s it. Elegant will take care of the rest.&lt;/p&gt;</summary><category term="web-analytics"></category><category term="pelican-theme"></category></entry><entry><title>How to display Line Numbers in Code Snippets</title><link href="/how-to-display-line-numbers-in-code-snippets" rel="alternate"></link><updated>2013-11-05T17:36:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2013-11-05:how-to-display-line-numbers-in-code-snippets</id><summary type="html">&lt;p&gt;reStructuredText and Markdown have directives that generate line numbers for
+&lt;p&gt;That’s it. Elegant will take care of the rest.&lt;/p&gt;</summary><category term="web-analytics"></category><category term="pelican-theme"></category></entry><entry><title>How to display Line Numbers in Code Snippets</title><link href="http://drpaneas.github.io/testblog/how-to-display-line-numbers-in-code-snippets" rel="alternate"></link><updated>2013-11-05T17:36:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2013-11-05:testblog/how-to-display-line-numbers-in-code-snippets</id><summary type="html">&lt;p&gt;reStructuredText and Markdown have directives that generate line numbers for
 code snippets. Install &lt;a href="http://pygments.org/"&gt;Pygments&lt;/a&gt; to use these&amp;nbsp;directives.&lt;/p&gt;
 &lt;p&gt;Following examples will generate this&amp;nbsp;output,&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
@@ -1690,7 +1690,7 @@ generate line&amp;nbsp;numbers.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#!python&lt;/span&gt;
 &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;example&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
     &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Hello World&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="markdown"></category><category term="reST"></category><category term="pelican-theme"></category><category term="web-design"></category></entry><entry><title>A Fitness Coach and the Software Developers</title><link href="/career-advice-software-developers-fitness-coach" rel="alternate"></link><updated>2013-11-19T01:15:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2013-11-01:career-advice-software-developers-fitness-coach</id><summary type="html">&lt;p&gt;Elliott Hulse, a fitness coach, on the topic of &lt;a class="reference external" href="http://www.hulsestrength.com/1-exercise-increase-testosterone/"&gt;building
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="markdown"></category><category term="reST"></category><category term="pelican-theme"></category><category term="web-design"></category></entry><entry><title>A Fitness Coach and the Software Developers</title><link href="http://drpaneas.github.io/testblog/career-advice-software-developers-fitness-coach" rel="alternate"></link><updated>2013-11-19T01:15:00+02:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2013-11-01:testblog/career-advice-software-developers-fitness-coach</id><summary type="html">&lt;p&gt;Elliott Hulse, a fitness coach, on the topic of &lt;a class="reference external" href="http://www.hulsestrength.com/1-exercise-increase-testosterone/"&gt;building
 muscles&lt;/a&gt;,&lt;/p&gt;
 &lt;blockquote&gt;
 Your muscles need to be stressed to a point where they are &lt;span class="caps"&gt;FORCED&lt;/span&gt; to
@@ -1710,7 +1710,7 @@ language is the best language ever created. Fall in love
 with your platform and become its ardent worshipper. Your&amp;nbsp;call!&lt;/p&gt;
 &lt;p&gt;You cannot improve with this&amp;nbsp;attitude.&lt;/p&gt;
 &lt;div class="figure align-right"&gt;
-&lt;img alt="A butterfly out of its cocoon" src="/images/career-advice-from-a-fitness-coach-butterfly-on-flower.jpg" /&gt;
+&lt;img alt="A butterfly out of its cocoon" src="http://drpaneas.github.io/testblog/images/career-advice-from-a-fitness-coach-butterfly-on-flower.jpg" /&gt;
 &lt;p class="caption"&gt;&lt;span class="caps"&gt;CC&lt;/span&gt; &lt;a class="reference external" href="https://secure.flickr.com/photos/bigtallguy/9508035181/"&gt;image&lt;/a&gt; courtesy of &lt;a class="reference external" href="https://secure.flickr.com/photos/bigtallguy/"&gt;Paul&amp;nbsp;Reynolds&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;C was the first programming language I learned. After few months, I
@@ -1743,7 +1743,7 @@ their&amp;nbsp;dreams.&lt;/p&gt;
 &lt;p&gt;If you want to improve, get out of your comfort zone. Pick something
 that challenges&amp;nbsp;you.&lt;/p&gt;
 &lt;p&gt;Do whatever that makes you&amp;nbsp;uncomfortable.&lt;/p&gt;
-</summary><category term="self-improvement"></category><category term="beginners"></category><category term="be-better"></category><category term="fitness"></category></entry><entry><title>Elegant</title><link href="/elegant-best-pelican-theme-features" rel="alternate"></link><updated>2013-10-11T23:00:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2013-08-27:elegant-best-pelican-theme-features</id><summary type="html">
+</summary><category term="self-improvement"></category><category term="beginners"></category><category term="be-better"></category><category term="fitness"></category></entry><entry><title>Elegant</title><link href="http://drpaneas.github.io/testblog/elegant-best-pelican-theme-features" rel="alternate"></link><updated>2013-10-11T23:00:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2013-08-27:testblog/elegant-best-pelican-theme-features</id><summary type="html">
 &lt;p&gt;Elegant is a stylish, responsive, and minimal &lt;a href="http://getpelican.com/"&gt;Pelican&lt;/a&gt;
 theme that looks amazing across all screen resolutions and devices.&lt;/p&gt;
 &lt;p&gt;Elegant gives meaning to the expression “sand the under side of the drawer.”
@@ -1770,9 +1770,9 @@ search for your static site.&lt;/p&gt;
 &lt;p&gt;Use &lt;span class="caps"&gt;JSON&lt;/span&gt; mode if you value speed, or have a large site, or don’t want to
 overwhelm your host server for every search query.&lt;/p&gt;
 &lt;p&gt;Here is how the search result looks like&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Search result for App Store" src="/images/elegant-theme_search-result.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Search result for App Store" src="http://drpaneas.github.io/testblog/images/elegant-theme_search-result.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Search box is part of main navigation menu so that visitor can search from any page.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Search box" src="/images/elegant-theme_search-box.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Search box" src="http://drpaneas.github.io/testblog/images/elegant-theme_search-box.png"/&gt;&lt;/p&gt;
 &lt;h2 id="live-filter-for-tags"&gt;Live Filter for Tags&lt;/h2&gt;
 &lt;p&gt;Elegant is a minimal theme. Instead of creating separate pages for each tag,
 Elegant shows all the tags on a single page. To help visitor find the tags he
@@ -1781,10 +1781,10 @@ is interested in, Elegant offers live filter.&lt;/p&gt;
 will automatically filter the list.&lt;/p&gt;
 &lt;p&gt;For example, this is how my tags page looks like&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Tags view
-unfiltered" src="/images/elegant-theme_tags-live-filter-default.png"/&gt;&lt;/p&gt;
+unfiltered" src="http://drpaneas.github.io/testblog/images/elegant-theme_tags-live-filter-default.png"/&gt;&lt;/p&gt;
 &lt;p&gt;As soon as I type “os”, all other tags are filtered out&lt;/p&gt;
 &lt;p&gt;&lt;img alt='Tags view filtered for
-"os"' src="/images/elegant-theme_tags-live-filter-filtered.png"/&gt;&lt;/p&gt;
+"os"' src="http://drpaneas.github.io/testblog/images/elegant-theme_tags-live-filter-filtered.png"/&gt;&lt;/p&gt;
 &lt;p&gt;With live filter, your reader will have no difficulty in picking up his desired
 tag from the list, even if your site has hundreds of tags.&lt;/p&gt;
 &lt;h2 id="all-categories-but-with-zero-clutter"&gt;All Categories but with zero clutter&lt;/h2&gt;
@@ -1796,24 +1796,24 @@ in enclosed in &lt;a href="http://getbootstrap.com/2.3.2/javascript.html#collaps
 accordions&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Here is how categories appear collapsed&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Categories accordions
-collapsed" src="/images/elegant-theme_category-accordions-collapsed.png"/&gt;&lt;/p&gt;
+collapsed" src="http://drpaneas.github.io/testblog/images/elegant-theme_category-accordions-collapsed.png"/&gt;&lt;/p&gt;
 &lt;p&gt;And this is how they appear uncollapsed&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Categories accordions
-uncollapsed" src="/images/elegant-theme_category-accordions-uncollapsed.png"/&gt;&lt;/p&gt;
+uncollapsed" src="http://drpaneas.github.io/testblog/images/elegant-theme_category-accordions-uncollapsed.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Did you notice that categories are listed in ascending alphabetical order and
 articles are sorted by their date in descending order?&lt;/p&gt;
 &lt;h2 id="home-page-features"&gt;Home Page Features&lt;/h2&gt;
 &lt;p&gt;This is the page that visitors see when they open your website. Your chance to
 make a good and lasting first impression. Most sites just display a list of
 recent posts. Elegant goes the extra mile. Check this out&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Home Page Sample" src="/images/elegant-theme_home-page-features.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Home Page Sample" src="http://drpaneas.github.io/testblog/images/elegant-theme_home-page-features.png"/&gt;&lt;/p&gt;
 &lt;p&gt;You can see two sections here,&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;About me&lt;/li&gt;
 &lt;li&gt;My Projects&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;There is a third section below these two sections, “Recent articles”&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Recent Articles Section" src="/images/elegant-theme_recent-posts.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Recent Articles Section" src="http://drpaneas.github.io/testblog/images/elegant-theme_recent-posts.png"/&gt;&lt;/p&gt;
 &lt;h3 id="about-me"&gt;About me&lt;/h3&gt;
 &lt;p&gt;You can write up your own About me section using &lt;code&gt;LANDING_PAGE_ABOUT&lt;/code&gt; variable
 in your configuration. It is a dictionary that has two keys &lt;code&gt;title&lt;/code&gt; and
@@ -1853,7 +1853,7 @@ also has a link to “all posts”.&lt;/p&gt;
 subscribe to your newsletter, above the fold, in the right section of every
 article. Increased visibility is said to increase number of subscribers.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Mailchimp subscriber
-form" src="/images/elegant-theme_subscribe-form.png"/&gt;&lt;/p&gt;
+form" src="http://drpaneas.github.io/testblog/images/elegant-theme_subscribe-form.png"/&gt;&lt;/p&gt;
 &lt;p&gt;You need to put your Mailchimp form action &lt;span class="caps"&gt;URL&lt;/span&gt; in &lt;code&gt;MAILCHIMP_FORM_ACTION&lt;/code&gt; in
 your configuration file. You can also define &lt;code&gt;EMAIL_SUBSCRIPTION_LABEL&lt;/code&gt;,
 &lt;code&gt;EMAIL_FIELD_PLACEHOLDER&lt;/code&gt; and &lt;code&gt;SUBSCRIBE_BUTTON_TITLE&lt;/code&gt; to customize user experience.&lt;/p&gt;
@@ -1873,10 +1873,10 @@ that there’s 450 comments and the article is actually pretty short]&lt;/p&gt;
 unhide the section by clicking on the comments section.&lt;/p&gt;
 &lt;p&gt;This is how comments section appear&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Collapsed comments
-section" src="/images/elegant-theme_comments-section-collapsed.png"/&gt;&lt;/p&gt;
+section" src="http://drpaneas.github.io/testblog/images/elegant-theme_comments-section-collapsed.png"/&gt;&lt;/p&gt;
 &lt;p&gt;It expands when reader clicks on it&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Uncollapsed comments
-section" src="/images/elegant-theme_comments-section-uncollapsed.png"/&gt;&lt;/p&gt;
+section" src="http://drpaneas.github.io/testblog/images/elegant-theme_comments-section-uncollapsed.png"/&gt;&lt;/p&gt;
 &lt;h2 id="articles-count-with-every-tag-and-category"&gt;Articles Count with every Tag and Category&lt;/h2&gt;
 &lt;p&gt;Readers of an article on your site usually look for other articles on the same
 topic. Categories and tags are a way of showing them related articles. Elegant
@@ -1888,18 +1888,18 @@ superscript. This way visitor will know you have written other articles too on
 the same topic.&lt;/p&gt;
 &lt;p&gt;Check out the screenshots,&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Count of articles in a category is displayed in
-superscript" src="/images/elegant-theme_category-superscript-count.png"/&gt;&lt;/p&gt;
+superscript" src="http://drpaneas.github.io/testblog/images/elegant-theme_category-superscript-count.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Count of articles that have been tagged is displayed in
-superscript" src="/images/elegant-theme_tag-superscript-count.png"/&gt;&lt;/p&gt;
+superscript" src="http://drpaneas.github.io/testblog/images/elegant-theme_tag-superscript-count.png"/&gt;&lt;/p&gt;
 &lt;h2 id="custom-404-page"&gt;Custom 404 Page&lt;/h2&gt;
 &lt;p&gt;Elegant has a custom Error 404 page for your readers.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Error 404 page" src="/images/elegant-theme_error-404-page.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Error 404 page" src="http://drpaneas.github.io/testblog/images/elegant-theme_error-404-page.png"/&gt;&lt;/p&gt;
 &lt;h2 id="page-title"&gt;Page Title&lt;/h2&gt;
 &lt;p&gt;Elegant follows following format for the &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; tag&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;Article title · Site Name
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;img alt="Article title is always visible in the
-tab" src="/images/elegant-theme_page-title.png"/&gt;&lt;/p&gt;
+tab" src="http://drpaneas.github.io/testblog/images/elegant-theme_page-title.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Some sites put site title first and article title later in the &lt;code&gt;&amp;lt;title&amp;gt;&lt;/code&gt; tag.
 There is a problem with this approach.  When you open too many tabs, browser
 delimits tab’s title from the end. In such cases, only the first few words or
@@ -1929,13 +1929,13 @@ appear distinct from the code. Here is an example&lt;/p&gt;
 subtitle support. Just define &lt;code&gt;subtitle&lt;/code&gt; in your article’s meta data and it
 will appear along with your title. Here is an example,&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Article subtitle
-example" src="/images/elegant-theme_article-subtitle.png"/&gt;&lt;/p&gt;
+example" src="http://drpaneas.github.io/testblog/images/elegant-theme_article-subtitle.png"/&gt;&lt;/p&gt;
 &lt;p&gt;Article subtitle is displayed with the title in every list. To keep it visibly
 separate from title, subtitle is enclosed in &lt;code&gt;&amp;lt;small&amp;gt;&lt;/code&gt; tag. When visible cue
 cannot be used, like in the title attribute of html anchor tag &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;, a hyphen
 is inserted between them.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Article title and subtitle separated with a
-hyphen" src="/images/elegant-theme_article-subtitle-hyphen.png"/&gt;&lt;/p&gt;
+hyphen" src="http://drpaneas.github.io/testblog/images/elegant-theme_article-subtitle-hyphen.png"/&gt;&lt;/p&gt;
 &lt;hr/&gt;
 &lt;h2 id="elegant-technical-nitty-gritty"&gt;Elegant - Technical Nitty-Gritty&lt;/h2&gt;
 &lt;h3 id="license"&gt;License&lt;/h3&gt;
@@ -1963,7 +1963,7 @@ design unknowingly. Please don’t let me go away with buggy code.&lt;/p&gt;
    tried to make sure it looks great on all platforms but it still needs polish&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Besides these, there must be other bugs that I haven’t noticed yet. I need your
-help to hunt them down and make them behave.&lt;/p&gt;</summary><category term="jinja2"></category><category term="bootstrap"></category><category term="pelican-theme"></category><category term="font-awesome"></category></entry><entry><title>How to open Mac App Store Programmatically</title><link href="/how-to-open-mac-app-store-programmatically" rel="alternate"></link><updated>2013-08-23T14:20:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:,2013-08-23:how-to-open-mac-app-store-programmatically</id><summary type="html">&lt;p&gt;Mac App Store is accessed using &lt;code&gt;macappstore&lt;/code&gt; &lt;span class="caps"&gt;URL&lt;/span&gt; scheme. Your &lt;span class="caps"&gt;URL&lt;/span&gt; should follow this&amp;nbsp;pattern:&lt;/p&gt;
+help to hunt them down and make them behave.&lt;/p&gt;</summary><category term="jinja2"></category><category term="bootstrap"></category><category term="pelican-theme"></category><category term="font-awesome"></category></entry><entry><title>How to open Mac App Store Programmatically</title><link href="http://drpaneas.github.io/testblog/how-to-open-mac-app-store-programmatically" rel="alternate"></link><updated>2013-08-23T14:20:00+03:00</updated><author><name>Panos Georgiadis</name></author><id>tag:drpaneas.github.io,2013-08-23:testblog/how-to-open-mac-app-store-programmatically</id><summary type="html">&lt;p&gt;Mac App Store is accessed using &lt;code&gt;macappstore&lt;/code&gt; &lt;span class="caps"&gt;URL&lt;/span&gt; scheme. Your &lt;span class="caps"&gt;URL&lt;/span&gt; should follow this&amp;nbsp;pattern:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;macappstore://itunes.apple.com/app/id&lt;span class="o"&gt;[&lt;/span&gt;APP_ID&lt;span class="o"&gt;]&lt;/span&gt;?mt&lt;span class="o"&gt;=&lt;/span&gt;12
 &lt;/pre&gt;&lt;/div&gt;
 
